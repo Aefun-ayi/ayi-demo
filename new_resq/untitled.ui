@@ -43,7 +43,8 @@
        </property>
        <property name="styleSheet">
         <string notr="true">font: 75 12pt &quot;微软雅黑&quot;;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(255, 255, 255);
+border-radius: 10px;</string>
        </property>
       </widget>
      </item>
@@ -67,7 +68,8 @@ background-color: rgb(255, 255, 255);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">font: 75 12pt &quot;微软雅黑&quot;;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(255, 255, 255);
+border-radius: 10px;</string>
        </property>
       </widget>
      </item>
@@ -91,7 +93,8 @@ background-color: rgb(255, 255, 255);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">font: 75 12pt &quot;微软雅黑&quot;;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(255, 255, 255);
+border-radius: 10px;</string>
        </property>
       </widget>
      </item>
@@ -222,9 +225,15 @@ Sunny</string>
                <height>71</height>
               </size>
              </property>
+             <property name="mouseTracking">
+              <bool>false</bool>
+             </property>
              <property name="styleSheet">
               <string notr="true">font: 14pt &quot;微软雅黑&quot;;
 background-color: rgb(155, 179, 255);
+border-radius: 15px;
+border-style: outset;
+
 color: rgb(255, 255, 255);</string>
              </property>
              <property name="text">
@@ -253,7 +262,9 @@ color: rgb(255, 255, 255);</string>
              <property name="styleSheet">
               <string notr="true">font: 14pt &quot;微软雅黑&quot;;
 background-color: rgb(55, 103, 255);
-color: rgb(255, 255, 255);</string>
+color: rgb(255, 255, 255);
+ border-radius: 15px;
+border-style: outset;</string>
              </property>
              <property name="text">
               <string>测试环境</string>
@@ -281,7 +292,9 @@ color: rgb(255, 255, 255);</string>
              <property name="styleSheet">
               <string notr="true">font: 14pt &quot;微软雅黑&quot;;
 background-color: rgb(255, 49, 82);
-color: rgb(255, 255, 255);</string>
+color: rgb(255, 255, 255);
+border-radius: 15px;
+border-style: outset;</string>
              </property>
              <property name="text">
               <string>清  空</string>

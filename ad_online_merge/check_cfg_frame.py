@@ -238,7 +238,7 @@ class Ui_Form(object):
         self.select_ad_2 = QtWidgets.QPushButton(self.than_cfg)
         self.select_ad_2.setGeometry(QtCore.QRect(550, 10, 171, 111))
         self.select_ad_2.setStyleSheet("background-color: rgb(170, 255, 255);\n"
-"font: 24pt \"幼圆\";")
+"font: 24pt \"幼圆\";border-radius: 15px;")
         self.select_ad_2.setIcon(icon1)
         self.select_ad_2.setIconSize(QtCore.QSize(24, 24))
         self.select_ad_2.setObjectName("select_ad_2")

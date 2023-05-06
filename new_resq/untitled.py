@@ -14,15 +14,67 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(1036, 882)
+        Form.resize(1004, 859)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/tittle/星球(star ball)_爱给网_aigei_com.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Form.setWindowIcon(icon)
-        self.horizontalLayout = QtWidgets.QHBoxLayout(Form)
-        self.horizontalLayout.setObjectName("horizontalLayout")
+        Form.setStyleSheet("background-color: rgb(170, 255, 255);")
+        self.verticalLayout_10 = QtWidgets.QVBoxLayout(Form)
+        self.verticalLayout_10.setObjectName("verticalLayout_10")
+        self.horizontalLayout_7 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_7.setObjectName("horizontalLayout_7")
+        self.label_32 = QtWidgets.QLabel(Form)
+        self.label_32.setStyleSheet("font: 75 12pt \"微软雅黑\";")
+        self.label_32.setObjectName("label_32")
+        self.horizontalLayout_7.addWidget(self.label_32)
+        self.app_id = QtWidgets.QLineEdit(Form)
+        self.app_id.setMinimumSize(QtCore.QSize(0, 30))
+        self.app_id.setStyleSheet("font: 75 12pt \"微软雅黑\";\n"
+"background-color: rgb(255, 255, 255);border-radius: 5px;")
+        self.app_id.setObjectName("app_id")
+        self.horizontalLayout_7.addWidget(self.app_id)
+        self.label_33 = QtWidgets.QLabel(Form)
+        self.label_33.setStyleSheet("font: 75 12pt \"微软雅黑\";")
+        self.label_33.setObjectName("label_33")
+        self.horizontalLayout_7.addWidget(self.label_33)
+        self.chan = QtWidgets.QLineEdit(Form)
+        self.chan.setMinimumSize(QtCore.QSize(0, 30))
+        self.chan.setStyleSheet("font: 75 12pt \"微软雅黑\";\n"
+"background-color: rgb(255, 255, 255);border-radius: 5px")
+        self.chan.setObjectName("chan")
+        self.horizontalLayout_7.addWidget(self.chan)
+        self.label_34 = QtWidgets.QLabel(Form)
+        self.label_34.setStyleSheet("font: 75 12pt \"微软雅黑\";")
+        self.label_34.setObjectName("label_34")
+        self.horizontalLayout_7.addWidget(self.label_34)
+        self.apk_version = QtWidgets.QLineEdit(Form)
+        self.apk_version.setMinimumSize(QtCore.QSize(0, 30))
+        self.apk_version.setStyleSheet("font: 75 12pt \"微软雅黑\";\n"
+"background-color: rgb(255, 255, 255);border-radius: 5px")
+        self.apk_version.setObjectName("apk_version")
+        self.horizontalLayout_7.addWidget(self.apk_version)
+        self.clear_project = QtWidgets.QPushButton(Form)
+        self.clear_project.setMinimumSize(QtCore.QSize(0, 30))
+        self.clear_project.setStyleSheet("QPushButton{"
+                                      "font: 10pt \"微软雅黑\";"
+                                      "color: rgb(255, 255, 255);"
+                                      "border-radius: 5px;"
+                                      "border-style: outset;"
+                                      "background-color:rgb(223, 71, 236)}"
+                                      "QPushButton:pressed"
+                                      "{font: 10pt \"微软雅黑\";"
+                                      "color: rgb(255, 255, 255);"
+                                      "border-radius: 5px;"
+                                      "border-style: outset;"
+                                      "background-color:rgb(255, 150, 255)}")
+        self.clear_project.setObjectName("clear_project")
+        self.horizontalLayout_7.addWidget(self.clear_project)
+        self.verticalLayout_10.addLayout(self.horizontalLayout_7)
         self.tabWidget = QtWidgets.QTabWidget(Form)
+        self.tabWidget.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.tabWidget.setObjectName("tabWidget")
         self.tab = QtWidgets.QWidget()
+        self.tab.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.tab.setObjectName("tab")
         self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.tab)
         self.verticalLayout_4.setObjectName("verticalLayout_4")
@@ -43,33 +95,14 @@ class Ui_Form(object):
         self.label_2.setAlignment(QtCore.Qt.AlignCenter)
         self.label_2.setObjectName("label_2")
         self.horizontalLayout_2.addWidget(self.label_2)
-        self.horizontalLayout_2.setStretch(0, 1)
+        self.horizontalLayout_2.setStretch(0, 2)
         self.horizontalLayout_2.setStretch(1, 1)
-        self.horizontalLayout_2.setStretch(2, 14)
+        self.horizontalLayout_2.setStretch(2, 30)
         self.verticalLayout_4.addLayout(self.horizontalLayout_2)
         self.horizontalLayout_6 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_6.setObjectName("horizontalLayout_6")
         self.verticalLayout = QtWidgets.QVBoxLayout()
         self.verticalLayout.setObjectName("verticalLayout")
-        self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
-        self.label_26 = QtWidgets.QLabel(self.tab)
-        self.label_26.setStyleSheet("font: 14pt \"幼圆\";")
-        self.label_26.setObjectName("label_26")
-        self.horizontalLayout_3.addWidget(self.label_26)
-        self.app_on_id = QtWidgets.QLineEdit(self.tab)
-        self.app_on_id.setStyleSheet("font: 14pt \"幼圆\";")
-        self.app_on_id.setObjectName("app_on_id")
-        self.horizontalLayout_3.addWidget(self.app_on_id)
-        self.label_27 = QtWidgets.QLabel(self.tab)
-        self.label_27.setStyleSheet("font: 14pt \"幼圆\";")
-        self.label_27.setObjectName("label_27")
-        self.horizontalLayout_3.addWidget(self.label_27)
-        self.app_on_chanl = QtWidgets.QLineEdit(self.tab)
-        self.app_on_chanl.setStyleSheet("font: 14pt \"幼圆\";")
-        self.app_on_chanl.setObjectName("app_on_chanl")
-        self.horizontalLayout_3.addWidget(self.app_on_chanl)
-        self.verticalLayout.addLayout(self.horizontalLayout_3)
         self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
         self.label_11 = QtWidgets.QLabel(self.tab)
@@ -82,14 +115,6 @@ class Ui_Form(object):
         self.track_channel.addItem("")
         self.track_channel.addItem("")
         self.horizontalLayout_4.addWidget(self.track_channel)
-        self.label_28 = QtWidgets.QLabel(self.tab)
-        self.label_28.setStyleSheet("font: 14pt \"幼圆\";")
-        self.label_28.setObjectName("label_28")
-        self.horizontalLayout_4.addWidget(self.label_28)
-        self.apk_on_version = QtWidgets.QLineEdit(self.tab)
-        self.apk_on_version.setStyleSheet("font: 14pt \"幼圆\";")
-        self.apk_on_version.setObjectName("apk_on_version")
-        self.horizontalLayout_4.addWidget(self.apk_on_version)
         self.verticalLayout.addLayout(self.horizontalLayout_4)
         self.horizontalLayout_6.addLayout(self.verticalLayout)
         self.horizontalLayout_5 = QtWidgets.QHBoxLayout()
@@ -97,8 +122,18 @@ class Ui_Form(object):
         self.horizontalLayout_5.setObjectName("horizontalLayout_5")
         self.tta_on_button = QtWidgets.QPushButton(self.tab)
         self.tta_on_button.setMinimumSize(QtCore.QSize(141, 71))
-        self.tta_on_button.setStyleSheet("font: 14pt \"微软雅黑\";\n"
-"background-color: rgb(170, 255, 127);")
+        self.tta_on_button.setMouseTracking(False)
+        self.tta_on_button.setStyleSheet("QPushButton{font: 14pt \"微软雅黑\";"
+                                         "border-radius: 15px;"
+                                         "border-style: outset;"
+                                         "color: rgb(255, 255, 255);"
+                                         "background-color:rgb(155, 179, 255)}"
+                                         "QPushButton:pressed"
+                                         "{font: 14pt \"微软雅黑\";"
+                                         "color: rgb(255, 255, 255);"
+                                         "border-radius: 15px;"
+                                         "border-style: outset;"
+                                         "background-color:rgb(155, 178, 200)}")
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap(":/release/ttt.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.tta_on_button.setIcon(icon1)
@@ -107,8 +142,18 @@ class Ui_Form(object):
         self.horizontalLayout_5.addWidget(self.tta_on_button)
         self.ttt_on_button = QtWidgets.QPushButton(self.tab)
         self.ttt_on_button.setMinimumSize(QtCore.QSize(141, 71))
-        self.ttt_on_button.setStyleSheet("font: 14pt \"微软雅黑\";\n"
-"background-color: rgb(170, 255, 255);")
+        self.ttt_on_button.setStyleSheet("QPushButton"
+                                         "{font: 14pt \"微软雅黑\";"
+                                         "color: rgb(255, 255, 255);"
+                                         "border-radius: 15px;"
+                                         "border-style: outset;"
+                                         "background-color:rgb(55, 103, 255)}"
+                                         "QPushButton:pressed"
+                                         "{font: 14pt \"微软雅黑\";"
+                                         "color: rgb(255, 255, 255);"
+                                         "border-radius: 15px;"
+                                         "border-style: outset;"
+                                         "background-color:rgb(32, 97, 171)}")
         icon2 = QtGui.QIcon()
         icon2.addPixmap(QtGui.QPixmap(":/test/sscom.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.ttt_on_button.setIcon(icon2)
@@ -117,8 +162,18 @@ class Ui_Form(object):
         self.horizontalLayout_5.addWidget(self.ttt_on_button)
         self.clear_on_button = QtWidgets.QPushButton(self.tab)
         self.clear_on_button.setMinimumSize(QtCore.QSize(141, 71))
-        self.clear_on_button.setStyleSheet("font: 14pt \"微软雅黑\";\n"
-"background-color: rgb(255, 193, 7);")
+        self.clear_on_button.setStyleSheet("QPushButton"
+                                         "{font: 14pt \"微软雅黑\";"
+                                         "color: rgb(255, 255, 255);"
+                                         "border-radius: 15px;"
+                                         "border-style: outset;"
+                                         "background-color:rgb(255, 49, 82)}"
+                                         "QPushButton:pressed"
+                                         "{font: 14pt \"微软雅黑\";"
+                                         "color: rgb(255, 255, 255);"
+                                         "border-radius: 15px;"
+                                         "border-style: outset;"
+                                         "background-color:rgb(255, 100, 100)}")
         icon3 = QtGui.QIcon()
         icon3.addPixmap(QtGui.QPixmap(":/clear/lajitong.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.clear_on_button.setIcon(icon3)
@@ -188,14 +243,14 @@ class Ui_Form(object):
         self.verticalLayout_5.setObjectName("verticalLayout_5")
         self.horizontalLayout_11 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_11.setObjectName("horizontalLayout_11")
-        self.label_29 = QtWidgets.QLabel(self.tab_2)
-        self.label_29.setStyleSheet("font: 14pt \"幼圆\";")
-        self.label_29.setObjectName("label_29")
-        self.horizontalLayout_11.addWidget(self.label_29)
-        self.app_ad_id = QtWidgets.QLineEdit(self.tab_2)
-        self.app_ad_id.setStyleSheet("font: 14pt \"幼圆\";")
-        self.app_ad_id.setObjectName("app_ad_id")
-        self.horizontalLayout_11.addWidget(self.app_ad_id)
+        self.label_30 = QtWidgets.QLabel(self.tab_2)
+        self.label_30.setStyleSheet("font: 14pt \"幼圆\";")
+        self.label_30.setObjectName("label_30")
+        self.horizontalLayout_11.addWidget(self.label_30)
+        self.out_pack_info = QtWidgets.QLineEdit(self.tab_2)
+        self.out_pack_info.setStyleSheet("font: 14pt \"幼圆\";")
+        self.out_pack_info.setObjectName("out_pack_info")
+        self.horizontalLayout_11.addWidget(self.out_pack_info)
         self.label_31 = QtWidgets.QLabel(self.tab_2)
         self.label_31.setStyleSheet("font: 14pt \"幼圆\";")
         self.label_31.setObjectName("label_31")
@@ -207,40 +262,53 @@ class Ui_Form(object):
         self.new_old.addItem("")
         self.horizontalLayout_11.addWidget(self.new_old)
         self.verticalLayout_5.addLayout(self.horizontalLayout_11)
-        self.horizontalLayout_12 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_12.setObjectName("horizontalLayout_12")
-        self.label_30 = QtWidgets.QLabel(self.tab_2)
-        self.label_30.setStyleSheet("font: 14pt \"幼圆\";")
-        self.label_30.setObjectName("label_30")
-        self.horizontalLayout_12.addWidget(self.label_30)
-        self.out_pack_info = QtWidgets.QLineEdit(self.tab_2)
-        self.out_pack_info.setStyleSheet("font: 14pt \"幼圆\";")
-        self.out_pack_info.setObjectName("out_pack_info")
-        self.horizontalLayout_12.addWidget(self.out_pack_info)
-        self.verticalLayout_5.addLayout(self.horizontalLayout_12)
         self.horizontalLayout_14.addLayout(self.verticalLayout_5)
         self.horizontalLayout_13 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_13.setObjectName("horizontalLayout_13")
         self.tta_ad_button = QtWidgets.QPushButton(self.tab_2)
         self.tta_ad_button.setMinimumSize(QtCore.QSize(141, 57))
-        self.tta_ad_button.setStyleSheet("font: 14pt \"微软雅黑\";\n"
-"background-color: rgb(170, 255, 127);")
+        self.tta_ad_button.setStyleSheet("QPushButton"
+                                         "{font: 14pt \"微软雅黑\";"
+                                         "border-radius: 15px;"
+                                         "border-style: outset;"
+                                         "background-color:rgb(170, 255, 127)}"
+                                         "QPushButton:pressed"
+                                         "{font: 14pt \"微软雅黑\";"
+                                         "border-radius: 15px;"
+                                         "border-style: outset;"
+                                         "background-color:rgb(180, 255, 170)}")
         self.tta_ad_button.setIcon(icon1)
         self.tta_ad_button.setIconSize(QtCore.QSize(22, 22))
         self.tta_ad_button.setObjectName("tta_ad_button")
         self.horizontalLayout_13.addWidget(self.tta_ad_button)
         self.ttt_ad_button = QtWidgets.QPushButton(self.tab_2)
         self.ttt_ad_button.setMinimumSize(QtCore.QSize(141, 57))
-        self.ttt_ad_button.setStyleSheet("font: 14pt \"微软雅黑\";\n"
-"background-color: rgb(170, 255, 255);")
+        self.ttt_ad_button.setStyleSheet("QPushButton"
+                                         "{font: 14pt \"微软雅黑\";"
+                                         "border-radius: 15px;"
+                                         "border-style: outset;"
+                                         "background-color:rgb(170, 255, 255)}"
+                                         "QPushButton:pressed"
+                                         "{font: 14pt \"微软雅黑\";"
+                                         "border-radius: 15px;"
+                                         "border-style: outset;"
+                                         "background-color:rgb(225, 255, 255)}")
         self.ttt_ad_button.setIcon(icon2)
         self.ttt_ad_button.setIconSize(QtCore.QSize(22, 22))
         self.ttt_ad_button.setObjectName("ttt_ad_button")
         self.horizontalLayout_13.addWidget(self.ttt_ad_button)
         self.clear_ad_txt = QtWidgets.QPushButton(self.tab_2)
         self.clear_ad_txt.setMinimumSize(QtCore.QSize(141, 57))
-        self.clear_ad_txt.setStyleSheet("font: 14pt \"微软雅黑\";\n"
-"background-color: rgb(255, 193, 7);")
+        self.clear_ad_txt.setStyleSheet("QPushButton"
+                                         "{font: 14pt \"微软雅黑\";"
+                                         "border-radius: 15px;"
+                                         "border-style: outset;"
+                                         "background-color:rgb(255, 193, 7)}"
+                                         "QPushButton:pressed"
+                                         "{font: 14pt \"微软雅黑\";"
+                                         "border-radius: 15px;"
+                                         "border-style: outset;"
+                                         "background-color:rgb(230, 193, 100)}")
         self.clear_ad_txt.setIcon(icon3)
         self.clear_ad_txt.setIconSize(QtCore.QSize(22, 22))
         self.clear_ad_txt.setObjectName("clear_ad_txt")
@@ -475,7 +543,9 @@ class Ui_Form(object):
         self.tabWidget_2.addTab(self.tab_6, "")
         self.verticalLayout_27.addWidget(self.tabWidget_2)
         self.tabWidget.addTab(self.tab_2, "")
-        self.horizontalLayout.addWidget(self.tabWidget)
+        self.verticalLayout_10.addWidget(self.tabWidget)
+        self.verticalLayout_10.setStretch(0, 1)
+        self.verticalLayout_10.setStretch(1, 15)
 
         self.retranslateUi(Form)
         self.tabWidget.setCurrentIndex(0)
@@ -484,16 +554,17 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
+        Form.setWindowTitle(_translate("Form", "新版-万里阳光-查询工具"))
+        self.label_32.setText(_translate("Form", "产品id："))
+        self.label_33.setText(_translate("Form", "渠道："))
+        self.label_34.setText(_translate("Form", "版本号："))
+        self.clear_project.setText(_translate("Form", "清空"))
         self.label_3.setText(_translate("Form", "Thousand \n"
 "Sunny"))
         self.label_2.setText(_translate("Form", "在线配置查询"))
-        self.label_26.setText(_translate("Form", "产品id："))
-        self.label_27.setText(_translate("Form", "渠道："))
         self.label_11.setText(_translate("Form", "归因结果："))
         self.track_channel.setItemText(0, _translate("Form", "default"))
         self.track_channel.setItemText(1, _translate("Form", "oceanengine"))
-        self.label_28.setText(_translate("Form", "版本号："))
         self.tta_on_button.setText(_translate("Form", "正式环境"))
         self.ttt_on_button.setText(_translate("Form", "测试环境"))
         self.clear_on_button.setText(_translate("Form", "清  空"))
@@ -503,11 +574,10 @@ class Ui_Form(object):
         self.label_7.setText(_translate("Form", "Thousand \n"
 "Sunny"))
         self.label_10.setText(_translate("Form", "广告配置查询"))
-        self.label_29.setText(_translate("Form", "产品id："))
+        self.label_30.setText(_translate("Form", "出包备注："))
         self.label_31.setText(_translate("Form", "新老用户："))
         self.new_old.setItemText(0, _translate("Form", "新用户"))
         self.new_old.setItemText(1, _translate("Form", "老用户"))
-        self.label_30.setText(_translate("Form", "出包备注："))
         self.tta_ad_button.setText(_translate("Form", "正式环境"))
         self.ttt_ad_button.setText(_translate("Form", "测试环境"))
         self.clear_ad_txt.setText(_translate("Form", "清  空"))
