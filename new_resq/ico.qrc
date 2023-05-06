@@ -1,0 +1,18 @@
+<RCC>
+  <qresource prefix="image">
+    <file>101848ViJv0fw8NYaV3sMf.png</file>
+    <file>sunny.ico</file>
+  </qresource>
+  <qresource prefix="clear">
+    <file>lajitong.png</file>
+  </qresource>
+  <qresource prefix="tittle">
+    <file>星球(star ball)_爱给网_aigei_com.png</file>
+  </qresource>
+  <qresource prefix="test">
+    <file>sscom.ico</file>
+  </qresource>
+  <qresource prefix="release">
+    <file>ttt.ico</file>
+  </qresource>
+</RCC>

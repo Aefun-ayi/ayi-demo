@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>sscom.ico</file>
+        <file>title.png</file>
+        <file>lajitong.png</file>
+     </qresource>
+</RCC>

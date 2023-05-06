@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>816</width>
+    <height>621</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLineEdit" name="path_text">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>40</y>
+     <width>681</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 16pt &quot;微软雅黑&quot;;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>581</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 16pt &quot;幼圆&quot;;</string>
+   </property>
+   <property name="text">
+    <string>拖入安装包【注意路径上不可带有中文！！！】</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="path_clear">
+   <property name="geometry">
+    <rect>
+     <x>694</x>
+     <y>40</y>
+     <width>111</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 24pt &quot;幼圆&quot;;</string>
+   </property>
+   <property name="text">
+    <string>清空</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>120</y>
+     <width>301</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+   </property>
+   <property name="text">
+    <string>选择安装来源（模拟来源安装）</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="demo_app">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>120</y>
+     <width>281</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;幼圆&quot;;</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>选择后点击安装按钮</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>模拟小米安装来源</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>模拟华为安装来源</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>模拟vivo安装来源</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>模拟oppo安装来源</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>debug安装</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>正常安装</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="install">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>120</y>
+     <width>71</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+   </property>
+   <property name="text">
+    <string>安装</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="start_app">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>170</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;幼圆&quot;;</string>
+   </property>
+   <property name="text">
+    <string>启动应用</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="check_pro">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>170</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;幼圆&quot;;</string>
+   </property>
+   <property name="text">
+    <string>查看进程</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="uninstall_app">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>170</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;幼圆&quot;;</string>
+   </property>
+   <property name="text">
+    <string>卸载应用</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="stop_app">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>170</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;幼圆&quot;;</string>
+   </property>
+   <property name="text">
+    <string>强停应用</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="debug">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>170</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;幼圆&quot;;</string>
+   </property>
+   <property name="text">
+    <string>开debug</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="clear_app">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>170</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;幼圆&quot;;</string>
+   </property>
+   <property name="text">
+    <string>清除应用信息</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="undebug">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>170</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;幼圆&quot;;</string>
+   </property>
+   <property name="text">
+    <string>关debug</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>220</y>
+     <width>31</width>
+     <height>341</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+   </property>
+   <property name="text">
+    <string>进
+程
+信
+息</string>
+   </property>
+  </widget>
+  <widget class="QTextBrowser" name="pro_text">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>220</y>
+     <width>671</width>
+     <height>391</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pro_clear">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>220</y>
+     <width>81</width>
+     <height>391</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+   </property>
+   <property name="text">
+    <string>清
+空</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

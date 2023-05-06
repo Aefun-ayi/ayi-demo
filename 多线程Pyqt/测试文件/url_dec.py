@@ -1,0 +1,7 @@
+import requests
+import base64
+
+
+url = "TQCvXCMpbhXWAQfz%2BNjH3MYgTlCwMSLNpeZ86oxlweaR5aMHAm0juTG10n6bUWQLzOrRHRSrFefIReD253DYYuDIEJ1zUvIzvX1sxQfOMo4hm1Eynx%2BEISccg1m4YJrwjssFIOJ0aoPF5NzTqgY23%2BRX9wWL73mRK9WnIXuLE1rKNZPtAJRchYl8%2BOBi6LSRb4A0kNIY6%2BGP%2BxUzoJN9M0%2B0Dqdv2qiwqd9BoevJqgnWWBs52%2B0nI5BPKjJirmDpY6oJaDsIljlqZTRgDnjgxPvTO9TrzzsjX5iMrmSfK3fmraGaEcAtIeKsXQH9x6Rr"
+decoded_url = requests.utils.unquote(url)
+print(decoded_url)
