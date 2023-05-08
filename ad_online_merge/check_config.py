@@ -370,9 +370,9 @@ class Main():
                 # 截图路径
                 path = d.screenshot(fr"D:\keep\五图截图\{dir_path}\{filetime}五图-1.png")
                 # 展示图片时根据label的尺寸调整大小
-                showImage = QPixmap(path).scaled(ui.img1_2.width(), ui.img1_2.height())
+                showImage = QPixmap(path).scaled(ui.img6.width(), ui.img6.height())
                 # 展示图片，达到预览效果
-                ui.img1_2.setPixmap(showImage)
+                ui.img6.setPixmap(showImage)
             else:
                 msg_box = QMessageBox(QMessageBox.Critical, '错误', fr'D:\keep\五图截图\{dir_path}' + ' 目录不存在，请先创建对应目录')
                 msg_box.exec_()
