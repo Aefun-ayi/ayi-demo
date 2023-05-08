@@ -501,6 +501,44 @@ class Main():
                 msg_box = QMessageBox(QMessageBox.Critical, '错误', fr'D:\keep\五图截图\{dir_path}' + ' 目录不存在，请先创建对应目录')
                 msg_box.exec_()
 
+
+    def mkdir_name(self):
+        a = ui.mkdir_txt.toPlainText()
+        info_list = a.split('\n')
+        project_name = info_list[1]
+        chan = info_list[2]
+        prid = info_list[3]
+        de_channl = info_list[4]
+        packageinfo = info_list[7] + info_list[8] + info_list[9]
+        want = info_list[10]
+        now = datetime.datetime.now()
+        date = now.strftime('%m')
+        pro_date = now.strftime('%m%d-%H-%M')
+        isExists = os.path.exists(fr'D:\keep\公用-储存安装包\{date}_moon')
+        # 进入判断是否存在这个文件夹
+        if not isExists:
+            os.mkdir(fr'D:\keep\公用-储存安装包\{date}_moon')
+            msg_box = QMessageBox(QMessageBox.Information, '提示', fr'D:\keep\公用-储存安装包\{date}_moon' + ' 创建成功')
+            msg_box.exec_()
+            os.mkdir(fr'D:\keep\公用-储存安装包\{date}_moon\{pro_date}{project_name}')
+            os.mkdir(fr'D:\keep\公用-储存安装包\{date}_moon\{pro_date}{project_name}\{prid}')
+            want_file = fr'D:\keep\公用-储存安装包\{date}_moon\{pro_date}{project_name}\{prid}\{chan}' + '.txt'
+            file = open(want_file, 'w')
+            file.write('投放渠道：' + str(de_channl) + '\n出包需求：' + str(want) + '\n打包参数：' + str(packageinfo))  # 写入出包需求
+            mmm_box = QMessageBox(QMessageBox.Information, '提示', fr'项目id：{prid}  产品名称{project_name}  产品需求：{want} 创建成功')
+            mmm_box.exec_()
+        else:
+            os.mkdir(fr'D:\keep\公用-储存安装包\{date}_moon\{pro_date}{project_name}')
+            os.mkdir(fr'D:\keep\公用-储存安装包\{date}_moon\{pro_date}{project_name}\{prid}')
+            want_file = fr'D:\keep\公用-储存安装包\{date}_moon\{pro_date}{project_name}\{prid}\{chan}'+ '.txt'
+            file = open(want_file, 'w')
+            file.write('投放渠道：' + str(de_channl) + '\n出包需求：' + str(want) + '\n打包参数：' + str(packageinfo))  # 写入出包需求
+            mmm_box = QMessageBox(QMessageBox.Information, '提示', fr'项目id：{prid}  产品名称{project_name}  产品需求：{want} 创建成功')
+            mmm_box.exec_()
+
+    def clear_dir_text(self):
+        ui.mkdir_txt.clear()
+
 if __name__ == '__main__':
     # 初始化数据
     # 。。。。。
@@ -522,5 +560,6 @@ if __name__ == '__main__':
     ui.scr3_2.clicked.connect(Main.scrc)
     ui.scr4_2.clicked.connect(Main.scrd)
     ui.scr5_2.clicked.connect(Main.scre)
-
+    ui.mkdir_name.clicked.connect(Main.mkdir_name)
+    ui.clear_dirtxt.clicked.connect(Main.clear_dir_text)
     sys.exit(app.exec_())
