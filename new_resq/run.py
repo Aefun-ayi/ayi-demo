@@ -98,6 +98,7 @@ class Main():
                 msg_source_info = Remove.remove_punctuation_and_replace(tttad[5])
                 ui.ttt_msg_source.setText(msg_source_info)
 
+
     def tta_ad(self):
         appid = ui.app_id.text()
         out_pack = ui.out_pack_info.text()
