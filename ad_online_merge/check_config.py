@@ -510,7 +510,7 @@ class Main():
         prid = info_list[3]
         de_channl = info_list[4]
         packageinfo = info_list[7] + info_list[8] + info_list[9]
-        want = info_list[10]
+        want = info_list[-2]
         now = datetime.datetime.now()
         date = now.strftime('%m')
         pro_date = now.strftime('%m%d-%H-%M')
