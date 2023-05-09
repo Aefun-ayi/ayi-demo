@@ -77,6 +77,7 @@ class Ui_Form(object):
         self.verticalLayout_13.addWidget(self.label_3)
         self.fail_cfg = QtWidgets.QTextBrowser(self.online)
         self.fail_cfg.setStyleSheet("font: 14pt \"幼圆\";")
+        self.fail_cfg.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAsNeeded)
         self.fail_cfg.setObjectName("fail_cfg")
         self.verticalLayout_13.addWidget(self.fail_cfg)
         self.horizontalLayout_9.addLayout(self.verticalLayout_13)
@@ -532,7 +533,7 @@ class Ui_Form(object):
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'幼圆\'; font-size:14pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
         self.label_4.setText(_translate("Form", "通过"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.online), _translate("Form", "查询在线配置"))
         self.label_2.setText(_translate("Form", "项目id："))
@@ -544,6 +545,11 @@ class Ui_Form(object):
         self.label_9.setText(_translate("Form", "1066B_B分组："))
         self.label_10.setText(_translate("Form", "1066C_C分组："))
         self.label_11.setText(_translate("Form", "已配置的开屏广告位："))
+        self.splash_cfg_text.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'微软雅黑\'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
         self.label_12.setText(_translate("Form", "已配置的信息流广告位："))
         self.label_13.setText(_translate("Form", "已配置的插屏广告位："))
         self.label_14.setText(_translate("Form", "已配置的视频广告位："))

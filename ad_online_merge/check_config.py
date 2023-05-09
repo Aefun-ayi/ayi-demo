@@ -2,6 +2,8 @@ import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow
 from PyQt5.QtCore import QCoreApplication
 from PyQt5 import QtCore
+from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QTextCursor
 from PyQt5.QtGui import *
 import os
 import check_cfg_frame
@@ -113,7 +115,10 @@ class Main():
                             remove_douhao = re.sub(r',', '\n', str_c_group[1:-1])
                             remove_danyinhao = remove_douhao.replace("'", '')
                             keep_otc_c_group = remove_danyinhao.replace('"', '')
-                            ui.C_text.setText(keep_otc_c_group)
+                            ui.C_text.setPlainText(keep_otc_c_group)
+                            option = QTextOption()
+                            option.setAlignment(Qt.AlignCenter)
+                            ui.C_text.document().setDefaultTextOption(option)
 
                     if "1066B_B" in str(fm):
                         for ii in range(len(m)):
@@ -122,7 +127,10 @@ class Main():
                             remove_douhao = re.sub(r',', '\n', str_b_group[1:-1])
                             remove_danyinhao = remove_douhao.replace("'", '')
                             keep_otc_b_group = remove_danyinhao.replace('"', '')
-                            ui.B_text.setText(keep_otc_b_group)
+                            ui.B_text.setPlainText(keep_otc_b_group)
+                            option = QTextOption()
+                            option.setAlignment(Qt.AlignCenter)
+                            ui.B_text.document().setDefaultTextOption(option)
 
                     if "1066A_A" in str(fm):
                         for ii in range(len(m)):
@@ -131,7 +139,10 @@ class Main():
                             remove_douhao = re.sub(r',', '\n', str_a_group[1:-1])
                             remove_danyinhao = remove_douhao.replace("'", '')
                             keep_otc_a_group = remove_danyinhao.replace('"', '')
-                            ui.A_text.setText(keep_otc_a_group)
+                            ui.A_text.setPlainText(keep_otc_a_group)
+                            option = QTextOption()
+                            option.setAlignment(Qt.AlignCenter)
+                            ui.A_text.document().setDefaultTextOption(option)
 
                     if "all" in str(fm):
                         for ii in range(len(m)):
@@ -140,7 +151,10 @@ class Main():
                             remove_douhao = re.sub(r',', '\n', str_all_group[1:-1])
                             remove_danyinhao = remove_douhao.replace("'", '')
                             keep_otc_all_group = remove_danyinhao.replace('"', '')
-                            ui.all_text.setText(keep_otc_all_group)
+                            ui.all_text.setPlainText(keep_otc_all_group)
+                            option = QTextOption()
+                            option.setAlignment(Qt.AlignCenter)
+                            ui.all_text.document().setDefaultTextOption(option)
 
                     list_strate = connect["strategys"]  # 获取分组内的策略信息
                     ad_name = connect["adPositions"]  # 获取分组内策略里面的广告位信息
@@ -158,30 +172,40 @@ class Main():
                                     remove_douhao_msg = re.sub(r',', '\n',str(msg_config)[1:-1])  # 去除不必要的标点符号 一并删除以及替换成换行符
                                     remove_danyinhao_msg = remove_douhao_msg.replace("'", '')
                                     keep_otc_msg = remove_danyinhao_msg.replace(' ', '')
-                                    ui.msg_cfg_text.setText(keep_otc_msg)
-                                    # print(keep_otc_msg)
+                                    ui.msg_cfg_text.setPlainText(keep_otc_msg)
+                                    option = QTextOption()
+                                    option.setAlignment(Qt.AlignCenter)
+                                    ui.msg_cfg_text.document().setDefaultTextOption(option)
 
                                 if 'video' in ad_name[index]['strategys']:
                                     video_config.append(ad_name[index]['name'])
-                                    remove_douhao_video = re.sub(r',', '\n',
-                                                                 str(video_config)[1:-1])  # 去除不必要的标点符号 一并删除以及替换成换行符
+                                    remove_douhao_video = re.sub(r',', '\n',str(video_config)[1:-1])  # 去除不必要的标点符号 一并删除以及替换成换行符
                                     remove_danyinhao_video = remove_douhao_video.replace("'", '')
                                     keep_otc_video = remove_danyinhao_video.replace(' ', '')
-                                    ui.video_cfg_text.setText(keep_otc_video)
+                                    ui.video_cfg_text.setPlainText(keep_otc_video)
+                                    option = QTextOption()
+                                    option.setAlignment(Qt.AlignCenter)
+                                    ui.video_cfg_text.document().setDefaultTextOption(option)
+
                                 if 'plaque' in ad_name[index]['strategys']:
                                     plaque_config.append(ad_name[index]['name'])
-                                    remove_douhao_plaque = re.sub(r',', '\n',
-                                                                  str(plaque_config)[1:-1])  # 去除不必要的标点符号 一并删除以及替换成换行符
+                                    remove_douhao_plaque = re.sub(r',', '\n',str(plaque_config)[1:-1])  # 去除不必要的标点符号 一并删除以及替换成换行符
                                     remove_danyinhao_plaque = remove_douhao_plaque.replace("'", '')
                                     keep_otc_plaque = remove_danyinhao_plaque.replace(' ', '')
-                                    ui.plaque_cfg_text.setText(keep_otc_plaque)
+                                    ui.plaque_cfg_text.setPlainText(keep_otc_plaque)
+                                    option = QTextOption()
+                                    option.setAlignment(Qt.AlignCenter)
+                                    ui.plaque_cfg_text.document().setDefaultTextOption(option)
+
                                 if 'splash' in ad_name[index]['strategys']:
                                     splash_config.append(ad_name[index]['name'])
-                                    remove_douhao_splash = re.sub(r',', '\n',
-                                                                  str(splash_config)[1:-1])  # 去除不必要的标点符号 一并删除以及替换成换行符
+                                    remove_douhao_splash = re.sub(r',', '\n',str(splash_config)[1:-1])  # 去除不必要的标点符号 一并删除以及替换成换行符
                                     remove_danyinhao_splash = remove_douhao_splash.replace("'", '')
                                     keep_otc_splash = remove_danyinhao_splash.replace(' ', '')
-                                    ui.splash_cfg_text.setText(keep_otc_splash)
+                                    ui.splash_cfg_text.setPlainText(keep_otc_splash)
+                                    option = QTextOption()
+                                    option.setAlignment(Qt.AlignCenter)
+                                    ui.splash_cfg_text.document().setDefaultTextOption(option)
 
                     msg_sid = []
                     video_sid = []
@@ -197,34 +221,43 @@ class Main():
                                 remove_msg_douhao = re.sub(r',', '\n', str(msg_sid)[1:-1])  # 去除不必要的标点符号 一并删除以及替换成换行符
                                 remove_msg_danyinhao = remove_msg_douhao.replace("'", '')
                                 msg_sources = remove_msg_danyinhao.replace(' ', '')
-                                ui.msg_source_text.setText(msg_sources)
+                                ui.msg_source_text.setPlainText(msg_sources)
+                                option = QTextOption()
+                                option.setAlignment(Qt.AlignCenter)
+                                ui.msg_source_text.document().setDefaultTextOption(option)
 
                             if '_video' in all_source['sids'][ii]:
                                 video_source = all_source['sids'][ii]
                                 video_sid.append(video_source)
-                                remove_video_douhao = re.sub(r',', '\n',
-                                                             str(video_sid)[1:-1])  # 去除不必要的标点符号 一并删除以及替换成换行符
+                                remove_video_douhao = re.sub(r',', '\n',str(video_sid)[1:-1])  # 去除不必要的标点符号 一并删除以及替换成换行符
                                 remove_video_danyinhao = remove_video_douhao.replace("'", '')
                                 video_sources = remove_video_danyinhao.replace(' ', '')
-                                ui.video_source_text.setText(video_sources)
+                                ui.video_source_text.setPlainText(video_sources)
+                                option = QTextOption()
+                                option.setAlignment(Qt.AlignCenter)
+                                ui.video_source_text.document().setDefaultTextOption(option)
 
                             if '_plaque' in all_source['sids'][ii]:
                                 plaque_source = all_source['sids'][ii]
                                 plaque_sid.append(plaque_source)
-                                remove_plaque_douhao = re.sub(r',', '\n',
-                                                              str(plaque_sid)[1:-1])  # 去除不必要的标点符号 一并删除以及替换成换行符
+                                remove_plaque_douhao = re.sub(r',', '\n',str(plaque_sid)[1:-1])  # 去除不必要的标点符号 一并删除以及替换成换行符
                                 remove_plaque_danyinhao = remove_plaque_douhao.replace("'", '')
                                 plaque_sources = remove_plaque_danyinhao.replace(' ', '')
-                                ui.plaque_source_text.setText(plaque_sources)
+                                ui.plaque_source_text.setPlainText(plaque_sources)
+                                option = QTextOption()
+                                option.setAlignment(Qt.AlignCenter)
+                                ui.plaque_source_text.document().setDefaultTextOption(option)
 
                             if '_splash' in all_source['sids'][ii]:
                                 splash_source = all_source['sids'][ii]
                                 splash_sid.append(splash_source)
-                                remove_splash_douhao = re.sub(r',', '\n',
-                                                              str(splash_sid)[1:-1])  # 去除不必要的标点符号 一并删除以及替换成换行符
+                                remove_splash_douhao = re.sub(r',', '\n',str(splash_sid)[1:-1])  # 去除不必要的标点符号 一并删除以及替换成换行符
                                 remove_splash_danyinhao = remove_splash_douhao.replace("'", '')
                                 splash_sources = remove_splash_danyinhao.replace(' ', '')
-                                ui.splash_source_text.setText(splash_sources)
+                                ui.splash_source_text.setPlainText(splash_sources)
+                                option = QTextOption()
+                                option.setAlignment(Qt.AlignCenter)
+                                ui.splash_source_text.document().setDefaultTextOption(option)
 
 
         except:
@@ -308,21 +341,37 @@ class Main():
                 remove_match_douhao = re.sub(r',', '\n', str(match_ad_name)[1:-1])  # 去除不必要的标点符号 一并删除以及替换成换行符
                 remove_match_danyinhao = remove_match_douhao.replace("'", '')
                 match = remove_match_danyinhao.replace(' ', '')
-                ui.match_text.setText(f"-----匹配的广告位-----\n{match}")
+                ui.match_text.setPlainText(f"-----匹配的广告位-----\n{match}")
+                option = QTextOption()
+                option.setAlignment(Qt.AlignCenter)
+                ui.match_text.document().setDefaultTextOption(option)
                 if len(short_ad_name) == 0:
-                    ui.lack_text.setText('无缺少的广告位')
+                    ui.lack_text.setPlainText('无缺少的广告位')
+                    option = QTextOption()
+                    option.setAlignment(Qt.AlignCenter)
+                    ui.lack_text.document().setDefaultTextOption(option)
                 else:
                     remove_lack_douhao = re.sub(r',', '\n', str(short_ad_name)[1:-1])  # 去除不必要的标点符号 一并删除以及替换成换行符
                     remove_lack_danyinhao = remove_lack_douhao.replace("'", '')
                     short = remove_lack_danyinhao.replace(' ', '')
-                    ui.lack_text.setText(f"-----含有缺少的广告位-----\n{short}")
+                    ui.lack_text.setPlainText(f"-----含有缺少的广告位-----\n{short}")
+                    option = QTextOption()
+                    option.setAlignment(Qt.AlignCenter)
+                    ui.lack_text.document().setDefaultTextOption(option)
+
                 if len(tmr_ad_name) == 0:
-                    ui.tmr_text.setText('无冗余的广告位')
+                    ui.tmr_text.setPlainText('无冗余的广告位')
+                    option = QTextOption()
+                    option.setAlignment(Qt.AlignCenter)
+                    ui.tmr_text.document().setDefaultTextOption(option)
                 else:
                     remove_tmr_douhao = re.sub(r',', '\n', str(tmr_ad_name)[1:-1])  # 去除不必要的标点符号 一并删除以及替换成换行符
                     remove_tmr_danyinhao = remove_tmr_douhao.replace("'", '')
                     tmr = remove_tmr_danyinhao.replace(' ', '')
-                    ui.tmr_text.setText(f"-----含有冗余的广告位-----\n{tmr}")
+                    ui.tmr_text.setPlainText(f"-----含有冗余的广告位-----\n{tmr}")
+                    option = QTextOption()
+                    option.setAlignment(Qt.AlignCenter)
+                    ui.tmr_text.document().setDefaultTextOption(option)
 
         except:
             tips = QMessageBox(QMessageBox.Critical, '错误', '程序错误')
