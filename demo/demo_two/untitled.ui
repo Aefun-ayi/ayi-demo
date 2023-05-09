@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1143</width>
-    <height>518</height>
+    <height>723</height>
    </rect>
   </property>
   <property name="maximumSize">
@@ -37,6 +37,9 @@
        <width>16777215</width>
        <height>16777215</height>
       </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(219, 252, 255);</string>
      </property>
      <property name="currentIndex">
       <number>0</number>
@@ -69,7 +72,8 @@
               </size>
              </property>
              <property name="styleSheet">
-              <string notr="true">font: 14pt &quot;华文细黑&quot;;</string>
+              <string notr="true">font: 14pt &quot;华文细黑&quot;;
+background-color: rgb(255, 255, 255);</string>
              </property>
              <property name="text">
               <string/>
@@ -141,8 +145,8 @@ background-color: rgb(170, 170, 0);</string>
            <item>
             <widget class="QLabel" name="label_3">
              <property name="styleSheet">
-              <string notr="true">background-color: rgb(255, 0, 0);
-font: 14pt &quot;微软雅黑&quot;;</string>
+              <string notr="true">font: 14pt &quot;微软雅黑&quot;;
+background-color: rgb(255, 0, 0);</string>
              </property>
              <property name="text">
               <string>失败</string>
@@ -155,7 +159,9 @@ font: 14pt &quot;微软雅黑&quot;;</string>
            <item>
             <widget class="QTextBrowser" name="fail_cfg">
              <property name="styleSheet">
-              <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+              <string notr="true">font: 14pt &quot;幼圆&quot;;
+background-color: rgb(255, 255, 255);
+border-radius: 50px;</string>
              </property>
              <property name="horizontalScrollBarPolicy">
               <enum>Qt::ScrollBarAsNeeded</enum>
@@ -176,8 +182,9 @@ p, li { white-space: pre-wrap; }
            <item>
             <widget class="QLabel" name="label_4">
              <property name="styleSheet">
-              <string notr="true">background-color: rgb(85, 255, 0);
-font: 14pt &quot;微软雅黑&quot;;</string>
+              <string notr="true">font: 14pt &quot;微软雅黑&quot;;
+background-color: rgb(0, 255, 127);
+</string>
              </property>
              <property name="frameShadow">
               <enum>QFrame::Plain</enum>
@@ -193,7 +200,7 @@ font: 14pt &quot;微软雅黑&quot;;</string>
            <item>
             <widget class="QTextBrowser" name="suc_cfg">
              <property name="styleSheet">
-              <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+              <string notr="true">font: 14pt &quot;幼圆&quot;;background-color: rgb(255, 255, 255);border-radius: 50px;</string>
              </property>
             </widget>
            </item>
@@ -229,7 +236,8 @@ font: 14pt &quot;微软雅黑&quot;;</string>
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 12pt &quot;微软雅黑&quot;;</string>
+            <string notr="true">font: 12pt &quot;微软雅黑&quot;;
+background-color: rgb(255, 255, 255);</string>
            </property>
           </widget>
          </item>
@@ -252,7 +260,8 @@ font: 14pt &quot;微软雅黑&quot;;</string>
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 12pt &quot;微软雅黑&quot;;</string>
+            <string notr="true">font: 12pt &quot;微软雅黑&quot;;
+background-color: rgb(255, 255, 255);</string>
            </property>
           </widget>
          </item>
@@ -325,12 +334,17 @@ font: 24pt &quot;幼圆&quot;;</string>
              <property name="text">
               <string>all分组：</string>
              </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
             </widget>
            </item>
            <item>
             <widget class="QTextBrowser" name="all_text">
              <property name="styleSheet">
-              <string notr="true">font: 10pt &quot;微软雅黑&quot;;</string>
+              <string notr="true">font: 10pt &quot;微软雅黑&quot;;
+border-radius: 20px;
+background-color: rgb(255, 255, 255);</string>
              </property>
             </widget>
            </item>
@@ -346,12 +360,17 @@ font: 24pt &quot;幼圆&quot;;</string>
              <property name="text">
               <string>1066A_A分组：</string>
              </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
             </widget>
            </item>
            <item>
             <widget class="QTextBrowser" name="A_text">
              <property name="styleSheet">
-              <string notr="true">font: 10pt &quot;微软雅黑&quot;;</string>
+              <string notr="true">font: 10pt &quot;微软雅黑&quot;;
+border-radius: 20px;
+background-color: rgb(255, 255, 255);</string>
              </property>
             </widget>
            </item>
@@ -367,12 +386,17 @@ font: 24pt &quot;幼圆&quot;;</string>
              <property name="text">
               <string>1066B_B分组：</string>
              </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
             </widget>
            </item>
            <item>
             <widget class="QTextBrowser" name="B_text">
              <property name="styleSheet">
-              <string notr="true">font: 10pt &quot;微软雅黑&quot;;</string>
+              <string notr="true">font: 10pt &quot;微软雅黑&quot;;
+border-radius: 20px;
+background-color: rgb(255, 255, 255);</string>
              </property>
             </widget>
            </item>
@@ -388,12 +412,17 @@ font: 24pt &quot;幼圆&quot;;</string>
              <property name="text">
               <string>1066C_C分组：</string>
              </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
             </widget>
            </item>
            <item>
             <widget class="QTextBrowser" name="C_text">
              <property name="styleSheet">
-              <string notr="true">font: 10pt &quot;微软雅黑&quot;;</string>
+              <string notr="true">font: 10pt &quot;微软雅黑&quot;;
+border-radius: 20px;
+background-color: rgb(255, 255, 255);</string>
              </property>
             </widget>
            </item>
@@ -435,12 +464,17 @@ font: 24pt &quot;幼圆&quot;;</string>
                  <property name="text">
                   <string>已配置的开屏广告位：</string>
                  </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
                 </widget>
                </item>
                <item>
                 <widget class="QTextBrowser" name="splash_cfg_text">
                  <property name="styleSheet">
-                  <string notr="true">font: 12pt &quot;微软雅黑&quot;;</string>
+                  <string notr="true">font: 12pt &quot;微软雅黑&quot;;
+border-radius: 20px;
+background-color: rgb(255, 255, 255);</string>
                  </property>
                  <property name="html">
                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -463,12 +497,17 @@ p, li { white-space: pre-wrap; }
                  <property name="text">
                   <string>已配置的信息流广告位：</string>
                  </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
                 </widget>
                </item>
                <item>
                 <widget class="QTextBrowser" name="msg_cfg_text">
                  <property name="styleSheet">
-                  <string notr="true">font: 12pt &quot;微软雅黑&quot;;</string>
+                  <string notr="true">font: 12pt &quot;微软雅黑&quot;;
+border-radius: 20px;
+background-color: rgb(255, 255, 255);</string>
                  </property>
                 </widget>
                </item>
@@ -484,12 +523,17 @@ p, li { white-space: pre-wrap; }
                  <property name="text">
                   <string>已配置的插屏广告位：</string>
                  </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
                 </widget>
                </item>
                <item>
                 <widget class="QTextBrowser" name="plaque_cfg_text">
                  <property name="styleSheet">
-                  <string notr="true">font: 12pt &quot;微软雅黑&quot;;</string>
+                  <string notr="true">font: 12pt &quot;微软雅黑&quot;;
+border-radius: 20px;
+background-color: rgb(255, 255, 255);</string>
                  </property>
                 </widget>
                </item>
@@ -505,12 +549,17 @@ p, li { white-space: pre-wrap; }
                  <property name="text">
                   <string>已配置的视频广告位：</string>
                  </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
                 </widget>
                </item>
                <item>
                 <widget class="QTextBrowser" name="video_cfg_text">
                  <property name="styleSheet">
-                  <string notr="true">font: 12pt &quot;微软雅黑&quot;;</string>
+                  <string notr="true">font: 12pt &quot;微软雅黑&quot;;
+border-radius: 20px;
+background-color: rgb(255, 255, 255);</string>
                  </property>
                 </widget>
                </item>
@@ -537,12 +586,17 @@ p, li { white-space: pre-wrap; }
                  <property name="text">
                   <string>已配置的开屏广告源：</string>
                  </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
                 </widget>
                </item>
                <item>
                 <widget class="QTextBrowser" name="splash_source_text">
                  <property name="styleSheet">
-                  <string notr="true">font: 12pt &quot;微软雅黑&quot;;</string>
+                  <string notr="true">font: 12pt &quot;微软雅黑&quot;;
+border-radius: 20px;
+background-color: rgb(255, 255, 255);</string>
                  </property>
                 </widget>
                </item>
@@ -558,12 +612,17 @@ p, li { white-space: pre-wrap; }
                  <property name="text">
                   <string>已配置的信息流广告源：</string>
                  </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
                 </widget>
                </item>
                <item>
                 <widget class="QTextBrowser" name="msg_source_text">
                  <property name="styleSheet">
-                  <string notr="true">font: 12pt &quot;微软雅黑&quot;;</string>
+                  <string notr="true">font: 12pt &quot;微软雅黑&quot;;
+border-radius: 20px;
+background-color: rgb(255, 255, 255);</string>
                  </property>
                 </widget>
                </item>
@@ -579,12 +638,17 @@ p, li { white-space: pre-wrap; }
                  <property name="text">
                   <string>已配置的插屏广告源：</string>
                  </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
                 </widget>
                </item>
                <item>
                 <widget class="QTextBrowser" name="plaque_source_text">
                  <property name="styleSheet">
-                  <string notr="true">font: 12pt &quot;微软雅黑&quot;;</string>
+                  <string notr="true">font: 12pt &quot;微软雅黑&quot;;
+border-radius: 20px;
+background-color: rgb(255, 255, 255);</string>
                  </property>
                 </widget>
                </item>
@@ -600,12 +664,17 @@ p, li { white-space: pre-wrap; }
                  <property name="text">
                   <string>已配置的视频广告源：</string>
                  </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
                 </widget>
                </item>
                <item>
                 <widget class="QTextBrowser" name="video_source_text">
                  <property name="styleSheet">
-                  <string notr="true">font: 12pt &quot;微软雅黑&quot;;</string>
+                  <string notr="true">font: 12pt &quot;微软雅黑&quot;;
+border-radius: 20px;
+background-color: rgb(255, 255, 255);</string>
                  </property>
                 </widget>
                </item>
@@ -649,7 +718,8 @@ p, li { white-space: pre-wrap; }
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">font: 12pt &quot;微软雅黑&quot;;</string>
+                <string notr="true">font: 12pt &quot;微软雅黑&quot;;
+background-color: rgb(255, 255, 255);</string>
                </property>
               </widget>
              </item>
@@ -672,7 +742,7 @@ p, li { white-space: pre-wrap; }
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">font: 12pt &quot;微软雅黑&quot;;</string>
+                <string notr="true">font: 12pt &quot;微软雅黑&quot;;background-color: rgb(255, 255, 255);</string>
                </property>
               </widget>
              </item>
@@ -699,7 +769,7 @@ p, li { white-space: pre-wrap; }
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">font: 14pt &quot;微软雅黑&quot;;</string>
+                <string notr="true">font: 14pt &quot;微软雅黑&quot;;background-color: rgb(255, 255, 255);</string>
                </property>
                <property name="text">
                 <string/>
@@ -791,7 +861,9 @@ font: 24pt &quot;幼圆&quot;;</string>
            <item>
             <widget class="QTextBrowser" name="match_text">
              <property name="styleSheet">
-              <string notr="true">font: 12pt &quot;微软雅黑&quot;;</string>
+              <string notr="true">font: 12pt &quot;微软雅黑&quot;;
+border-radius: 20px;
+background-color: rgb(255, 255, 255);</string>
              </property>
             </widget>
            </item>
@@ -815,7 +887,9 @@ font: 24pt &quot;幼圆&quot;;</string>
            <item>
             <widget class="QTextBrowser" name="lack_text">
              <property name="styleSheet">
-              <string notr="true">font: 12pt &quot;微软雅黑&quot;;</string>
+              <string notr="true">font: 12pt &quot;微软雅黑&quot;;
+border-radius: 20px;
+background-color: rgb(255, 255, 255);</string>
              </property>
             </widget>
            </item>
@@ -839,7 +913,9 @@ font: 24pt &quot;幼圆&quot;;</string>
            <item>
             <widget class="QTextBrowser" name="tmr_text">
              <property name="styleSheet">
-              <string notr="true">font: 12pt &quot;微软雅黑&quot;;</string>
+              <string notr="true">font: 12pt &quot;微软雅黑&quot;;
+border-radius: 20px;
+background-color: rgb(255, 255, 255);</string>
              </property>
             </widget>
            </item>
@@ -875,7 +951,7 @@ font: 24pt &quot;幼圆&quot;;</string>
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 14pt &quot;微软雅黑&quot;;</string>
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
            </property>
           </widget>
          </item>
@@ -886,6 +962,9 @@ font: 24pt &quot;幼圆&quot;;</string>
              <width>0</width>
              <height>50</height>
             </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(0, 255, 255);</string>
            </property>
            <property name="text">
             <string>创建目录</string>
@@ -900,6 +979,9 @@ font: 24pt &quot;幼圆&quot;;</string>
           <layout class="QVBoxLayout" name="verticalLayout_6">
            <item>
             <widget class="QLabel" name="img6">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 255, 255);</string>
+             </property>
              <property name="text">
               <string>图片预览区</string>
              </property>
@@ -913,6 +995,9 @@ font: 24pt &quot;幼圆&quot;;</string>
            </item>
            <item>
             <widget class="QPushButton" name="scr1_2">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(0, 255, 255);</string>
+             </property>
              <property name="text">
               <string>截图（1）</string>
              </property>
@@ -924,6 +1009,9 @@ font: 24pt &quot;幼圆&quot;;</string>
           <layout class="QVBoxLayout" name="verticalLayout_7">
            <item>
             <widget class="QLabel" name="img2_2">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 255, 255);</string>
+             </property>
              <property name="text">
               <string>图片预览区</string>
              </property>
@@ -934,6 +1022,9 @@ font: 24pt &quot;幼圆&quot;;</string>
            </item>
            <item>
             <widget class="QPushButton" name="scr2_2">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(0, 255, 255);</string>
+             </property>
              <property name="text">
               <string>截图（2）</string>
              </property>
@@ -945,6 +1036,9 @@ font: 24pt &quot;幼圆&quot;;</string>
           <layout class="QVBoxLayout" name="verticalLayout_8">
            <item>
             <widget class="QLabel" name="img3_2">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 255, 255);</string>
+             </property>
              <property name="text">
               <string>图片预览区</string>
              </property>
@@ -955,6 +1049,9 @@ font: 24pt &quot;幼圆&quot;;</string>
            </item>
            <item>
             <widget class="QPushButton" name="scr3_2">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(0, 255, 255);</string>
+             </property>
              <property name="text">
               <string>截图（3）</string>
              </property>
@@ -966,6 +1063,9 @@ font: 24pt &quot;幼圆&quot;;</string>
           <layout class="QVBoxLayout" name="verticalLayout_9">
            <item>
             <widget class="QLabel" name="img4_2">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 255, 255);</string>
+             </property>
              <property name="text">
               <string>图片预览区</string>
              </property>
@@ -976,6 +1076,9 @@ font: 24pt &quot;幼圆&quot;;</string>
            </item>
            <item>
             <widget class="QPushButton" name="scr4_2">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(0, 255, 255);</string>
+             </property>
              <property name="text">
               <string>截图（4）</string>
              </property>
@@ -987,6 +1090,9 @@ font: 24pt &quot;幼圆&quot;;</string>
           <layout class="QVBoxLayout" name="verticalLayout_10">
            <item>
             <widget class="QLabel" name="img5_2">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 255, 255);</string>
+             </property>
              <property name="text">
               <string>图片预览区</string>
              </property>
@@ -997,6 +1103,9 @@ font: 24pt &quot;幼圆&quot;;</string>
            </item>
            <item>
             <widget class="QPushButton" name="scr5_2">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(0, 255, 255);</string>
+             </property>
              <property name="text">
               <string>截图（5）</string>
              </property>
@@ -1028,7 +1137,14 @@ font: 24pt &quot;幼圆&quot;;</string>
           <number>9</number>
          </property>
          <item>
-          <widget class="QTextEdit" name="mkdir_txt"/>
+          <widget class="QTextEdit" name="mkdir_txt">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="tabChangesFocus">
+            <bool>false</bool>
+           </property>
+          </widget>
          </item>
          <item>
           <widget class="QPushButton" name="mkdir_name">
@@ -1039,7 +1155,7 @@ font: 24pt &quot;幼圆&quot;;</string>
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 26pt &quot;幼圆&quot;;</string>
+            <string notr="true">font: 26pt &quot;幼圆&quot;;background-color: rgb(0, 255, 255);</string>
            </property>
            <property name="text">
             <string>创建目录</string>
@@ -1055,7 +1171,8 @@ font: 24pt &quot;幼圆&quot;;</string>
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 26pt &quot;幼圆&quot;;</string>
+            <string notr="true">font: 26pt &quot;幼圆&quot;;
+background-color: rgb(255, 170, 127);</string>
            </property>
            <property name="text">
             <string>清空文本</string>

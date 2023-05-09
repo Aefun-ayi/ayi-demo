@@ -5,6 +5,8 @@ from PyQt5 import QtCore
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QTextCursor
 from PyQt5.QtGui import *
+# from PyQt5.QtGui import *
+from PyQt5.QtCore import *
 import os
 import check_cfg_frame
 from event_handler import QEventHandler
@@ -43,6 +45,10 @@ class Main():
             keep_otc_pass = remove_danyinhao_pass.replace('"', '')
             ui.suc_cfg.append(f'项目id：{a.pid} \n渠道：{a.cha} \n{keep_otc_pass}\n----------------------------------\n')
             ui.fail_cfg.append(f'项目id：{a.pid} \n渠道：{a.cha} \n{keep_otc_lose}\n----------------------------------\n')
+            option = QTextOption()
+            option.setAlignment(Qt.AlignCenter)
+            ui.suc_cfg.document().setDefaultTextOption(option)
+            ui.fail_cfg.document().setDefaultTextOption(option)
 
     def online_clean_click():
         ui.suc_cfg.clear()
@@ -611,4 +617,8 @@ if __name__ == '__main__':
     ui.scr5_2.clicked.connect(Main.scre)
     ui.mkdir_name.clicked.connect(Main.mkdir_name)
     ui.clear_dirtxt.clicked.connect(Main.clear_dir_text)
+    int_num = QIntValidator()
+    int_num.setRange(1, 99999999)
+    ui.prid.setValidator(int_num)
+    ui.app_chan.setValidator(QRegExpValidator(QRegExp("[a-z]{12}")))
     sys.exit(app.exec_())
