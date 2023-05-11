@@ -17,9 +17,9 @@ class ProgressThread(QThread):
 
     def run(self):
         self.msleep(2)
-        # for p in range(100):
-        #     self.signal.emit()
-        #     self.msleep(100)
+        for p in range(100):
+            self.signal.emit()
+            self.msleep(100)
 class RoundProgress(QWidget):
     m_waterOffset = 0.05
     m_offset = 50

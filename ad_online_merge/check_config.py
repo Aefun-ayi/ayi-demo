@@ -1,22 +1,23 @@
-import datetime
-import uiautomator2 as u2
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget
 from PyQt5.QtCore import QCoreApplication
 from PyQt5 import QtCore
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
-import check_cfg_frame
-from event_handler import QEventHandler
 from PyQt5.QtWidgets import QMessageBox
 from queue import Queue
 from Worker_run import Worker
+import check_cfg_frame
+from event_handler import QEventHandler
 import Remove
 import Ad_Sid
 import Ad_Name
 import Ad_Source
 import Ad_Contrast
 import os
+import Screen_Img
+import Mkdir_name
+import Mk_five_dirname
 
 class MainWindow(QWidget, check_cfg_frame.Ui_Form):
     def __init__(self, parent=None):
@@ -48,6 +49,8 @@ class MainWindow(QWidget, check_cfg_frame.Ui_Form):
         int_num.setRange(1, 99999999)
         self.prid.setValidator(int_num)
         self.app_chan.setValidator(QRegExpValidator(QRegExp("[a-z]{12}")))
+        self.option = QTextOption()
+        self.option.setAlignment(Qt.AlignCenter)
 
     def online_select_click(self):
         path = self.line_apkdir_path.text()
@@ -57,9 +60,11 @@ class MainWindow(QWidget, check_cfg_frame.Ui_Form):
 
     def updateSucCfg(self, text):
         self.suc_cfg.append(text)
+        self.suc_cfg.document().setDefaultTextOption(self.option)
 
     def updateFailCfg(self, text):
         self.fail_cfg.append(text)
+        self.fail_cfg.document().setDefaultTextOption(self.option)
 
     def online_clean_click(self):
         self.suc_cfg.clear()
@@ -88,18 +93,22 @@ class MainWindow(QWidget, check_cfg_frame.Ui_Form):
                     pass
                 else:
                     self.all_text.setText(all_info)
+                    self.all_text.document().setDefaultTextOption(self.option)
                 if len(a_info)<1:
                     pass
                 else:
                     self.A_text.setText(a_info)
+                    self.A_text.document().setDefaultTextOption(self.option)
                 if len(b_info)<1:
                     pass
                 else:
                     self.B_text.setText(b_info)
+                    self.B_text.document().setDefaultTextOption(self.option)
                 if len(c_info)<1:
                     pass
                 else:
                     self.C_text.setText(c_info)
+                    self.C_text.document().setDefaultTextOption(self.option)
                 adname = Ad_Name.Ad_Name_Cfg(appid,pid,chan).ad_name_select()
                 splash_name = Remove.remove_punctuation_and_replace(adname[0])
                 msg_name = Remove.remove_punctuation_and_replace(adname[1])
@@ -109,18 +118,22 @@ class MainWindow(QWidget, check_cfg_frame.Ui_Form):
                     pass
                 else:
                     self.splash_cfg_text.setText(splash_name)
+                    self.splash_cfg_text.document().setDefaultTextOption(self.option)
                 if len(adname[1])<1:
                     pass
                 else:
                     self.msg_cfg_text.setText(msg_name)
+                    self.msg_cfg_text.document().setDefaultTextOption(self.option)
                 if len(adname[2])<1:
                     pass
                 else:
                     self.plaque_cfg_text.setText(plaque_name)
+                    self.plaque_cfg_text.document().setDefaultTextOption(self.option)
                 if len(adname[3])<1:
                     pass
                 else:
                     self.video_cfg_text.setText(video_name)
+                    self.video_cfg_text.document().setDefaultTextOption(self.option)
                 adsid = Ad_Source.Ad_Sids_Cfg(appid, pid, chan).ad_sids_select()
                 splash_sid = Remove.remove_punctuation_and_replace(adsid[0])
                 msg_sid = Remove.remove_punctuation_and_replace(adsid[1])
@@ -130,18 +143,22 @@ class MainWindow(QWidget, check_cfg_frame.Ui_Form):
                     pass
                 else:
                     self.splash_source_text.setText(splash_sid)
+                    self.splash_source_text.document().setDefaultTextOption(self.option)
                 if len(adsid[1])<1:
                     pass
                 else:
                     self.msg_source_text.setText(msg_sid)
+                    self.msg_source_text.document().setDefaultTextOption(self.option)
                 if len(adsid[2])<1:
                     pass
                 else:
                     self.plaque_source_text.setText(plaque_sid)
+                    self.plaque_source_text.document().setDefaultTextOption(self.option)
                 if len(adsid[3])<1:
                     pass
                 else:
                     self.video_source_text.setText(video_sid)
+                    self.video_source_text.document().setDefaultTextOption(self.option)
 
         except Exception as e:
             tips = QMessageBox(QMessageBox.Critical, '错误', f'程序错误:{e}')
@@ -184,14 +201,19 @@ class MainWindow(QWidget, check_cfg_frame.Ui_Form):
                 short = Remove.remove_punctuation_and_replace(adthan[1])
                 tmr = Remove.remove_punctuation_and_replace(adthan[2])
                 self.match_text.setText(f"-----匹配的广告位-----\n{match}")
+                self.match_text.document().setDefaultTextOption(self.option)
                 if len(adthan[1]) < 1:
                     self.lack_text.setText('无缺少的广告位')
+                    self.lack_text.document().setDefaultTextOption(self.option)
                 else:
                     self.lack_text.setText(f"-----含有缺少的广告位-----\n{short}")
+                    self.lack_text.document().setDefaultTextOption(self.option)
                 if len(adthan[2]) < 1:
                     self.tmr_text.setText('无冗余的广告位')
+                    self.tmr_text.document().setDefaultTextOption(self.option)
                 else:
                     self.tmr_text.setText(f"-----含有冗余的广告位-----\n{tmr}")
+                    self.tmr_text.document().setDefaultTextOption(self.option)
         except Exception as e:
             tips = QMessageBox(QMessageBox.Critical, '错误', f'程序错误:{e}')
             tips.exec_()
@@ -202,209 +224,40 @@ class MainWindow(QWidget, check_cfg_frame.Ui_Form):
         self.lack_text.clear()
 
     def linetxt(self):
-        dir_name = self.dir_name_2.text()
-        dir_path = dir_name.replace('	','_')
-        isExists = os.path.exists(fr'D:\keep\五图截图\{dir_path}')
-        # 判断结果
-        if not isExists:
-            # 如果不存在则创建目录
-            # 创建目录操作函数
-            path = os.makedirs(fr'D:\keep\五图截图\{dir_path}')
-            msg_box = QMessageBox(QMessageBox.Information, '提示', fr'D:\keep\五图截图\{dir_path}' + ' 创建成功')
-            msg_box.exec_()
-        else:
-            msg_box = QMessageBox(QMessageBox.Critical, '错误', fr'D:\keep\五图截图\{dir_path}' + ' 目录已存在')
-            msg_box.exec_()
-            # 如果目录存在则不创建，并提示目录已存在
+        Mk_five_dirname.linetxt(self.dir_name_2.text())
 
     def scra(self):
-        try:
-            # 加入try 避免出现连接失败时产生的闪退问题
-            d = u2.connect()
-        except RuntimeError as run:
-            msg_box = QMessageBox(QMessageBox.Critical, '错误', f'报错信息：{run}，手机连接失败，请重新连接手机')
-            msg_box.exec_()
-        dir_name = self.dir_name_2.text()
-        # 判断输入为空处理
-        if dir_name =='':
-            msg_box = QMessageBox(QMessageBox.Critical, '错误', '请输入创建五图文件夹的目录名')
-            msg_box.exec_()
-        else:
-            # 把里面的空格替换成下划线，为了满足创建文件夹的名称限制
-            dir_path = dir_name.replace('	', '_')
-            isExists = os.path.exists(fr'D:\keep\五图截图\{dir_path}')
-            # 进入判断是否存在这个文件夹
-            if isExists:
-                # 时间戳
-                filetime = datetime.datetime.now().strftime('%Y{y}%m{m}%d{d} %H{h}%M{f}%S{s}').format(y='年', m='月', d='日', h='时', f='分', s='秒')
-                # 截图路径
-                path = d.screenshot(fr"D:\keep\五图截图\{dir_path}\{filetime}五图-1.png")
-                # 展示图片时根据label的尺寸调整大小
-                showImage = QPixmap(path).scaled(self.img6.width(), self.img6.height())
-                # 展示图片，达到预览效果
-                self.img6.setPixmap(showImage)
-            else:
-                msg_box = QMessageBox(QMessageBox.Critical, '错误', fr'D:\keep\五图截图\{dir_path}' + ' 目录不存在，请先创建对应目录')
-                msg_box.exec_()
-
+        path = Screen_Img.scr(self.dir_name_2.text())
+        showImage = QPixmap(path).scaled(self.img6.width(), self.img6.height())
+        # 展示图片，达到预览效果
+        self.img6.setPixmap(showImage)
 
     def scrb(self):
-        try:
-            # 加入try 避免出现连接失败时产生的闪退问题
-            d = u2.connect()
-        except RuntimeError as run:
-            msg_box = QMessageBox(QMessageBox.Critical, '错误', f'报错信息：{run}，手机连接失败，请重新连接手机')
-            msg_box.exec_()
-        dir_name = self.dir_name_2.text()
-        # 判断输入为空处理
-        if dir_name =='':
-            msg_box = QMessageBox(QMessageBox.Critical, '错误', '请输入创建五图文件夹的目录名')
-            msg_box.exec_()
-        else:
-            # 把里面的空格替换成下划线，为了满足创建文件夹的名称限制
-            dir_path = dir_name.replace('	', '_')
-            isExists = os.path.exists(fr'D:\keep\五图截图\{dir_path}')
-            # 进入判断是否存在这个文件夹
-            if isExists:
-                # 时间戳
-                filetime = datetime.datetime.now().strftime('%Y{y}%m{m}%d{d} %H{h}%M{f}%S{s}').format(y='年', m='月', d='日', h='时', f='分', s='秒')
-                # 截图路径
-                path = d.screenshot(fr"D:\keep\五图截图\{dir_path}\{filetime}五图-2.png")
-                # 展示图片时根据label的尺寸调整大小
-                showImage = QPixmap(path).scaled(self.img2_2.width(), self.img2_2.height())
-                # 展示图片，达到预览效果
-                self.img2_2.setPixmap(showImage)
-            else:
-                msg_box = QMessageBox(QMessageBox.Critical, '错误', fr'D:\keep\五图截图\{dir_path}' + ' 目录不存在，请先创建对应目录')
-                msg_box.exec_()
-
+        path = Screen_Img.scr(self.dir_name_2.text())
+        showImage = QPixmap(path).scaled(self.img2_2.width(), self.img2_2.height())
+        # 展示图片，达到预览效果
+        self.img2_2.setPixmap(showImage)
 
     def scrc(self):
-        try:
-            # 加入try 避免出现连接失败时产生的闪退问题
-            d = u2.connect()
-        except RuntimeError as run:
-            msg_box = QMessageBox(QMessageBox.Critical, '错误', f'报错信息：{run}，手机连接失败，请重新连接手机')
-            msg_box.exec_()
-        dir_name = self.dir_name_2.text()
-        # 判断输入为空处理
-        if dir_name =='':
-            msg_box = QMessageBox(QMessageBox.Critical, '错误', '请输入创建五图文件夹的目录名')
-            msg_box.exec_()
-        else:
-            # 把里面的空格替换成下划线，为了满足创建文件夹的名称限制
-            dir_path = dir_name.replace('	', '_')
-            isExists = os.path.exists(fr'D:\keep\五图截图\{dir_path}')
-            # 进入判断是否存在这个文件夹
-            if isExists:
-                # 时间戳
-                filetime = datetime.datetime.now().strftime('%Y{y}%m{m}%d{d} %H{h}%M{f}%S{s}').format(y='年', m='月', d='日', h='时', f='分', s='秒')
-                # 截图路径
-                path = d.screenshot(fr"D:\keep\五图截图\{dir_path}\{filetime}五图-3.png")
-                # 展示图片时根据label的尺寸调整大小
-                showImage = QPixmap(path).scaled(self.img3_2.width(), self.img3_2.height())
-                # 展示图片，达到预览效果
-                self.img3_2.setPixmap(showImage)
-            else:
-                msg_box = QMessageBox(QMessageBox.Critical, '错误', fr'D:\keep\五图截图\{dir_path}' + ' 目录不存在，请先创建对应目录')
-                msg_box.exec_()
-
+        path = Screen_Img.scr(self.dir_name_2.text())
+        showImage = QPixmap(path).scaled(self.img3_2.width(), self.img3_2.height())
+        # 展示图片，达到预览效果
+        self.img3_2.setPixmap(showImage)
 
     def scrd(self):
-        try:
-            # 加入try 避免出现连接失败时产生的闪退问题
-            d = u2.connect()
-        except RuntimeError as run:
-            msg_box = QMessageBox(QMessageBox.Critical, '错误', f'报错信息：{run}，手机连接失败，请重新连接手机')
-            msg_box.exec_()
-        dir_name = self.dir_name_2.text()
-        # 判断输入为空处理
-        if dir_name =='':
-            msg_box = QMessageBox(QMessageBox.Critical, '错误', '请输入创建五图文件夹的目录名')
-            msg_box.exec_()
-        else:
-            # 把里面的空格替换成下划线，为了满足创建文件夹的名称限制
-            dir_path = dir_name.replace('	', '_')
-            isExists = os.path.exists(fr'D:\keep\五图截图\{dir_path}')
-            # 进入判断是否存在这个文件夹
-            if isExists:
-                # 时间戳
-                filetime = datetime.datetime.now().strftime('%Y{y}%m{m}%d{d} %H{h}%M{f}%S{s}').format(y='年', m='月', d='日', h='时', f='分', s='秒')
-                # 截图路径
-                path = d.screenshot(fr"D:\keep\五图截图\{dir_path}\{filetime}五图-4.png")
-                # 展示图片时根据label的尺寸调整大小
-                showImage = QPixmap(path).scaled(self.img4_2.width(), self.img4_2.height())
-                # 展示图片，达到预览效果
-                self.img4_2.setPixmap(showImage)
-            else:
-                msg_box = QMessageBox(QMessageBox.Critical, '错误', fr'D:\keep\五图截图\{dir_path}' + ' 目录不存在，请先创建对应目录')
-                msg_box.exec_()
-
+        path = Screen_Img.scr(self.dir_name_2.text())
+        showImage = QPixmap(path).scaled(self.img4_2.width(), self.img4_2.height())
+        # 展示图片，达到预览效果
+        self.img4_2.setPixmap(showImage)
 
     def scre(self):
-        try:
-            # 加入try 避免出现连接失败时产生的闪退问题
-            d = u2.connect()
-        except RuntimeError as run:
-            msg_box = QMessageBox(QMessageBox.Critical, '错误', f'报错信息：{run}，手机连接失败，请重新连接手机')
-            msg_box.exec_()
-        dir_name = self.dir_name_2.text()
-        # 判断输入为空处理
-        if dir_name =='':
-            msg_box = QMessageBox(QMessageBox.Critical, '错误', '请输入创建五图文件夹的目录名')
-            msg_box.exec_()
-        else:
-            # 把里面的空格替换成下划线，为了满足创建文件夹的名称限制
-            dir_path = dir_name.replace('	', '_')
-            isExists = os.path.exists(fr'D:\keep\五图截图\{dir_path}')
-            # 进入判断是否存在这个文件夹
-            if isExists:
-                # 时间戳
-                filetime = datetime.datetime.now().strftime('%Y{y}%m{m}%d{d} %H{h}%M{f}%S{s}').format(y='年', m='月', d='日', h='时', f='分', s='秒')
-                # 截图路径
-                path = d.screenshot(fr"D:\keep\五图截图\{dir_path}\{filetime}五图-5.png")
-                # 展示图片时根据label的尺寸调整大小
-                showImage = QPixmap(path).scaled(self.img5_2.width(), self.img5_2.height())
-                # 展示图片，达到预览效果
-                self.img5_2.setPixmap(showImage)
-            else:
-                msg_box = QMessageBox(QMessageBox.Critical, '错误', fr'D:\keep\五图截图\{dir_path}' + ' 目录不存在，请先创建对应目录')
-                msg_box.exec_()
-
+        path = Screen_Img.scr(self.dir_name_2.text())
+        showImage = QPixmap(path).scaled(self.img5_2.width(), self.img5_2.height())
+         # 展示图片，达到预览效果
+        self.img5_2.setPixmap(showImage)
 
     def mk_dir_name(self):
-        a = self.mkdir_txt.toPlainText()
-        info_list = a.split('\n')
-        project_name = info_list[1]
-        chan = info_list[2]
-        prid = info_list[3]
-        de_channl = info_list[4]
-        packageinfo = info_list[7] + info_list[8] + info_list[9]
-        want = info_list[-2]
-        now = datetime.datetime.now()
-        date = now.strftime('%m')
-        pro_date = now.strftime('%m%d-%H-%M')
-        isExists = os.path.exists(fr'D:\keep\公用-储存安装包\{date}_moon')
-        # 进入判断是否存在这个文件夹
-        if not isExists:
-            os.mkdir(fr'D:\keep\公用-储存安装包\{date}_moon')
-            msg_box = QMessageBox(QMessageBox.Information, '提示', fr'D:\keep\公用-储存安装包\{date}_moon' + ' 创建成功')
-            msg_box.exec_()
-            os.mkdir(fr'D:\keep\公用-储存安装包\{date}_moon\{pro_date}{project_name}')
-            os.mkdir(fr'D:\keep\公用-储存安装包\{date}_moon\{pro_date}{project_name}\{prid}')
-            want_file = fr'D:\keep\公用-储存安装包\{date}_moon\{pro_date}{project_name}\{prid}\{chan}' + '.txt'
-            file = open(want_file, 'w')
-            file.write('投放渠道：' + str(de_channl) + '\n出包需求：' + str(want) + '\n打包参数：' + str(packageinfo))  # 写入出包需求
-            mmm_box = QMessageBox(QMessageBox.Information, '提示', fr'项目id：{prid}  产品名称{project_name}  产品需求：{want} 创建成功')
-            mmm_box.exec_()
-        else:
-            os.mkdir(fr'D:\keep\公用-储存安装包\{date}_moon\{pro_date}{project_name}')
-            os.mkdir(fr'D:\keep\公用-储存安装包\{date}_moon\{pro_date}{project_name}\{prid}')
-            want_file = fr'D:\keep\公用-储存安装包\{date}_moon\{pro_date}{project_name}\{prid}\{chan}'+ '.txt'
-            file = open(want_file, 'w')
-            file.write('投放渠道：' + str(de_channl) + '\n出包需求：' + str(want) + '\n打包参数：' + str(packageinfo))  # 写入出包需求
-            mmm_box = QMessageBox(QMessageBox.Information, '提示', fr'项目id：{prid}  产品名称{project_name}  产品需求：{want} 创建成功')
-            mmm_box.exec_()
+        Mkdir_name.mk_dir_name(self.mkdir_txt.toPlainText())
 
     def clear_dir_text(self):
         self.mkdir_txt.clear()
