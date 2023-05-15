@@ -18,6 +18,7 @@ import os
 import Screen_Img
 import Mkdir_name
 import Mk_five_dirname
+from Worker_auto import Worker_Auto
 
 class MainWindow(QWidget, check_cfg_frame.Ui_Form):
     def __init__(self, parent=None):
@@ -25,12 +26,16 @@ class MainWindow(QWidget, check_cfg_frame.Ui_Form):
         super(MainWindow, self).__init__(parent)
         self.setupUi(self)
         self.queue = Queue()
+        self.auto_queue = Queue()
         # 创建一个工作线程，并将其信号连接到updateLabel方法
         self.thread = Worker(self.queue)
         self.thread.sig1.connect(self.updateSucCfg)
         self.thread.sig2.connect(self.updateFailCfg)
+        self.threar1 = Worker_Auto(self.queue)
+        self.threar1.log.connect(self.updateAutoCfg)
         #连接按钮点击信号到buttonClicked方法
         line_apk_path = self.line_apkdir_path.installEventFilter(QEventHandler(self.line_apkdir_path))
+        auto_path = self.auto_path.installEventFilter(QEventHandler(self.auto_path))
         self.select_online.clicked.connect(self.online_select_click)
         self.clean_online_text.clicked.connect(self.online_clean_click)
         self.select_ad.clicked.connect(self.ad_select_click)
@@ -51,6 +56,15 @@ class MainWindow(QWidget, check_cfg_frame.Ui_Form):
         self.app_chan.setValidator(QRegExpValidator(QRegExp("[a-z]{12}")))
         self.option = QTextOption()
         self.option.setAlignment(Qt.AlignCenter)
+        self.acition_auto.clicked.connect(self.auto_driver)
+
+    def updateAutoCfg(self, text):
+        self.auto_info.append(text)
+
+    def auto_driver(self):
+        auto_path = self.auto_path.text()
+        self.auto_queue.put(auto_path)
+        self.threar1.start()
 
     def online_select_click(self):
         path = self.line_apkdir_path.text()

@@ -20,8 +20,8 @@
    <string>查询配置</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>C:/Users/Administrator/ad_online_merge/搜索_爱给网_aigei_com.png</normaloff>C:/Users/Administrator/ad_online_merge/搜索_爱给网_aigei_com.png</iconset>
+   <iconset resource="images.qrc">
+    <normaloff>:/title.png</normaloff>:/title.png</iconset>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_16">
    <item>
@@ -98,13 +98,13 @@ QPushButton:pressed{background-color:rgb(167, 167, 167);};</string>
             <string>查询</string>
            </property>
            <property name="icon">
-            <iconset>
-             <normaloff>C:/Users/AeFun_script/test-demo/sscom.ico</normaloff>C:/Users/AeFun_script/test-demo/sscom.ico</iconset>
+            <iconset resource="images.qrc">
+             <normaloff>:/sscom.ico</normaloff>:/sscom.ico</iconset>
            </property>
            <property name="iconSize">
             <size>
-             <width>32</width>
-             <height>32</height>
+             <width>24</width>
+             <height>24</height>
             </size>
            </property>
           </widget>
@@ -125,13 +125,13 @@ QPushButton:pressed{background-color:rgb(167, 167, 167);};</string>
             <string>清空</string>
            </property>
            <property name="icon">
-            <iconset>
-             <normaloff>C:/Users/ico储存/厕洗卫设备-垃圾桶-1_爱给网_aigei_com.png</normaloff>C:/Users/ico储存/厕洗卫设备-垃圾桶-1_爱给网_aigei_com.png</iconset>
+            <iconset resource="images.qrc">
+             <normaloff>:/lajitong.png</normaloff>:/lajitong.png</iconset>
            </property>
            <property name="iconSize">
             <size>
-             <width>32</width>
-             <height>32</height>
+             <width>24</width>
+             <height>24</height>
             </size>
            </property>
           </widget>
@@ -281,8 +281,8 @@ QPushButton:pressed{background-color:rgb(167, 167, 167);};</string>
             <string>查询</string>
            </property>
            <property name="icon">
-            <iconset>
-             <normaloff>C:/Users/AeFun_script/test-demo/sscom.ico</normaloff>C:/Users/AeFun_script/test-demo/sscom.ico</iconset>
+            <iconset resource="images.qrc">
+             <normaloff>:/sscom.ico</normaloff>:/sscom.ico</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -308,8 +308,8 @@ QPushButton:pressed{background-color:rgb(167, 167, 167);};</string>
             <string>清空</string>
            </property>
            <property name="icon">
-            <iconset>
-             <normaloff>C:/Users/ico储存/厕洗卫设备-垃圾桶-1_爱给网_aigei_com.png</normaloff>C:/Users/ico储存/厕洗卫设备-垃圾桶-1_爱给网_aigei_com.png</iconset>
+            <iconset resource="images.qrc">
+             <normaloff>:/lajitong.png</normaloff>:/lajitong.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -797,8 +797,8 @@ QPushButton:pressed{background-color:rgb(167, 167, 167);};</string>
               <string>查询</string>
              </property>
              <property name="icon">
-              <iconset>
-               <normaloff>C:/Users/AeFun_script/test-demo/sscom.ico</normaloff>C:/Users/AeFun_script/test-demo/sscom.ico</iconset>
+              <iconset resource="images.qrc">
+               <normaloff>:/sscom.ico</normaloff>:/sscom.ico</iconset>
              </property>
              <property name="iconSize">
               <size>
@@ -824,8 +824,8 @@ QPushButton:pressed{background-color:rgb(167, 167, 167);};</string>
               <string>清空</string>
              </property>
              <property name="icon">
-              <iconset>
-               <normaloff>C:/Users/ico储存/厕洗卫设备-垃圾桶-1_爱给网_aigei_com.png</normaloff>C:/Users/ico储存/厕洗卫设备-垃圾桶-1_爱给网_aigei_com.png</iconset>
+              <iconset resource="images.qrc">
+               <normaloff>:/lajitong.png</normaloff>:/lajitong.png</iconset>
              </property>
              <property name="iconSize">
               <size>
@@ -1679,6 +1679,8 @@ QPushButton:pressed{background-color:rgb(167, 167, 167);};
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -1,5 +1,4 @@
 from PyQt5.QtCore import QThread, pyqtSignal, QMutex
-from queue import Queue
 import path_list
 from apk_object import apk
 from Pattern_Test import Pattern_API
