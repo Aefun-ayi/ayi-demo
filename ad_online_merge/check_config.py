@@ -33,7 +33,7 @@ class MainWindow(QWidget, check_cfg_frame.Ui_Form):
         self.thread.sig2.connect(self.updateFailCfg)
         self.threar1 = Worker_Auto(self.queue)
         self.threar1.log.connect(self.updateAutoCfg)
-        #连接按钮点击信号到buttonClicked方法1
+        #连接按钮点击信号到buttonClicked方法
         line_apk_path = self.line_apkdir_path.installEventFilter(QEventHandler(self.line_apkdir_path))
         auto_path = self.auto_path.installEventFilter(QEventHandler(self.auto_path))
         self.select_online.clicked.connect(self.online_select_click)
