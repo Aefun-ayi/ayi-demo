@@ -30,3 +30,11 @@ def get_activity_name(apk_path):
     activity_name = output[activity_start:activity_end]
 
     return activity_name
+
+def get_apk_app_name(apk_path):
+    command = ["aapt", "dump", "badging", apk_path]
+    output = subprocess.check_output(command).decode("utf-8")
+    start = output.find("application-label:") + 19
+    end = output.find("'", start)
+    app_name = output[start:end]
+    return app_name

@@ -7,23 +7,13 @@
     <x>0</x>
     <y>0</y>
     <width>1143</width>
-    <height>723</height>
+    <height>785</height>
    </rect>
   </property>
-  <property name="maximumSize">
-   <size>
-    <width>16777215</width>
-    <height>16777215</height>
-   </size>
-  </property>
   <property name="windowTitle">
-   <string>查询配置</string>
+   <string>Form</string>
   </property>
-  <property name="windowIcon">
-   <iconset resource="images.qrc">
-    <normaloff>:/title.png</normaloff>:/title.png</iconset>
-  </property>
-  <layout class="QVBoxLayout" name="verticalLayout_16">
+  <layout class="QHBoxLayout" name="horizontalLayout_20">
    <item>
     <widget class="QTabWidget" name="tabWidget">
      <property name="minimumSize">
@@ -72,9 +62,7 @@
               </size>
              </property>
              <property name="styleSheet">
-              <string notr="true">font: 14pt &quot;华文细黑&quot;;
-color: rgb(170, 255, 127);
-border-radius: 20px;</string>
+              <string notr="true">font: 14pt &quot;华文细黑&quot;;</string>
              </property>
              <property name="text">
               <string/>
@@ -92,14 +80,14 @@ border-radius: 20px;</string>
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">QPushButton{border-radius:10px;font: 20pt &quot;幼圆&quot;;background-color: rgb(0, 0, 91)}
+            <string notr="true">QPushButton{border-radius:10px;font: 20pt &quot;幼圆&quot;;background-color: rgb(0, 0, 84)}
 QPushButton:pressed{background-color:rgb(167, 167, 167);};</string>
            </property>
            <property name="text">
             <string>查询</string>
            </property>
            <property name="icon">
-            <iconset resource="images.qrc">
+            <iconset resource="../../ad_online_merge/images.qrc">
              <normaloff>:/sscom.ico</normaloff>:/sscom.ico</iconset>
            </property>
            <property name="iconSize">
@@ -119,14 +107,14 @@ QPushButton:pressed{background-color:rgb(167, 167, 167);};</string>
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">QPushButton{border-radius:10px;font: 20pt &quot;幼圆&quot;;background-color: rgb(76, 76, 0)}
+            <string notr="true">QPushButton{border-radius:10px;font: 20pt &quot;幼圆&quot;;background-color: rgb(170, 170, 0)}
 QPushButton:pressed{background-color:rgb(167, 167, 167);};</string>
            </property>
            <property name="text">
             <string>清空</string>
            </property>
            <property name="icon">
-            <iconset resource="images.qrc">
+            <iconset resource="../../ad_online_merge/images.qrc">
              <normaloff>:/lajitong.png</normaloff>:/lajitong.png</iconset>
            </property>
            <property name="iconSize">
@@ -147,7 +135,7 @@ QPushButton:pressed{background-color:rgb(167, 167, 167);};</string>
             <widget class="QLabel" name="label_3">
              <property name="styleSheet">
               <string notr="true">font: 14pt &quot;微软雅黑&quot;;
-background-color: rgb(255, 0, 0);</string>
+background-color: rgb(99, 0, 0);</string>
              </property>
              <property name="text">
               <string>失败</string>
@@ -161,7 +149,6 @@ background-color: rgb(255, 0, 0);</string>
             <widget class="QTextBrowser" name="fail_cfg">
              <property name="styleSheet">
               <string notr="true">font: 14pt &quot;幼圆&quot;;
-
 border-radius: 50px;</string>
              </property>
              <property name="horizontalScrollBarPolicy">
@@ -184,7 +171,7 @@ p, li { white-space: pre-wrap; }
             <widget class="QLabel" name="label_4">
              <property name="styleSheet">
               <string notr="true">font: 14pt &quot;微软雅黑&quot;;
-background-color: rgb(0, 255, 127);
+background-color:rgb(0, 48, 0)
 </string>
              </property>
              <property name="frameShadow">
@@ -201,7 +188,7 @@ background-color: rgb(0, 255, 127);
            <item>
             <widget class="QTextBrowser" name="suc_cfg">
              <property name="styleSheet">
-              <string notr="true">font: 14pt &quot;幼圆&quot;;;border-radius: 50px;</string>
+              <string notr="true">font: 14pt &quot;幼圆&quot;;border-radius: 50px;</string>
              </property>
             </widget>
            </item>
@@ -238,8 +225,7 @@ background-color: rgb(0, 255, 127);
            </property>
            <property name="styleSheet">
             <string notr="true">font: 12pt &quot;微软雅黑&quot;;
-color: rgb(170, 255, 127);
-border-radius: 20px;</string>
+background-color: rgb(255, 255, 255);</string>
            </property>
           </widget>
          </item>
@@ -263,8 +249,7 @@ border-radius: 20px;</string>
            </property>
            <property name="styleSheet">
             <string notr="true">font: 12pt &quot;微软雅黑&quot;;
-color: rgb(170, 255, 127);
-border-radius: 20px;</string>
+background-color: rgb(255, 255, 255);</string>
            </property>
           </widget>
          </item>
@@ -277,14 +262,14 @@ border-radius: 20px;</string>
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">QPushButton{border-radius:10px;font: 24pt &quot;幼圆&quot;;background-color: rgb(0, 0, 91)}
+            <string notr="true">QPushButton{border-radius:10px;font: 24pt &quot;幼圆&quot;;background-color: rgb(170, 255, 255)}
 QPushButton:pressed{background-color:rgb(167, 167, 167);};</string>
            </property>
            <property name="text">
             <string>查询</string>
            </property>
            <property name="icon">
-            <iconset resource="images.qrc">
+            <iconset resource="../../ad_online_merge/images.qrc">
              <normaloff>:/sscom.ico</normaloff>:/sscom.ico</iconset>
            </property>
            <property name="iconSize">
@@ -304,14 +289,14 @@ QPushButton:pressed{background-color:rgb(167, 167, 167);};</string>
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">QPushButton{border-radius:10px;font: 24pt &quot;幼圆&quot;;background-color: rgb(76, 76, 0);color: rgb(255, 255, 127);}
+            <string notr="true">QPushButton{border-radius:10px;font: 24pt &quot;幼圆&quot;;background-color: rgb(140, 0, 0);color: rgb(255, 255, 127);}
 QPushButton:pressed{background-color:rgb(167, 167, 167);};</string>
            </property>
            <property name="text">
             <string>清空</string>
            </property>
            <property name="icon">
-            <iconset resource="images.qrc">
+            <iconset resource="../../ad_online_merge/images.qrc">
              <normaloff>:/lajitong.png</normaloff>:/lajitong.png</iconset>
            </property>
            <property name="iconSize">
@@ -346,8 +331,7 @@ QPushButton:pressed{background-color:rgb(167, 167, 167);};</string>
              <property name="styleSheet">
               <string notr="true">font: 10pt &quot;微软雅黑&quot;;
 border-radius: 20px;
-
-</string>
+background-color: rgb(255, 255, 255);</string>
              </property>
             </widget>
            </item>
@@ -373,7 +357,7 @@ border-radius: 20px;
              <property name="styleSheet">
               <string notr="true">font: 10pt &quot;微软雅黑&quot;;
 border-radius: 20px;
-</string>
+background-color: rgb(255, 255, 255);</string>
              </property>
             </widget>
            </item>
@@ -399,7 +383,7 @@ border-radius: 20px;
              <property name="styleSheet">
               <string notr="true">font: 10pt &quot;微软雅黑&quot;;
 border-radius: 20px;
-</string>
+background-color: rgb(255, 255, 255);</string>
              </property>
             </widget>
            </item>
@@ -425,7 +409,7 @@ border-radius: 20px;
              <property name="styleSheet">
               <string notr="true">font: 10pt &quot;微软雅黑&quot;;
 border-radius: 20px;
-</string>
+background-color: rgb(255, 255, 255);</string>
              </property>
             </widget>
            </item>
@@ -477,7 +461,7 @@ border-radius: 20px;
                  <property name="styleSheet">
                   <string notr="true">font: 12pt &quot;微软雅黑&quot;;
 border-radius: 20px;
-</string>
+background-color: rgb(255, 255, 255);</string>
                  </property>
                  <property name="html">
                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -510,7 +494,7 @@ p, li { white-space: pre-wrap; }
                  <property name="styleSheet">
                   <string notr="true">font: 12pt &quot;微软雅黑&quot;;
 border-radius: 20px;
-</string>
+background-color: rgb(255, 255, 255);</string>
                  </property>
                 </widget>
                </item>
@@ -536,7 +520,7 @@ border-radius: 20px;
                  <property name="styleSheet">
                   <string notr="true">font: 12pt &quot;微软雅黑&quot;;
 border-radius: 20px;
-</string>
+background-color: rgb(255, 255, 255);</string>
                  </property>
                 </widget>
                </item>
@@ -562,7 +546,7 @@ border-radius: 20px;
                  <property name="styleSheet">
                   <string notr="true">font: 12pt &quot;微软雅黑&quot;;
 border-radius: 20px;
-</string>
+background-color: rgb(255, 255, 255);</string>
                  </property>
                 </widget>
                </item>
@@ -599,7 +583,7 @@ border-radius: 20px;
                  <property name="styleSheet">
                   <string notr="true">font: 12pt &quot;微软雅黑&quot;;
 border-radius: 20px;
-</string>
+background-color: rgb(255, 255, 255);</string>
                  </property>
                 </widget>
                </item>
@@ -625,7 +609,7 @@ border-radius: 20px;
                  <property name="styleSheet">
                   <string notr="true">font: 12pt &quot;微软雅黑&quot;;
 border-radius: 20px;
-</string>
+background-color: rgb(255, 255, 255);</string>
                  </property>
                 </widget>
                </item>
@@ -651,7 +635,7 @@ border-radius: 20px;
                  <property name="styleSheet">
                   <string notr="true">font: 12pt &quot;微软雅黑&quot;;
 border-radius: 20px;
-</string>
+background-color: rgb(255, 255, 255);</string>
                  </property>
                 </widget>
                </item>
@@ -677,7 +661,7 @@ border-radius: 20px;
                  <property name="styleSheet">
                   <string notr="true">font: 12pt &quot;微软雅黑&quot;;
 border-radius: 20px;
-</string>
+background-color: rgb(255, 255, 255);</string>
                  </property>
                 </widget>
                </item>
@@ -722,9 +706,7 @@ border-radius: 20px;
                </property>
                <property name="styleSheet">
                 <string notr="true">font: 12pt &quot;微软雅黑&quot;;
-color: rgb(170, 255, 127);
-border-radius: 20px;
-</string>
+background-color: rgb(255, 255, 255);</string>
                </property>
               </widget>
              </item>
@@ -747,9 +729,7 @@ border-radius: 20px;
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">font: 12pt &quot;微软雅黑&quot;;
-color: rgb(170, 255, 127);
-border-radius: 20px;</string>
+                <string notr="true">font: 12pt &quot;微软雅黑&quot;;background-color: rgb(255, 255, 255);</string>
                </property>
               </widget>
              </item>
@@ -776,9 +756,7 @@ border-radius: 20px;</string>
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">font: 14pt &quot;微软雅黑&quot;;
-color: rgb(170, 255, 127);
-border-radius: 20px;</string>
+                <string notr="true">font: 14pt &quot;微软雅黑&quot;;background-color: rgb(255, 255, 255);</string>
                </property>
                <property name="text">
                 <string/>
@@ -800,14 +778,14 @@ border-radius: 20px;</string>
               </size>
              </property>
              <property name="styleSheet">
-              <string notr="true">QPushButton{border-radius:10px;font: 24pt &quot;幼圆&quot;;background-color: rgb(0, 0, 91)}
+              <string notr="true">QPushButton{border-radius:10px;font: 24pt &quot;幼圆&quot;;background-color: rgb(170, 255, 255)}
 QPushButton:pressed{background-color:rgb(167, 167, 167);};</string>
              </property>
              <property name="text">
               <string>查询</string>
              </property>
              <property name="icon">
-              <iconset resource="images.qrc">
+              <iconset resource="../../ad_online_merge/images.qrc">
                <normaloff>:/sscom.ico</normaloff>:/sscom.ico</iconset>
              </property>
              <property name="iconSize">
@@ -827,14 +805,14 @@ QPushButton:pressed{background-color:rgb(167, 167, 167);};</string>
               </size>
              </property>
              <property name="styleSheet">
-              <string notr="true">QPushButton{border-radius:10px;font: 24pt &quot;幼圆&quot;;color: rgb(255, 255, 127);background-color: rgb(76, 76, 0)}
+              <string notr="true">QPushButton{border-radius:10px;font: 24pt &quot;幼圆&quot;;color: rgb(255, 255, 127);background-color: rgb(140, 0, 0)}
 QPushButton:pressed{background-color:rgb(167, 167, 167);};</string>
              </property>
              <property name="text">
               <string>清空</string>
              </property>
              <property name="icon">
-              <iconset resource="images.qrc">
+              <iconset resource="../../ad_online_merge/images.qrc">
                <normaloff>:/lajitong.png</normaloff>:/lajitong.png</iconset>
              </property>
              <property name="iconSize">
@@ -871,7 +849,7 @@ QPushButton:pressed{background-color:rgb(167, 167, 167);};</string>
              <property name="styleSheet">
               <string notr="true">font: 12pt &quot;微软雅黑&quot;;
 border-radius: 20px;
-</string>
+background-color: rgb(255, 255, 255);</string>
              </property>
             </widget>
            </item>
@@ -897,7 +875,7 @@ border-radius: 20px;
              <property name="styleSheet">
               <string notr="true">font: 12pt &quot;微软雅黑&quot;;
 border-radius: 20px;
-</string>
+background-color: rgb(255, 255, 255);</string>
              </property>
             </widget>
            </item>
@@ -923,7 +901,7 @@ border-radius: 20px;
              <property name="styleSheet">
               <string notr="true">font: 12pt &quot;微软雅黑&quot;;
 border-radius: 20px;
-</string>
+background-color: rgb(255, 255, 255);</string>
              </property>
             </widget>
            </item>
@@ -959,9 +937,7 @@ border-radius: 20px;
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">border-radius: 20px;
-font: 14pt &quot;微软雅黑&quot;;
-color: rgb(170, 255, 127);</string>
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
            </property>
           </widget>
          </item>
@@ -974,7 +950,7 @@ color: rgb(170, 255, 127);</string>
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">QPushButton{border-radius:10px;font: 18pt &quot;幼圆&quot;;background-color: rgb(85, 0, 127)}
+            <string notr="true">QPushButton{border-radius:10px;font: 18pt &quot;幼圆&quot;;background-color: rgb(0, 255, 255)}
 QPushButton:pressed{background-color:rgb(176,176,176);};</string>
            </property>
            <property name="text">
@@ -991,23 +967,16 @@ QPushButton:pressed{background-color:rgb(176,176,176);};</string>
            <item>
             <widget class="QLabel" name="img6">
              <property name="styleSheet">
-              <string notr="true">border-color: rgb(170, 255, 127);
-border-width: 1px;
-border-style: solid;
-border-radius:10px;
-font: 20pt &quot;微软雅黑&quot;;</string>
+              <string notr="true">background-color: rgb(255, 255, 255);</string>
              </property>
              <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              <string>图片预览区</string>
              </property>
              <property name="textFormat">
               <enum>Qt::AutoText</enum>
              </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
-             </property>
-             <property name="margin">
-              <number>2</number>
              </property>
             </widget>
            </item>
@@ -1020,7 +989,7 @@ font: 20pt &quot;微软雅黑&quot;;</string>
               </size>
              </property>
              <property name="styleSheet">
-              <string notr="true">QPushButton{border-radius:10px;font: 18pt &quot;幼圆&quot;;background-color: rgb(85, 0, 127)}
+              <string notr="true">QPushButton{border-radius:10px;font: 18pt &quot;幼圆&quot;;background-color: rgb(0, 255, 255)}
 QPushButton:pressed{background-color:rgb(176,176,176);};</string>
              </property>
              <property name="text">
@@ -1035,14 +1004,10 @@ QPushButton:pressed{background-color:rgb(176,176,176);};</string>
            <item>
             <widget class="QLabel" name="img2_2">
              <property name="styleSheet">
-              <string notr="true">border-color: rgb(170, 255, 127);
-border-width: 1px;
-border-style: solid;
-border-radius:10px;
-font: 20pt &quot;微软雅黑&quot;;</string>
+              <string notr="true">background-color: rgb(255, 255, 255);</string>
              </property>
              <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              <string>图片预览区</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
@@ -1058,7 +1023,7 @@ font: 20pt &quot;微软雅黑&quot;;</string>
               </size>
              </property>
              <property name="styleSheet">
-              <string notr="true">QPushButton{border-radius:10px;font: 18pt &quot;幼圆&quot;;background-color: rgb(85, 0, 127)}
+              <string notr="true">QPushButton{border-radius:10px;font: 18pt &quot;幼圆&quot;;background-color: rgb(0, 255, 255)}
 QPushButton:pressed{background-color:rgb(176,176,176);};</string>
              </property>
              <property name="text">
@@ -1073,14 +1038,10 @@ QPushButton:pressed{background-color:rgb(176,176,176);};</string>
            <item>
             <widget class="QLabel" name="img3_2">
              <property name="styleSheet">
-              <string notr="true">border-color: rgb(170, 255, 127);
-border-width: 1px;
-border-style: solid;
-border-radius:10px;
-font: 20pt &quot;微软雅黑&quot;;</string>
+              <string notr="true">background-color: rgb(255, 255, 255);</string>
              </property>
              <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              <string>图片预览区</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
@@ -1096,7 +1057,7 @@ font: 20pt &quot;微软雅黑&quot;;</string>
               </size>
              </property>
              <property name="styleSheet">
-              <string notr="true">QPushButton{border-radius:10px;font: 18pt &quot;幼圆&quot;;background-color: rgb(85, 0, 127)}
+              <string notr="true">QPushButton{border-radius:10px;font: 18pt &quot;幼圆&quot;;background-color: rgb(0, 255, 255)}
 QPushButton:pressed{background-color:rgb(176,176,176);};</string>
              </property>
              <property name="text">
@@ -1111,14 +1072,10 @@ QPushButton:pressed{background-color:rgb(176,176,176);};</string>
            <item>
             <widget class="QLabel" name="img4_2">
              <property name="styleSheet">
-              <string notr="true">border-color: rgb(170, 255, 127);
-border-width: 1px;
-border-style: solid;
-border-radius:10px;
-font: 20pt &quot;微软雅黑&quot;;</string>
+              <string notr="true">background-color: rgb(255, 255, 255);</string>
              </property>
              <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              <string>图片预览区</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
@@ -1134,7 +1091,7 @@ font: 20pt &quot;微软雅黑&quot;;</string>
               </size>
              </property>
              <property name="styleSheet">
-              <string notr="true">QPushButton{border-radius:10px;font: 18pt &quot;幼圆&quot;;background-color: rgb(85, 0, 127)}
+              <string notr="true">QPushButton{border-radius:10px;font: 18pt &quot;幼圆&quot;;background-color: rgb(0, 255, 255)}
 QPushButton:pressed{background-color:rgb(176,176,176);};</string>
              </property>
              <property name="text">
@@ -1149,14 +1106,10 @@ QPushButton:pressed{background-color:rgb(176,176,176);};</string>
            <item>
             <widget class="QLabel" name="img5_2">
              <property name="styleSheet">
-              <string notr="true">border-color: rgb(170, 255, 127);
-border-width: 1px;
-border-style: solid;
-border-radius:10px;
-font: 20pt &quot;微软雅黑&quot;;</string>
+              <string notr="true">background-color: rgb(255, 255, 255);</string>
              </property>
              <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              <string>图片预览区</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
@@ -1172,7 +1125,7 @@ font: 20pt &quot;微软雅黑&quot;;</string>
               </size>
              </property>
              <property name="styleSheet">
-              <string notr="true">QPushButton{border-radius:10px;font: 18pt &quot;幼圆&quot;;background-color: rgb(85, 0, 127)}
+              <string notr="true">QPushButton{border-radius:10px;font: 18pt &quot;幼圆&quot;;background-color: rgb(0, 255, 255)}
 QPushButton:pressed{background-color:rgb(176,176,176);};</string>
              </property>
              <property name="text">
@@ -1208,9 +1161,7 @@ QPushButton:pressed{background-color:rgb(176,176,176);};</string>
          <item>
           <widget class="QTextEdit" name="mkdir_txt">
            <property name="styleSheet">
-            <string notr="true">border-radius: 20px;
-font: 10pt &quot;微软雅黑&quot;;
-color: rgb(170, 255, 127);</string>
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
            </property>
            <property name="tabChangesFocus">
             <bool>false</bool>
@@ -1226,7 +1177,7 @@ color: rgb(170, 255, 127);</string>
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">QPushButton{border-radius:10px;font: 26pt &quot;幼圆&quot;;background-color: rgb(0, 0, 127)}
+            <string notr="true">QPushButton{border-radius:10px;font: 26pt &quot;幼圆&quot;;background-color: rgb(0, 255, 255)}
 QPushButton:pressed{background-color:rgb(176,176,176);};</string>
            </property>
            <property name="text">
@@ -1243,7 +1194,7 @@ QPushButton:pressed{background-color:rgb(176,176,176);};</string>
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">QPushButton{border-radius:10px;font: 26pt &quot;幼圆&quot;;background-color: rgb(85, 0, 0)}
+            <string notr="true">QPushButton{border-radius:10px;font: 26pt &quot;幼圆&quot;;background-color: rgb(255, 170, 127)}
 QPushButton:pressed{background-color:rgb(176,176,176);};</string>
            </property>
            <property name="text">
@@ -1271,9 +1222,7 @@ QPushButton:pressed{background-color:rgb(176,176,176);};</string>
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">border-radius: 20px;
-font: 14pt &quot;微软雅黑&quot;;
-color: rgb(170, 255, 127);</string>
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
            </property>
           </widget>
          </item>
@@ -1286,7 +1235,7 @@ color: rgb(170, 255, 127);</string>
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">QPushButton{background-color: rgb(0, 0, 127)}
+            <string notr="true">QPushButton{background-color: rgb(85, 170, 255)}
 QPushButton{border-radius:5px;}
 QPushButton:pressed{background-color:rgb(167, 167, 167);};
 </string>
@@ -1305,7 +1254,7 @@ QPushButton:pressed{background-color:rgb(167, 167, 167);};
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">QPushButton{background-color: rgb(88, 59, 44)}
+            <string notr="true">QPushButton{background-color: rgb(255, 170, 0)}
 QPushButton{border-radius:5px;}
 QPushButton:pressed{background-color:rgb(167, 167, 167);};
 </string>
@@ -1347,9 +1296,7 @@ QPushButton:pressed{background-color:rgb(167, 167, 167);};
            <item>
             <widget class="QTextBrowser" name="auto_info">
              <property name="styleSheet">
-              <string notr="true">border-radius: 20px;
-font: 10pt &quot;微软雅黑&quot;;
-color: rgb(170, 255, 127);</string>
+              <string notr="true">background-color: rgb(255, 255, 255);</string>
              </property>
             </widget>
            </item>
@@ -1367,14 +1314,10 @@ color: rgb(170, 255, 127);</string>
                <item>
                 <widget class="QLabel" name="lock_img">
                  <property name="styleSheet">
-                  <string notr="true">border-color: rgb(170, 255, 127);
-border-width: 1px;
-border-style: solid;
-border-radius:10px;
-font: 20pt &quot;微软雅黑&quot;;</string>
+                  <string notr="true">background-color: rgb(255, 255, 255);</string>
                  </property>
                  <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>图片展示区</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -1386,9 +1329,7 @@ font: 20pt &quot;微软雅黑&quot;;</string>
              <item>
               <widget class="QTextBrowser" name="lock_path">
                <property name="styleSheet">
-                <string notr="true">border-radius: 20px;
-font: 10pt &quot;微软雅黑&quot;;
-color: rgb(170, 255, 127);</string>
+                <string notr="true">background-color: rgb(255, 255, 255);</string>
                </property>
               </widget>
              </item>
@@ -1401,14 +1342,10 @@ color: rgb(170, 255, 127);</string>
                <item>
                 <widget class="QLabel" name="unlock_img">
                  <property name="styleSheet">
-                  <string notr="true">border-color: rgb(170, 255, 127);
-border-width: 1px;
-border-style: solid;
-border-radius:10px;
-font: 20pt &quot;微软雅黑&quot;;</string>
+                  <string notr="true">background-color: rgb(255, 255, 255);</string>
                  </property>
                  <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>图片展示区</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -1420,9 +1357,7 @@ font: 20pt &quot;微软雅黑&quot;;</string>
              <item>
               <widget class="QTextBrowser" name="unlock_path">
                <property name="styleSheet">
-                <string notr="true">border-radius: 20px;
-font: 10pt &quot;微软雅黑&quot;;
-color: rgb(170, 255, 127);</string>
+                <string notr="true">background-color: rgb(255, 255, 255);</string>
                </property>
               </widget>
              </item>
@@ -1435,14 +1370,10 @@ color: rgb(170, 255, 127);</string>
                <item>
                 <widget class="QLabel" name="charge_img">
                  <property name="styleSheet">
-                  <string notr="true">border-color: rgb(170, 255, 127);
-border-width: 1px;
-border-style: solid;
-border-radius:10px;
-font: 20pt &quot;微软雅黑&quot;;</string>
+                  <string notr="true">background-color: rgb(255, 255, 255);</string>
                  </property>
                  <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>图片展示区</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -1454,9 +1385,7 @@ font: 20pt &quot;微软雅黑&quot;;</string>
              <item>
               <widget class="QTextBrowser" name="charge_path">
                <property name="styleSheet">
-                <string notr="true">border-radius: 20px;
-font: 10pt &quot;微软雅黑&quot;;
-color: rgb(170, 255, 127);</string>
+                <string notr="true">background-color: rgb(255, 255, 255);</string>
                </property>
               </widget>
              </item>
@@ -1469,14 +1398,10 @@ color: rgb(170, 255, 127);</string>
                <item>
                 <widget class="QLabel" name="wifi_img">
                  <property name="styleSheet">
-                  <string notr="true">border-color: rgb(170, 255, 127);
-border-width: 1px;
-border-style: solid;
-border-radius:10px;
-font: 20pt &quot;微软雅黑&quot;;</string>
+                  <string notr="true">background-color: rgb(255, 255, 255);</string>
                  </property>
                  <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>图片展示区</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -1488,9 +1413,7 @@ font: 20pt &quot;微软雅黑&quot;;</string>
              <item>
               <widget class="QTextBrowser" name="wifi_path">
                <property name="styleSheet">
-                <string notr="true">border-radius: 20px;
-font: 10pt &quot;微软雅黑&quot;;
-color: rgb(170, 255, 127);</string>
+                <string notr="true">background-color: rgb(255, 255, 255);</string>
                </property>
               </widget>
              </item>
@@ -1503,14 +1426,10 @@ color: rgb(170, 255, 127);</string>
                <item>
                 <widget class="QLabel" name="timing_img">
                  <property name="styleSheet">
-                  <string notr="true">border-color: rgb(170, 255, 127);
-border-width: 1px;
-border-style: solid;
-border-radius:10px;
-font: 20pt &quot;微软雅黑&quot;;</string>
+                  <string notr="true">background-color: rgb(255, 255, 255);</string>
                  </property>
                  <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>图片展示区</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -1522,9 +1441,7 @@ font: 20pt &quot;微软雅黑&quot;;</string>
              <item>
               <widget class="QTextBrowser" name="timing_path">
                <property name="styleSheet">
-                <string notr="true">border-radius: 20px;
-font: 10pt &quot;微软雅黑&quot;;
-color: rgb(170, 255, 127);</string>
+                <string notr="true">background-color: rgb(255, 255, 255);</string>
                </property>
               </widget>
              </item>
@@ -1537,14 +1454,10 @@ color: rgb(170, 255, 127);</string>
                <item>
                 <widget class="QLabel" name="home_img">
                  <property name="styleSheet">
-                  <string notr="true">border-color: rgb(170, 255, 127);
-border-width: 1px;
-border-style: solid;
-border-radius:10px;
-font: 20pt &quot;微软雅黑&quot;;</string>
+                  <string notr="true">background-color: rgb(255, 255, 255);</string>
                  </property>
                  <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>图片展示区</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -1556,9 +1469,7 @@ font: 20pt &quot;微软雅黑&quot;;</string>
              <item>
               <widget class="QTextBrowser" name="home_path">
                <property name="styleSheet">
-                <string notr="true">border-radius: 20px;
-font: 10pt &quot;微软雅黑&quot;;
-color: rgb(170, 255, 127);</string>
+                <string notr="true">background-color: rgb(255, 255, 255);</string>
                </property>
               </widget>
              </item>
@@ -1578,14 +1489,10 @@ color: rgb(170, 255, 127);</string>
                <item>
                 <widget class="QLabel" name="unlock_ad_img">
                  <property name="styleSheet">
-                  <string notr="true">border-color: rgb(170, 255, 127);
-border-width: 1px;
-border-style: solid;
-border-radius:10px;
-font: 20pt &quot;微软雅黑&quot;;</string>
+                  <string notr="true">background-color: rgb(255, 255, 255);</string>
                  </property>
                  <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>图片展示区</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -1599,17 +1506,12 @@ font: 20pt &quot;微软雅黑&quot;;</string>
                <property name="text">
                 <string>解锁后弹窗广告展示</string>
                </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
               </widget>
              </item>
              <item>
               <widget class="QTextBrowser" name="unlock_ad_path">
                <property name="styleSheet">
-                <string notr="true">border-radius: 20px;
-font: 10pt &quot;微软雅黑&quot;;
-color: rgb(170, 255, 127);</string>
+                <string notr="true">background-color: rgb(255, 255, 255);</string>
                </property>
               </widget>
              </item>
@@ -1622,14 +1524,10 @@ color: rgb(170, 255, 127);</string>
                <item>
                 <widget class="QLabel" name="charge_ad_img">
                  <property name="styleSheet">
-                  <string notr="true">border-color: rgb(170, 255, 127);
-border-width: 1px;
-border-style: solid;
-border-radius:10px;
-font: 20pt &quot;微软雅黑&quot;;</string>
+                  <string notr="true">background-color: rgb(255, 255, 255);</string>
                  </property>
                  <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>图片展示区</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -1643,17 +1541,12 @@ font: 20pt &quot;微软雅黑&quot;;</string>
                <property name="text">
                 <string>插拔电弹窗广告展示</string>
                </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
               </widget>
              </item>
              <item>
               <widget class="QTextBrowser" name="charge_ad_path">
                <property name="styleSheet">
-                <string notr="true">border-radius: 20px;
-font: 10pt &quot;微软雅黑&quot;;
-color: rgb(170, 255, 127);</string>
+                <string notr="true">background-color: rgb(255, 255, 255);</string>
                </property>
               </widget>
              </item>
@@ -1666,14 +1559,10 @@ color: rgb(170, 255, 127);</string>
                <item>
                 <widget class="QLabel" name="home_ad_img">
                  <property name="styleSheet">
-                  <string notr="true">border-color: rgb(170, 255, 127);
-border-width: 1px;
-border-style: solid;
-border-radius:10px;
-font: 20pt &quot;微软雅黑&quot;;</string>
+                  <string notr="true">background-color: rgb(255, 255, 255);</string>
                  </property>
                  <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>图片展示区</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -1687,17 +1576,12 @@ font: 20pt &quot;微软雅黑&quot;;</string>
                <property name="text">
                 <string>home弹窗广告展示</string>
                </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
               </widget>
              </item>
              <item>
               <widget class="QTextBrowser" name="home_ad_path">
                <property name="styleSheet">
-                <string notr="true">border-radius: 20px;
-font: 10pt &quot;微软雅黑&quot;;
-color: rgb(170, 255, 127);</string>
+                <string notr="true">background-color: rgb(255, 255, 255);</string>
                </property>
               </widget>
              </item>
@@ -1710,14 +1594,10 @@ color: rgb(170, 255, 127);</string>
                <item>
                 <widget class="QLabel" name="wifi_ad_img">
                  <property name="styleSheet">
-                  <string notr="true">border-color: rgb(170, 255, 127);
-border-width: 1px;
-border-style: solid;
-border-radius:10px;
-font: 20pt &quot;微软雅黑&quot;;</string>
+                  <string notr="true">background-color: rgb(255, 255, 255);</string>
                  </property>
                  <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>图片展示区</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -1731,17 +1611,12 @@ font: 20pt &quot;微软雅黑&quot;;</string>
                <property name="text">
                 <string>wifi切换弹窗广告展示</string>
                </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
               </widget>
              </item>
              <item>
               <widget class="QTextBrowser" name="wifi_ad_path">
                <property name="styleSheet">
-                <string notr="true">border-radius: 20px;
-font: 10pt &quot;微软雅黑&quot;;
-color: rgb(170, 255, 127);</string>
+                <string notr="true">background-color: rgb(255, 255, 255);</string>
                </property>
               </widget>
              </item>
@@ -1754,14 +1629,10 @@ color: rgb(170, 255, 127);</string>
                <item>
                 <widget class="QLabel" name="timming_ad_img">
                  <property name="styleSheet">
-                  <string notr="true">border-color: rgb(170, 255, 127);
-border-width: 1px;
-border-style: solid;
-border-radius:10px;
-font: 20pt &quot;微软雅黑&quot;;</string>
+                  <string notr="true">background-color: rgb(255, 255, 255);</string>
                  </property>
                  <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>图片展示区</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -1775,17 +1646,12 @@ font: 20pt &quot;微软雅黑&quot;;</string>
                <property name="text">
                 <string>定时弹窗广告展示</string>
                </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
               </widget>
              </item>
              <item>
               <widget class="QTextBrowser" name="timming_ad_path">
                <property name="styleSheet">
-                <string notr="true">border-radius: 20px;
-font: 10pt &quot;微软雅黑&quot;;
-color: rgb(170, 255, 127);</string>
+                <string notr="true">background-color: rgb(255, 255, 255);</string>
                </property>
               </widget>
              </item>
@@ -1805,7 +1671,7 @@ color: rgb(170, 255, 127);</string>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_7">
          <item>
-          <widget class="QLineEdit" name="ash_auto_path">
+          <widget class="QLineEdit" name="auto_path_2">
            <property name="minimumSize">
             <size>
              <width>0</width>
@@ -1813,14 +1679,12 @@ color: rgb(170, 255, 127);</string>
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">border-radius: 20px;
-font: 14pt &quot;微软雅黑&quot;;
-color: rgb(170, 255, 127);</string>
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="ash_acition_auto">
+          <widget class="QPushButton" name="acition_auto_2">
            <property name="minimumSize">
             <size>
              <width>80</width>
@@ -1828,7 +1692,7 @@ color: rgb(170, 255, 127);</string>
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">QPushButton{background-color: rgb(0, 0, 127)}
+            <string notr="true">QPushButton{background-color: rgb(85, 170, 255)}
 QPushButton{border-radius:5px;}
 QPushButton:pressed{background-color:rgb(167, 167, 167);};
 </string>
@@ -1839,7 +1703,7 @@ QPushButton:pressed{background-color:rgb(167, 167, 167);};
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="ash_clear_auto_path">
+          <widget class="QPushButton" name="clear_auto_path_2">
            <property name="minimumSize">
             <size>
              <width>80</width>
@@ -1847,7 +1711,7 @@ QPushButton:pressed{background-color:rgb(167, 167, 167);};
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">QPushButton{background-color: rgb(108, 72, 0)}
+            <string notr="true">QPushButton{background-color: rgb(255, 170, 0)}
 QPushButton{border-radius:5px;}
 QPushButton:pressed{background-color:rgb(167, 167, 167);};
 </string>
@@ -1887,11 +1751,9 @@ QPushButton:pressed{background-color:rgb(167, 167, 167);};
             </widget>
            </item>
            <item>
-            <widget class="QTextBrowser" name="ash_auto_info">
+            <widget class="QTextBrowser" name="auto_info_2">
              <property name="styleSheet">
-              <string notr="true">border-radius: 20px;
-font: 10pt &quot;微软雅黑&quot;;
-color: rgb(170, 255, 127);</string>
+              <string notr="true">background-color: rgb(255, 255, 255);</string>
              </property>
             </widget>
            </item>
@@ -1907,16 +1769,12 @@ color: rgb(170, 255, 127);</string>
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_60">
                <item>
-                <widget class="QLabel" name="ash_lock_img">
+                <widget class="QLabel" name="lock_img_2">
                  <property name="styleSheet">
-                  <string notr="true">border-color: rgb(170, 255, 127);
-border-width: 1px;
-border-style: solid;
-border-radius:10px;
-font: 20pt &quot;微软雅黑&quot;;</string>
+                  <string notr="true">background-color: rgb(255, 255, 255);</string>
                  </property>
                  <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>图片展示区</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -1926,11 +1784,9 @@ font: 20pt &quot;微软雅黑&quot;;</string>
               </layout>
              </item>
              <item>
-              <widget class="QTextBrowser" name="ash_lock_path">
+              <widget class="QTextBrowser" name="lock_path_2">
                <property name="styleSheet">
-                <string notr="true">border-radius: 20px;
-font: 10pt &quot;微软雅黑&quot;;
-color: rgb(170, 255, 127);</string>
+                <string notr="true">background-color: rgb(255, 255, 255);</string>
                </property>
               </widget>
              </item>
@@ -1941,16 +1797,12 @@ color: rgb(170, 255, 127);</string>
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_62">
                <item>
-                <widget class="QLabel" name="ash_unlock_img">
+                <widget class="QLabel" name="unlock_img_2">
                  <property name="styleSheet">
-                  <string notr="true">border-color: rgb(170, 255, 127);
-border-width: 1px;
-border-style: solid;
-border-radius:10px;
-font: 20pt &quot;微软雅黑&quot;;</string>
+                  <string notr="true">background-color: rgb(255, 255, 255);</string>
                  </property>
                  <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>图片展示区</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -1960,11 +1812,9 @@ font: 20pt &quot;微软雅黑&quot;;</string>
               </layout>
              </item>
              <item>
-              <widget class="QTextBrowser" name="ash_unlock_path">
+              <widget class="QTextBrowser" name="unlock_path_2">
                <property name="styleSheet">
-                <string notr="true">border-radius: 20px;
-font: 10pt &quot;微软雅黑&quot;;
-color: rgb(170, 255, 127);</string>
+                <string notr="true">background-color: rgb(255, 255, 255);</string>
                </property>
               </widget>
              </item>
@@ -1975,16 +1825,12 @@ color: rgb(170, 255, 127);</string>
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_64">
                <item>
-                <widget class="QLabel" name="ash_charge_img">
+                <widget class="QLabel" name="charge_img_2">
                  <property name="styleSheet">
-                  <string notr="true">border-color: rgb(170, 255, 127);
-border-width: 1px;
-border-style: solid;
-border-radius:10px;
-font: 20pt &quot;微软雅黑&quot;;</string>
+                  <string notr="true">background-color: rgb(255, 255, 255);</string>
                  </property>
                  <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>图片展示区</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -1994,11 +1840,9 @@ font: 20pt &quot;微软雅黑&quot;;</string>
               </layout>
              </item>
              <item>
-              <widget class="QTextBrowser" name="ash_charge_path">
+              <widget class="QTextBrowser" name="charge_path_2">
                <property name="styleSheet">
-                <string notr="true">border-radius: 20px;
-font: 10pt &quot;微软雅黑&quot;;
-color: rgb(170, 255, 127);</string>
+                <string notr="true">background-color: rgb(255, 255, 255);</string>
                </property>
               </widget>
              </item>
@@ -2009,16 +1853,12 @@ color: rgb(170, 255, 127);</string>
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_66">
                <item>
-                <widget class="QLabel" name="ash_wifi_img">
+                <widget class="QLabel" name="wifi_img_2">
                  <property name="styleSheet">
-                  <string notr="true">border-color: rgb(170, 255, 127);
-border-width: 1px;
-border-style: solid;
-border-radius:10px;
-font: 20pt &quot;微软雅黑&quot;;</string>
+                  <string notr="true">background-color: rgb(255, 255, 255);</string>
                  </property>
                  <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>图片展示区</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -2028,11 +1868,9 @@ font: 20pt &quot;微软雅黑&quot;;</string>
               </layout>
              </item>
              <item>
-              <widget class="QTextBrowser" name="ash_wifi_path">
+              <widget class="QTextBrowser" name="wifi_path_2">
                <property name="styleSheet">
-                <string notr="true">border-radius: 20px;
-font: 10pt &quot;微软雅黑&quot;;
-color: rgb(170, 255, 127);</string>
+                <string notr="true">background-color: rgb(255, 255, 255);</string>
                </property>
               </widget>
              </item>
@@ -2043,16 +1881,12 @@ color: rgb(170, 255, 127);</string>
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_68">
                <item>
-                <widget class="QLabel" name="ash_timing_img">
+                <widget class="QLabel" name="timing_img_2">
                  <property name="styleSheet">
-                  <string notr="true">border-color: rgb(170, 255, 127);
-border-width: 1px;
-border-style: solid;
-border-radius:10px;
-font: 20pt &quot;微软雅黑&quot;;</string>
+                  <string notr="true">background-color: rgb(255, 255, 255);</string>
                  </property>
                  <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>图片展示区</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -2062,11 +1896,9 @@ font: 20pt &quot;微软雅黑&quot;;</string>
               </layout>
              </item>
              <item>
-              <widget class="QTextBrowser" name="ash_timing_path">
+              <widget class="QTextBrowser" name="timing_path_2">
                <property name="styleSheet">
-                <string notr="true">border-radius: 20px;
-font: 10pt &quot;微软雅黑&quot;;
-color: rgb(170, 255, 127);</string>
+                <string notr="true">background-color: rgb(255, 255, 255);</string>
                </property>
               </widget>
              </item>
@@ -2077,16 +1909,12 @@ color: rgb(170, 255, 127);</string>
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_70">
                <item>
-                <widget class="QLabel" name="ash_home_img">
+                <widget class="QLabel" name="home_img_2">
                  <property name="styleSheet">
-                  <string notr="true">border-color: rgb(170, 255, 127);
-border-width: 1px;
-border-style: solid;
-border-radius:10px;
-font: 20pt &quot;微软雅黑&quot;;</string>
+                  <string notr="true">background-color: rgb(255, 255, 255);</string>
                  </property>
                  <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>图片展示区</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -2096,11 +1924,9 @@ font: 20pt &quot;微软雅黑&quot;;</string>
               </layout>
              </item>
              <item>
-              <widget class="QTextBrowser" name="ash_home_path">
+              <widget class="QTextBrowser" name="home_path_2">
                <property name="styleSheet">
-                <string notr="true">border-radius: 20px;
-font: 10pt &quot;微软雅黑&quot;;
-color: rgb(170, 255, 127);</string>
+                <string notr="true">background-color: rgb(255, 255, 255);</string>
                </property>
               </widget>
              </item>
@@ -2118,16 +1944,12 @@ color: rgb(170, 255, 127);</string>
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_72">
                <item>
-                <widget class="QLabel" name="ash_unlock_ad_img">
+                <widget class="QLabel" name="unlock_ad_img_2">
                  <property name="styleSheet">
-                  <string notr="true">border-color: rgb(170, 255, 127);
-border-width: 1px;
-border-style: solid;
-border-radius:10px;
-font: 20pt &quot;微软雅黑&quot;;</string>
+                  <string notr="true">background-color: rgb(255, 255, 255);</string>
                  </property>
                  <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>图片展示区</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -2141,17 +1963,12 @@ font: 20pt &quot;微软雅黑&quot;;</string>
                <property name="text">
                 <string>解锁后弹窗广告展示</string>
                </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
               </widget>
              </item>
              <item>
-              <widget class="QTextBrowser" name="ash_unlock_ad_path">
+              <widget class="QTextBrowser" name="unlock_ad_path_2">
                <property name="styleSheet">
-                <string notr="true">border-radius: 20px;
-font: 10pt &quot;微软雅黑&quot;;
-color: rgb(170, 255, 127);</string>
+                <string notr="true">background-color: rgb(255, 255, 255);</string>
                </property>
               </widget>
              </item>
@@ -2162,16 +1979,12 @@ color: rgb(170, 255, 127);</string>
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_74">
                <item>
-                <widget class="QLabel" name="ash_charge_ad_img">
+                <widget class="QLabel" name="charge_ad_img_2">
                  <property name="styleSheet">
-                  <string notr="true">border-color: rgb(170, 255, 127);
-border-width: 1px;
-border-style: solid;
-border-radius:10px;
-font: 20pt &quot;微软雅黑&quot;;</string>
+                  <string notr="true">background-color: rgb(255, 255, 255);</string>
                  </property>
                  <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>图片展示区</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -2185,17 +1998,12 @@ font: 20pt &quot;微软雅黑&quot;;</string>
                <property name="text">
                 <string>插拔电弹窗广告展示</string>
                </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
               </widget>
              </item>
              <item>
-              <widget class="QTextBrowser" name="ash_charge_ad_path">
+              <widget class="QTextBrowser" name="charge_ad_path_2">
                <property name="styleSheet">
-                <string notr="true">border-radius: 20px;
-font: 10pt &quot;微软雅黑&quot;;
-color: rgb(170, 255, 127);</string>
+                <string notr="true">background-color: rgb(255, 255, 255);</string>
                </property>
               </widget>
              </item>
@@ -2206,16 +2014,12 @@ color: rgb(170, 255, 127);</string>
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_76">
                <item>
-                <widget class="QLabel" name="ash_home_ad_img">
+                <widget class="QLabel" name="home_ad_img_2">
                  <property name="styleSheet">
-                  <string notr="true">border-color: rgb(170, 255, 127);
-border-width: 1px;
-border-style: solid;
-border-radius:10px;
-font: 20pt &quot;微软雅黑&quot;;</string>
+                  <string notr="true">background-color: rgb(255, 255, 255);</string>
                  </property>
                  <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>图片展示区</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -2229,17 +2033,12 @@ font: 20pt &quot;微软雅黑&quot;;</string>
                <property name="text">
                 <string>home弹窗广告展示</string>
                </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
               </widget>
              </item>
              <item>
-              <widget class="QTextBrowser" name="ash_home_ad_path">
+              <widget class="QTextBrowser" name="home_ad_path_2">
                <property name="styleSheet">
-                <string notr="true">border-radius: 20px;
-font: 10pt &quot;微软雅黑&quot;;
-color: rgb(170, 255, 127);</string>
+                <string notr="true">background-color: rgb(255, 255, 255);</string>
                </property>
               </widget>
              </item>
@@ -2250,16 +2049,12 @@ color: rgb(170, 255, 127);</string>
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_78">
                <item>
-                <widget class="QLabel" name="ash_wifi_ad_img">
+                <widget class="QLabel" name="wifi_ad_img_2">
                  <property name="styleSheet">
-                  <string notr="true">border-color: rgb(170, 255, 127);
-border-width: 1px;
-border-style: solid;
-border-radius:10px;
-font: 20pt &quot;微软雅黑&quot;;</string>
+                  <string notr="true">background-color: rgb(255, 255, 255);</string>
                  </property>
                  <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>图片展示区</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -2273,17 +2068,12 @@ font: 20pt &quot;微软雅黑&quot;;</string>
                <property name="text">
                 <string>wifi切换弹窗广告展示</string>
                </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
               </widget>
              </item>
              <item>
-              <widget class="QTextBrowser" name="ash_wifi_ad_path">
+              <widget class="QTextBrowser" name="wifi_ad_path_2">
                <property name="styleSheet">
-                <string notr="true">border-radius: 20px;
-font: 10pt &quot;微软雅黑&quot;;
-color: rgb(170, 255, 127);</string>
+                <string notr="true">background-color: rgb(255, 255, 255);</string>
                </property>
               </widget>
              </item>
@@ -2294,16 +2084,12 @@ color: rgb(170, 255, 127);</string>
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_80">
                <item>
-                <widget class="QLabel" name="ash_timming_ad_img">
+                <widget class="QLabel" name="timming_ad_img_2">
                  <property name="styleSheet">
-                  <string notr="true">border-color: rgb(170, 255, 127);
-border-width: 1px;
-border-style: solid;
-border-radius:10px;
-font: 20pt &quot;微软雅黑&quot;;</string>
+                  <string notr="true">background-color: rgb(255, 255, 255);</string>
                  </property>
                  <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>图片展示区</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -2317,17 +2103,12 @@ font: 20pt &quot;微软雅黑&quot;;</string>
                <property name="text">
                 <string>定时弹窗广告展示</string>
                </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
               </widget>
              </item>
              <item>
-              <widget class="QTextBrowser" name="ash_timming_ad_path">
+              <widget class="QTextBrowser" name="timming_ad_path_2">
                <property name="styleSheet">
-                <string notr="true">border-radius: 20px;
-font: 10pt &quot;微软雅黑&quot;;
-color: rgb(170, 255, 127);</string>
+                <string notr="true">background-color: rgb(255, 255, 255);</string>
                </property>
               </widget>
              </item>
@@ -2344,7 +2125,7 @@ color: rgb(170, 255, 127);</string>
   </layout>
  </widget>
  <resources>
-  <include location="images.qrc"/>
+  <include location="../../ad_online_merge/images.qrc"/>
  </resources>
  <connections/>
 </ui>

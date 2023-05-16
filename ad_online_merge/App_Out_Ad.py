@@ -1,6 +1,6 @@
 import os
 import uiautomator2 as u2
-from Package_Acitivity import get_package_name, get_activity_name
+from Package_Acitivity import get_package_name, get_activity_name,get_apk_app_name
 from time import sleep
 import datetime
 
@@ -9,6 +9,7 @@ class Out_Ad():
     def __init__(self, path):
         self.package = get_package_name(path)
         self.activity = get_activity_name(path)
+        self.appname = get_apk_app_name(path)
         # print(self.package)
         self.filetime = datetime.datetime.now().strftime('%Y{y}%m{m}%d{d} %H{h}%M{f}%S{s}').format(y='年', m='月', d='日', h='时', f='分', s='秒')
 
@@ -20,9 +21,18 @@ class Out_Ad():
         self.dirver = u2.connect()
         self.dirver.app_start(self.package, self.activity)
 
+    def appinfo(self):
+        return self.appname
+
+    def proess_info(self):
+        info = os.popen(f'adb shell ps|findstr {self.package}').read()
+        if self.package in info:
+            return True
+        else:
+            return False
+
     def stop_app(self):
-        self.dirver = u2.connect()
-        self.dirver.app_stop(self.package)
+        os.popen(f'adb shell am force-stop {self.package}')
 
     def img_dir(self):
         path = r'D:/keep/自动化截图存储'
@@ -37,7 +47,6 @@ class Out_Ad():
             return path
 
     def lock_news(self):
-        # self.img_dir()
         self.dirver.screen_off()
         sleep(2)
         self.dirver.screen_on()
@@ -45,7 +54,6 @@ class Out_Ad():
         if self.dirver(text='推荐').wait(timeout=5.0):
             path = self.dirver.screenshot(fr"{self.img_dir()}/{self.filetime}-锁屏新闻展示成功.jpg")
             return path
-            # print('锁屏新闻展示成功')
         else:
             info = '锁屏新闻触发失败'
             print('锁屏新闻触发失败')
@@ -133,9 +141,9 @@ class Out_Ad():
 
 
 
-# if __name__ == '__main__':
-#     a = Out_Ad(
-#         r"E:\csgj\createApk_1.4.4\createApk\outFloder\38726014_cn.kandroidzpz.ppctsfun_1.0.51_xmtxzn_20230515.apk")
+if __name__ == '__main__':
+    a = Out_Ad(r"D:\laying-file\39432004_com.android.ljyctsusj.axuctsking_1.0.0_csj_20230423.apk")
+    print(a.appinfo())
     # a.img_dir()
     # a.connect_phone()
     # print(a.connect_phone())

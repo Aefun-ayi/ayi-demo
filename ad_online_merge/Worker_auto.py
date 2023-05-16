@@ -1,5 +1,4 @@
 from PyQt5.QtCore import QThread, pyqtSignal, QMutex
-import os
 from App_Out_Ad import Out_Ad
 from time import sleep
 
@@ -27,9 +26,10 @@ class Worker_Auto(QThread):
         path = self.queue.get()
         driver_info = Out_Ad(path).connect_phone()
         self.d = Out_Ad(path)
-        self.log.emit("自动化启动，本次自动化操作触发：锁屏新闻，解锁后弹窗，插拔电弹窗，wifi切换弹窗，home键弹窗，定时弹窗")
+        self.log.emit("自动化启动，本次自动化操作：启动app-->强停一次app-->触发锁屏新闻-->解锁后弹窗-->插拔电弹窗-->wifi切换弹窗-->home键弹窗-->定时弹窗")
         self.log.emit(f"手机设备信息-->品牌：{driver_info['brand']}，系统版本：{driver_info['version']}，型号：{driver_info['model']}")
         self.d.start_app()
+        self.log.emit('正在启动app'+self.d.appinfo())
         sleep(5)
         self.d.stop_app()
         first_lock = self.d.lock_news()

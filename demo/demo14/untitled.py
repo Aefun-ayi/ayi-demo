@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'check_cfg_frame.ui'
+# Form implementation generated from reading ui file 'untitled.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -14,13 +14,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(1143, 723)
-        Form.setMaximumSize(QtCore.QSize(16777215, 16777215))
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/title.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        Form.setWindowIcon(icon)
-        self.verticalLayout_16 = QtWidgets.QVBoxLayout(Form)
-        self.verticalLayout_16.setObjectName("verticalLayout_16")
+        Form.resize(1143, 785)
+        self.horizontalLayout_20 = QtWidgets.QHBoxLayout(Form)
+        self.horizontalLayout_20.setObjectName("horizontalLayout_20")
         self.tabWidget = QtWidgets.QTabWidget(Form)
         self.tabWidget.setMinimumSize(QtCore.QSize(0, 0))
         self.tabWidget.setMaximumSize(QtCore.QSize(16777215, 16777215))
@@ -40,30 +36,28 @@ class Ui_Form(object):
         self.verticalLayout_11.addWidget(self.label)
         self.line_apkdir_path = QtWidgets.QLineEdit(self.online)
         self.line_apkdir_path.setMinimumSize(QtCore.QSize(0, 50))
-        self.line_apkdir_path.setStyleSheet("font: 14pt \"华文细黑\";\n"
-"color: rgb(170, 255, 127);\n"
-"border-radius: 20px;")
+        self.line_apkdir_path.setStyleSheet("font: 14pt \"华文细黑\";")
         self.line_apkdir_path.setText("")
         self.line_apkdir_path.setObjectName("line_apkdir_path")
         self.verticalLayout_11.addWidget(self.line_apkdir_path)
         self.horizontalLayout_5.addLayout(self.verticalLayout_11)
         self.select_online = QtWidgets.QPushButton(self.online)
         self.select_online.setMinimumSize(QtCore.QSize(0, 80))
-        self.select_online.setStyleSheet("QPushButton{border-radius:10px;font: 20pt \"幼圆\";background-color: rgb(0, 0, 91)}\n"
+        self.select_online.setStyleSheet("QPushButton{border-radius:10px;font: 20pt \"幼圆\";background-color: rgb(0, 0, 84)}\n"
 "QPushButton:pressed{background-color:rgb(167, 167, 167);};")
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(":/sscom.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.select_online.setIcon(icon1)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/sscom.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.select_online.setIcon(icon)
         self.select_online.setIconSize(QtCore.QSize(24, 24))
         self.select_online.setObjectName("select_online")
         self.horizontalLayout_5.addWidget(self.select_online)
         self.clean_online_text = QtWidgets.QPushButton(self.online)
         self.clean_online_text.setMinimumSize(QtCore.QSize(0, 80))
-        self.clean_online_text.setStyleSheet("QPushButton{border-radius:10px;font: 20pt \"幼圆\";background-color: rgb(76, 76, 0)}\n"
+        self.clean_online_text.setStyleSheet("QPushButton{border-radius:10px;font: 20pt \"幼圆\";background-color: rgb(170, 170, 0)}\n"
 "QPushButton:pressed{background-color:rgb(167, 167, 167);};")
-        icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap(":/lajitong.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.clean_online_text.setIcon(icon2)
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(":/lajitong.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.clean_online_text.setIcon(icon1)
         self.clean_online_text.setIconSize(QtCore.QSize(24, 24))
         self.clean_online_text.setObjectName("clean_online_text")
         self.horizontalLayout_5.addWidget(self.clean_online_text)
@@ -74,13 +68,12 @@ class Ui_Form(object):
         self.verticalLayout_13.setObjectName("verticalLayout_13")
         self.label_3 = QtWidgets.QLabel(self.online)
         self.label_3.setStyleSheet("font: 14pt \"微软雅黑\";\n"
-"background-color: rgb(255, 0, 0);")
+"background-color: rgb(99, 0, 0);")
         self.label_3.setAlignment(QtCore.Qt.AlignCenter)
         self.label_3.setObjectName("label_3")
         self.verticalLayout_13.addWidget(self.label_3)
         self.fail_cfg = QtWidgets.QTextBrowser(self.online)
         self.fail_cfg.setStyleSheet("font: 14pt \"幼圆\";\n"
-"\n"
 "border-radius: 50px;")
         self.fail_cfg.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAsNeeded)
         self.fail_cfg.setObjectName("fail_cfg")
@@ -90,14 +83,14 @@ class Ui_Form(object):
         self.verticalLayout_14.setObjectName("verticalLayout_14")
         self.label_4 = QtWidgets.QLabel(self.online)
         self.label_4.setStyleSheet("font: 14pt \"微软雅黑\";\n"
-"background-color: rgb(0, 255, 127);\n"
+"background-color:rgb(0, 48, 0)\n"
 "")
         self.label_4.setFrameShadow(QtWidgets.QFrame.Plain)
         self.label_4.setAlignment(QtCore.Qt.AlignCenter)
         self.label_4.setObjectName("label_4")
         self.verticalLayout_14.addWidget(self.label_4)
         self.suc_cfg = QtWidgets.QTextBrowser(self.online)
-        self.suc_cfg.setStyleSheet("font: 14pt \"幼圆\";;border-radius: 50px;")
+        self.suc_cfg.setStyleSheet("font: 14pt \"幼圆\";border-radius: 50px;")
         self.suc_cfg.setObjectName("suc_cfg")
         self.verticalLayout_14.addWidget(self.suc_cfg)
         self.horizontalLayout_9.addLayout(self.verticalLayout_14)
@@ -116,8 +109,7 @@ class Ui_Form(object):
         self.prid = QtWidgets.QLineEdit(self.adcfg)
         self.prid.setMinimumSize(QtCore.QSize(0, 50))
         self.prid.setStyleSheet("font: 12pt \"微软雅黑\";\n"
-"color: rgb(170, 255, 127);\n"
-"border-radius: 20px;")
+"background-color: rgb(255, 255, 255);")
         self.prid.setObjectName("prid")
         self.horizontalLayout_10.addWidget(self.prid)
         self.label_6 = QtWidgets.QLabel(self.adcfg)
@@ -127,23 +119,22 @@ class Ui_Form(object):
         self.app_chan = QtWidgets.QLineEdit(self.adcfg)
         self.app_chan.setMinimumSize(QtCore.QSize(0, 50))
         self.app_chan.setStyleSheet("font: 12pt \"微软雅黑\";\n"
-"color: rgb(170, 255, 127);\n"
-"border-radius: 20px;")
+"background-color: rgb(255, 255, 255);")
         self.app_chan.setObjectName("app_chan")
         self.horizontalLayout_10.addWidget(self.app_chan)
         self.select_ad = QtWidgets.QPushButton(self.adcfg)
         self.select_ad.setMinimumSize(QtCore.QSize(0, 80))
-        self.select_ad.setStyleSheet("QPushButton{border-radius:10px;font: 24pt \"幼圆\";background-color: rgb(0, 0, 91)}\n"
+        self.select_ad.setStyleSheet("QPushButton{border-radius:10px;font: 24pt \"幼圆\";background-color: rgb(170, 255, 255)}\n"
 "QPushButton:pressed{background-color:rgb(167, 167, 167);};")
-        self.select_ad.setIcon(icon1)
+        self.select_ad.setIcon(icon)
         self.select_ad.setIconSize(QtCore.QSize(24, 24))
         self.select_ad.setObjectName("select_ad")
         self.horizontalLayout_10.addWidget(self.select_ad)
         self.clean_ad_text = QtWidgets.QPushButton(self.adcfg)
         self.clean_ad_text.setMinimumSize(QtCore.QSize(0, 80))
-        self.clean_ad_text.setStyleSheet("QPushButton{border-radius:10px;font: 24pt \"幼圆\";background-color: rgb(76, 76, 0);color: rgb(255, 255, 127);}\n"
+        self.clean_ad_text.setStyleSheet("QPushButton{border-radius:10px;font: 24pt \"幼圆\";background-color: rgb(140, 0, 0);color: rgb(255, 255, 127);}\n"
 "QPushButton:pressed{background-color:rgb(167, 167, 167);};")
-        self.clean_ad_text.setIcon(icon2)
+        self.clean_ad_text.setIcon(icon1)
         self.clean_ad_text.setIconSize(QtCore.QSize(24, 24))
         self.clean_ad_text.setObjectName("clean_ad_text")
         self.horizontalLayout_10.addWidget(self.clean_ad_text)
@@ -166,8 +157,7 @@ class Ui_Form(object):
         self.all_text = QtWidgets.QTextBrowser(self.adcfg)
         self.all_text.setStyleSheet("font: 10pt \"微软雅黑\";\n"
 "border-radius: 20px;\n"
-"\n"
-"")
+"background-color: rgb(255, 255, 255);")
         self.all_text.setObjectName("all_text")
         self.verticalLayout_17.addWidget(self.all_text)
         self.horizontalLayout_11.addLayout(self.verticalLayout_17)
@@ -181,7 +171,7 @@ class Ui_Form(object):
         self.A_text = QtWidgets.QTextBrowser(self.adcfg)
         self.A_text.setStyleSheet("font: 10pt \"微软雅黑\";\n"
 "border-radius: 20px;\n"
-"")
+"background-color: rgb(255, 255, 255);")
         self.A_text.setObjectName("A_text")
         self.verticalLayout_19.addWidget(self.A_text)
         self.horizontalLayout_11.addLayout(self.verticalLayout_19)
@@ -195,7 +185,7 @@ class Ui_Form(object):
         self.B_text = QtWidgets.QTextBrowser(self.adcfg)
         self.B_text.setStyleSheet("font: 10pt \"微软雅黑\";\n"
 "border-radius: 20px;\n"
-"")
+"background-color: rgb(255, 255, 255);")
         self.B_text.setObjectName("B_text")
         self.verticalLayout_18.addWidget(self.B_text)
         self.horizontalLayout_11.addLayout(self.verticalLayout_18)
@@ -209,7 +199,7 @@ class Ui_Form(object):
         self.C_text = QtWidgets.QTextBrowser(self.adcfg)
         self.C_text.setStyleSheet("font: 10pt \"微软雅黑\";\n"
 "border-radius: 20px;\n"
-"")
+"background-color: rgb(255, 255, 255);")
         self.C_text.setObjectName("C_text")
         self.verticalLayout_20.addWidget(self.C_text)
         self.horizontalLayout_11.addLayout(self.verticalLayout_20)
@@ -234,7 +224,7 @@ class Ui_Form(object):
         self.splash_cfg_text = QtWidgets.QTextBrowser(self.tab)
         self.splash_cfg_text.setStyleSheet("font: 12pt \"微软雅黑\";\n"
 "border-radius: 20px;\n"
-"")
+"background-color: rgb(255, 255, 255);")
         self.splash_cfg_text.setObjectName("splash_cfg_text")
         self.verticalLayout_21.addWidget(self.splash_cfg_text)
         self.horizontalLayout_12.addLayout(self.verticalLayout_21)
@@ -248,7 +238,7 @@ class Ui_Form(object):
         self.msg_cfg_text = QtWidgets.QTextBrowser(self.tab)
         self.msg_cfg_text.setStyleSheet("font: 12pt \"微软雅黑\";\n"
 "border-radius: 20px;\n"
-"")
+"background-color: rgb(255, 255, 255);")
         self.msg_cfg_text.setObjectName("msg_cfg_text")
         self.verticalLayout_22.addWidget(self.msg_cfg_text)
         self.horizontalLayout_12.addLayout(self.verticalLayout_22)
@@ -262,7 +252,7 @@ class Ui_Form(object):
         self.plaque_cfg_text = QtWidgets.QTextBrowser(self.tab)
         self.plaque_cfg_text.setStyleSheet("font: 12pt \"微软雅黑\";\n"
 "border-radius: 20px;\n"
-"")
+"background-color: rgb(255, 255, 255);")
         self.plaque_cfg_text.setObjectName("plaque_cfg_text")
         self.verticalLayout_23.addWidget(self.plaque_cfg_text)
         self.horizontalLayout_12.addLayout(self.verticalLayout_23)
@@ -276,7 +266,7 @@ class Ui_Form(object):
         self.video_cfg_text = QtWidgets.QTextBrowser(self.tab)
         self.video_cfg_text.setStyleSheet("font: 12pt \"微软雅黑\";\n"
 "border-radius: 20px;\n"
-"")
+"background-color: rgb(255, 255, 255);")
         self.video_cfg_text.setObjectName("video_cfg_text")
         self.verticalLayout_24.addWidget(self.video_cfg_text)
         self.horizontalLayout_12.addLayout(self.verticalLayout_24)
@@ -298,7 +288,7 @@ class Ui_Form(object):
         self.splash_source_text = QtWidgets.QTextBrowser(self.tab_2)
         self.splash_source_text.setStyleSheet("font: 12pt \"微软雅黑\";\n"
 "border-radius: 20px;\n"
-"")
+"background-color: rgb(255, 255, 255);")
         self.splash_source_text.setObjectName("splash_source_text")
         self.verticalLayout_27.addWidget(self.splash_source_text)
         self.horizontalLayout_13.addLayout(self.verticalLayout_27)
@@ -312,7 +302,7 @@ class Ui_Form(object):
         self.msg_source_text = QtWidgets.QTextBrowser(self.tab_2)
         self.msg_source_text.setStyleSheet("font: 12pt \"微软雅黑\";\n"
 "border-radius: 20px;\n"
-"")
+"background-color: rgb(255, 255, 255);")
         self.msg_source_text.setObjectName("msg_source_text")
         self.verticalLayout_28.addWidget(self.msg_source_text)
         self.horizontalLayout_13.addLayout(self.verticalLayout_28)
@@ -326,7 +316,7 @@ class Ui_Form(object):
         self.plaque_source_text = QtWidgets.QTextBrowser(self.tab_2)
         self.plaque_source_text.setStyleSheet("font: 12pt \"微软雅黑\";\n"
 "border-radius: 20px;\n"
-"")
+"background-color: rgb(255, 255, 255);")
         self.plaque_source_text.setObjectName("plaque_source_text")
         self.verticalLayout_30.addWidget(self.plaque_source_text)
         self.horizontalLayout_13.addLayout(self.verticalLayout_30)
@@ -340,7 +330,7 @@ class Ui_Form(object):
         self.video_source_text = QtWidgets.QTextBrowser(self.tab_2)
         self.video_source_text.setStyleSheet("font: 12pt \"微软雅黑\";\n"
 "border-radius: 20px;\n"
-"")
+"background-color: rgb(255, 255, 255);")
         self.video_source_text.setObjectName("video_source_text")
         self.verticalLayout_29.addWidget(self.video_source_text)
         self.horizontalLayout_13.addLayout(self.verticalLayout_29)
@@ -367,9 +357,7 @@ class Ui_Form(object):
         self.prid_2 = QtWidgets.QLineEdit(self.than_cfg)
         self.prid_2.setMinimumSize(QtCore.QSize(0, 50))
         self.prid_2.setStyleSheet("font: 12pt \"微软雅黑\";\n"
-"color: rgb(170, 255, 127);\n"
-"border-radius: 20px;\n"
-"")
+"background-color: rgb(255, 255, 255);")
         self.prid_2.setObjectName("prid_2")
         self.horizontalLayout_14.addWidget(self.prid_2)
         self.label_20 = QtWidgets.QLabel(self.than_cfg)
@@ -378,9 +366,7 @@ class Ui_Form(object):
         self.horizontalLayout_14.addWidget(self.label_20)
         self.app_chan_2 = QtWidgets.QLineEdit(self.than_cfg)
         self.app_chan_2.setMinimumSize(QtCore.QSize(0, 50))
-        self.app_chan_2.setStyleSheet("font: 12pt \"微软雅黑\";\n"
-"color: rgb(170, 255, 127);\n"
-"border-radius: 20px;")
+        self.app_chan_2.setStyleSheet("font: 12pt \"微软雅黑\";background-color: rgb(255, 255, 255);")
         self.app_chan_2.setObjectName("app_chan_2")
         self.horizontalLayout_14.addWidget(self.app_chan_2)
         self.verticalLayout_32.addLayout(self.horizontalLayout_14)
@@ -392,9 +378,7 @@ class Ui_Form(object):
         self.horizontalLayout_15.addWidget(self.label_25)
         self.package_info = QtWidgets.QLineEdit(self.than_cfg)
         self.package_info.setMinimumSize(QtCore.QSize(0, 50))
-        self.package_info.setStyleSheet("font: 14pt \"微软雅黑\";\n"
-"color: rgb(170, 255, 127);\n"
-"border-radius: 20px;")
+        self.package_info.setStyleSheet("font: 14pt \"微软雅黑\";background-color: rgb(255, 255, 255);")
         self.package_info.setText("")
         self.package_info.setObjectName("package_info")
         self.horizontalLayout_15.addWidget(self.package_info)
@@ -404,17 +388,17 @@ class Ui_Form(object):
         self.horizontalLayout_16.setObjectName("horizontalLayout_16")
         self.select_ad_2 = QtWidgets.QPushButton(self.than_cfg)
         self.select_ad_2.setMinimumSize(QtCore.QSize(0, 80))
-        self.select_ad_2.setStyleSheet("QPushButton{border-radius:10px;font: 24pt \"幼圆\";background-color: rgb(0, 0, 91)}\n"
+        self.select_ad_2.setStyleSheet("QPushButton{border-radius:10px;font: 24pt \"幼圆\";background-color: rgb(170, 255, 255)}\n"
 "QPushButton:pressed{background-color:rgb(167, 167, 167);};")
-        self.select_ad_2.setIcon(icon1)
+        self.select_ad_2.setIcon(icon)
         self.select_ad_2.setIconSize(QtCore.QSize(24, 24))
         self.select_ad_2.setObjectName("select_ad_2")
         self.horizontalLayout_16.addWidget(self.select_ad_2)
         self.clean_ad_text_2 = QtWidgets.QPushButton(self.than_cfg)
         self.clean_ad_text_2.setMinimumSize(QtCore.QSize(0, 80))
-        self.clean_ad_text_2.setStyleSheet("QPushButton{border-radius:10px;font: 24pt \"幼圆\";color: rgb(255, 255, 127);background-color: rgb(76, 76, 0)}\n"
+        self.clean_ad_text_2.setStyleSheet("QPushButton{border-radius:10px;font: 24pt \"幼圆\";color: rgb(255, 255, 127);background-color: rgb(140, 0, 0)}\n"
 "QPushButton:pressed{background-color:rgb(167, 167, 167);};")
-        self.clean_ad_text_2.setIcon(icon2)
+        self.clean_ad_text_2.setIcon(icon1)
         self.clean_ad_text_2.setIconSize(QtCore.QSize(24, 24))
         self.clean_ad_text_2.setObjectName("clean_ad_text_2")
         self.horizontalLayout_16.addWidget(self.clean_ad_text_2)
@@ -434,7 +418,7 @@ class Ui_Form(object):
         self.match_text = QtWidgets.QTextBrowser(self.than_cfg)
         self.match_text.setStyleSheet("font: 12pt \"微软雅黑\";\n"
 "border-radius: 20px;\n"
-"")
+"background-color: rgb(255, 255, 255);")
         self.match_text.setObjectName("match_text")
         self.verticalLayout_33.addWidget(self.match_text)
         self.horizontalLayout_18.addLayout(self.verticalLayout_33)
@@ -448,7 +432,7 @@ class Ui_Form(object):
         self.lack_text = QtWidgets.QTextBrowser(self.than_cfg)
         self.lack_text.setStyleSheet("font: 12pt \"微软雅黑\";\n"
 "border-radius: 20px;\n"
-"")
+"background-color: rgb(255, 255, 255);")
         self.lack_text.setObjectName("lack_text")
         self.verticalLayout_34.addWidget(self.lack_text)
         self.horizontalLayout_18.addLayout(self.verticalLayout_34)
@@ -462,7 +446,7 @@ class Ui_Form(object):
         self.tmr_text = QtWidgets.QTextBrowser(self.than_cfg)
         self.tmr_text.setStyleSheet("font: 12pt \"微软雅黑\";\n"
 "border-radius: 20px;\n"
-"")
+"background-color: rgb(255, 255, 255);")
         self.tmr_text.setObjectName("tmr_text")
         self.verticalLayout_35.addWidget(self.tmr_text)
         self.horizontalLayout_18.addLayout(self.verticalLayout_35)
@@ -480,14 +464,12 @@ class Ui_Form(object):
         self.horizontalLayout_3.addWidget(self.label_27)
         self.dir_name_2 = QtWidgets.QLineEdit(self.tab_3)
         self.dir_name_2.setMinimumSize(QtCore.QSize(0, 50))
-        self.dir_name_2.setStyleSheet("border-radius: 20px;\n"
-"font: 14pt \"微软雅黑\";\n"
-"color: rgb(170, 255, 127);")
+        self.dir_name_2.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.dir_name_2.setObjectName("dir_name_2")
         self.horizontalLayout_3.addWidget(self.dir_name_2)
         self.mkdir_dir_2 = QtWidgets.QPushButton(self.tab_3)
         self.mkdir_dir_2.setMinimumSize(QtCore.QSize(150, 50))
-        self.mkdir_dir_2.setStyleSheet("QPushButton{border-radius:10px;font: 18pt \"幼圆\";background-color: rgb(85, 0, 127)}\n"
+        self.mkdir_dir_2.setStyleSheet("QPushButton{border-radius:10px;font: 18pt \"幼圆\";background-color: rgb(0, 255, 255)}\n"
 "QPushButton:pressed{background-color:rgb(176,176,176);};")
         self.mkdir_dir_2.setObjectName("mkdir_dir_2")
         self.horizontalLayout_3.addWidget(self.mkdir_dir_2)
@@ -500,18 +482,14 @@ class Ui_Form(object):
         self.verticalLayout_6 = QtWidgets.QVBoxLayout()
         self.verticalLayout_6.setObjectName("verticalLayout_6")
         self.img6 = QtWidgets.QLabel(self.tab_3)
-        self.img6.setStyleSheet("border-color: rgb(170, 255, 127);\n"
-"border-width: 1px;\n"
-"border-style: solid;\n"
-"border-radius:10px;\n"
-"font: 20pt \"微软雅黑\";")
+        self.img6.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.img6.setTextFormat(QtCore.Qt.AutoText)
         self.img6.setAlignment(QtCore.Qt.AlignCenter)
         self.img6.setObjectName("img6")
         self.verticalLayout_6.addWidget(self.img6)
         self.scr1_2 = QtWidgets.QPushButton(self.tab_3)
         self.scr1_2.setMinimumSize(QtCore.QSize(0, 30))
-        self.scr1_2.setStyleSheet("QPushButton{border-radius:10px;font: 18pt \"幼圆\";background-color: rgb(85, 0, 127)}\n"
+        self.scr1_2.setStyleSheet("QPushButton{border-radius:10px;font: 18pt \"幼圆\";background-color: rgb(0, 255, 255)}\n"
 "QPushButton:pressed{background-color:rgb(176,176,176);};")
         self.scr1_2.setObjectName("scr1_2")
         self.verticalLayout_6.addWidget(self.scr1_2)
@@ -519,17 +497,13 @@ class Ui_Form(object):
         self.verticalLayout_7 = QtWidgets.QVBoxLayout()
         self.verticalLayout_7.setObjectName("verticalLayout_7")
         self.img2_2 = QtWidgets.QLabel(self.tab_3)
-        self.img2_2.setStyleSheet("border-color: rgb(170, 255, 127);\n"
-"border-width: 1px;\n"
-"border-style: solid;\n"
-"border-radius:10px;\n"
-"font: 20pt \"微软雅黑\";")
+        self.img2_2.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.img2_2.setAlignment(QtCore.Qt.AlignCenter)
         self.img2_2.setObjectName("img2_2")
         self.verticalLayout_7.addWidget(self.img2_2)
         self.scr2_2 = QtWidgets.QPushButton(self.tab_3)
         self.scr2_2.setMinimumSize(QtCore.QSize(0, 30))
-        self.scr2_2.setStyleSheet("QPushButton{border-radius:10px;font: 18pt \"幼圆\";background-color: rgb(85, 0, 127)}\n"
+        self.scr2_2.setStyleSheet("QPushButton{border-radius:10px;font: 18pt \"幼圆\";background-color: rgb(0, 255, 255)}\n"
 "QPushButton:pressed{background-color:rgb(176,176,176);};")
         self.scr2_2.setObjectName("scr2_2")
         self.verticalLayout_7.addWidget(self.scr2_2)
@@ -537,17 +511,13 @@ class Ui_Form(object):
         self.verticalLayout_8 = QtWidgets.QVBoxLayout()
         self.verticalLayout_8.setObjectName("verticalLayout_8")
         self.img3_2 = QtWidgets.QLabel(self.tab_3)
-        self.img3_2.setStyleSheet("border-color: rgb(170, 255, 127);\n"
-"border-width: 1px;\n"
-"border-style: solid;\n"
-"border-radius:10px;\n"
-"font: 20pt \"微软雅黑\";")
+        self.img3_2.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.img3_2.setAlignment(QtCore.Qt.AlignCenter)
         self.img3_2.setObjectName("img3_2")
         self.verticalLayout_8.addWidget(self.img3_2)
         self.scr3_2 = QtWidgets.QPushButton(self.tab_3)
         self.scr3_2.setMinimumSize(QtCore.QSize(0, 30))
-        self.scr3_2.setStyleSheet("QPushButton{border-radius:10px;font: 18pt \"幼圆\";background-color: rgb(85, 0, 127)}\n"
+        self.scr3_2.setStyleSheet("QPushButton{border-radius:10px;font: 18pt \"幼圆\";background-color: rgb(0, 255, 255)}\n"
 "QPushButton:pressed{background-color:rgb(176,176,176);};")
         self.scr3_2.setObjectName("scr3_2")
         self.verticalLayout_8.addWidget(self.scr3_2)
@@ -555,17 +525,13 @@ class Ui_Form(object):
         self.verticalLayout_9 = QtWidgets.QVBoxLayout()
         self.verticalLayout_9.setObjectName("verticalLayout_9")
         self.img4_2 = QtWidgets.QLabel(self.tab_3)
-        self.img4_2.setStyleSheet("border-color: rgb(170, 255, 127);\n"
-"border-width: 1px;\n"
-"border-style: solid;\n"
-"border-radius:10px;\n"
-"font: 20pt \"微软雅黑\";")
+        self.img4_2.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.img4_2.setAlignment(QtCore.Qt.AlignCenter)
         self.img4_2.setObjectName("img4_2")
         self.verticalLayout_9.addWidget(self.img4_2)
         self.scr4_2 = QtWidgets.QPushButton(self.tab_3)
         self.scr4_2.setMinimumSize(QtCore.QSize(0, 30))
-        self.scr4_2.setStyleSheet("QPushButton{border-radius:10px;font: 18pt \"幼圆\";background-color: rgb(85, 0, 127)}\n"
+        self.scr4_2.setStyleSheet("QPushButton{border-radius:10px;font: 18pt \"幼圆\";background-color: rgb(0, 255, 255)}\n"
 "QPushButton:pressed{background-color:rgb(176,176,176);};")
         self.scr4_2.setObjectName("scr4_2")
         self.verticalLayout_9.addWidget(self.scr4_2)
@@ -573,17 +539,13 @@ class Ui_Form(object):
         self.verticalLayout_10 = QtWidgets.QVBoxLayout()
         self.verticalLayout_10.setObjectName("verticalLayout_10")
         self.img5_2 = QtWidgets.QLabel(self.tab_3)
-        self.img5_2.setStyleSheet("border-color: rgb(170, 255, 127);\n"
-"border-width: 1px;\n"
-"border-style: solid;\n"
-"border-radius:10px;\n"
-"font: 20pt \"微软雅黑\";")
+        self.img5_2.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.img5_2.setAlignment(QtCore.Qt.AlignCenter)
         self.img5_2.setObjectName("img5_2")
         self.verticalLayout_10.addWidget(self.img5_2)
         self.scr5_2 = QtWidgets.QPushButton(self.tab_3)
         self.scr5_2.setMinimumSize(QtCore.QSize(0, 30))
-        self.scr5_2.setStyleSheet("QPushButton{border-radius:10px;font: 18pt \"幼圆\";background-color: rgb(85, 0, 127)}\n"
+        self.scr5_2.setStyleSheet("QPushButton{border-radius:10px;font: 18pt \"幼圆\";background-color: rgb(0, 255, 255)}\n"
 "QPushButton:pressed{background-color:rgb(176,176,176);};")
         self.scr5_2.setObjectName("scr5_2")
         self.verticalLayout_10.addWidget(self.scr5_2)
@@ -600,21 +562,19 @@ class Ui_Form(object):
         self.verticalLayout.setContentsMargins(9, 9, 9, 9)
         self.verticalLayout.setObjectName("verticalLayout")
         self.mkdir_txt = QtWidgets.QTextEdit(self.tab_4)
-        self.mkdir_txt.setStyleSheet("border-radius: 20px;\n"
-"font: 10pt \"微软雅黑\";\n"
-"color: rgb(170, 255, 127);")
+        self.mkdir_txt.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.mkdir_txt.setTabChangesFocus(False)
         self.mkdir_txt.setObjectName("mkdir_txt")
         self.verticalLayout.addWidget(self.mkdir_txt)
         self.mkdir_name = QtWidgets.QPushButton(self.tab_4)
         self.mkdir_name.setMinimumSize(QtCore.QSize(0, 100))
-        self.mkdir_name.setStyleSheet("QPushButton{border-radius:10px;font: 26pt \"幼圆\";background-color: rgb(0, 0, 127)}\n"
+        self.mkdir_name.setStyleSheet("QPushButton{border-radius:10px;font: 26pt \"幼圆\";background-color: rgb(0, 255, 255)}\n"
 "QPushButton:pressed{background-color:rgb(176,176,176);};")
         self.mkdir_name.setObjectName("mkdir_name")
         self.verticalLayout.addWidget(self.mkdir_name)
         self.clear_dirtxt = QtWidgets.QPushButton(self.tab_4)
         self.clear_dirtxt.setMinimumSize(QtCore.QSize(0, 100))
-        self.clear_dirtxt.setStyleSheet("QPushButton{border-radius:10px;font: 26pt \"幼圆\";background-color: rgb(85, 0, 0)}\n"
+        self.clear_dirtxt.setStyleSheet("QPushButton{border-radius:10px;font: 26pt \"幼圆\";background-color: rgb(255, 170, 127)}\n"
 "QPushButton:pressed{background-color:rgb(176,176,176);};")
         self.clear_dirtxt.setObjectName("clear_dirtxt")
         self.verticalLayout.addWidget(self.clear_dirtxt)
@@ -631,14 +591,12 @@ class Ui_Form(object):
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.auto_path = QtWidgets.QLineEdit(self.tab_5)
         self.auto_path.setMinimumSize(QtCore.QSize(0, 60))
-        self.auto_path.setStyleSheet("border-radius: 20px;\n"
-"font: 14pt \"微软雅黑\";\n"
-"color: rgb(170, 255, 127);")
+        self.auto_path.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.auto_path.setObjectName("auto_path")
         self.horizontalLayout.addWidget(self.auto_path)
         self.acition_auto = QtWidgets.QPushButton(self.tab_5)
         self.acition_auto.setMinimumSize(QtCore.QSize(80, 60))
-        self.acition_auto.setStyleSheet("QPushButton{background-color: rgb(0, 0, 127)}\n"
+        self.acition_auto.setStyleSheet("QPushButton{background-color: rgb(85, 170, 255)}\n"
 "QPushButton{border-radius:5px;}\n"
 "QPushButton:pressed{background-color:rgb(167, 167, 167);};\n"
 "")
@@ -646,7 +604,7 @@ class Ui_Form(object):
         self.horizontalLayout.addWidget(self.acition_auto)
         self.clear_auto_path = QtWidgets.QPushButton(self.tab_5)
         self.clear_auto_path.setMinimumSize(QtCore.QSize(80, 60))
-        self.clear_auto_path.setStyleSheet("QPushButton{background-color: rgb(88, 59, 44)}\n"
+        self.clear_auto_path.setStyleSheet("QPushButton{background-color: rgb(255, 170, 0)}\n"
 "QPushButton{border-radius:5px;}\n"
 "QPushButton:pressed{background-color:rgb(167, 167, 167);};\n"
 "")
@@ -668,9 +626,7 @@ class Ui_Form(object):
         self.label_40.setObjectName("label_40")
         self.verticalLayout_4.addWidget(self.label_40)
         self.auto_info = QtWidgets.QTextBrowser(self.tab_6)
-        self.auto_info.setStyleSheet("border-radius: 20px;\n"
-"font: 10pt \"微软雅黑\";\n"
-"color: rgb(170, 255, 127);")
+        self.auto_info.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.auto_info.setObjectName("auto_info")
         self.verticalLayout_4.addWidget(self.auto_info)
         self.tabWidget_3.addTab(self.tab_6, "")
@@ -683,19 +639,13 @@ class Ui_Form(object):
         self.verticalLayout_5 = QtWidgets.QVBoxLayout()
         self.verticalLayout_5.setObjectName("verticalLayout_5")
         self.lock_img = QtWidgets.QLabel(self.tab_7)
-        self.lock_img.setStyleSheet("border-color: rgb(170, 255, 127);\n"
-"border-width: 1px;\n"
-"border-style: solid;\n"
-"border-radius:10px;\n"
-"font: 20pt \"微软雅黑\";")
+        self.lock_img.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.lock_img.setAlignment(QtCore.Qt.AlignCenter)
         self.lock_img.setObjectName("lock_img")
         self.verticalLayout_5.addWidget(self.lock_img)
         self.verticalLayout_12.addLayout(self.verticalLayout_5)
         self.lock_path = QtWidgets.QTextBrowser(self.tab_7)
-        self.lock_path.setStyleSheet("border-radius: 20px;\n"
-"font: 10pt \"微软雅黑\";\n"
-"color: rgb(170, 255, 127);")
+        self.lock_path.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.lock_path.setObjectName("lock_path")
         self.verticalLayout_12.addWidget(self.lock_path)
         self.verticalLayout_12.setStretch(0, 9)
@@ -706,19 +656,13 @@ class Ui_Form(object):
         self.verticalLayout_38 = QtWidgets.QVBoxLayout()
         self.verticalLayout_38.setObjectName("verticalLayout_38")
         self.unlock_img = QtWidgets.QLabel(self.tab_7)
-        self.unlock_img.setStyleSheet("border-color: rgb(170, 255, 127);\n"
-"border-width: 1px;\n"
-"border-style: solid;\n"
-"border-radius:10px;\n"
-"font: 20pt \"微软雅黑\";")
+        self.unlock_img.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.unlock_img.setAlignment(QtCore.Qt.AlignCenter)
         self.unlock_img.setObjectName("unlock_img")
         self.verticalLayout_38.addWidget(self.unlock_img)
         self.verticalLayout_39.addLayout(self.verticalLayout_38)
         self.unlock_path = QtWidgets.QTextBrowser(self.tab_7)
-        self.unlock_path.setStyleSheet("border-radius: 20px;\n"
-"font: 10pt \"微软雅黑\";\n"
-"color: rgb(170, 255, 127);")
+        self.unlock_path.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.unlock_path.setObjectName("unlock_path")
         self.verticalLayout_39.addWidget(self.unlock_path)
         self.verticalLayout_39.setStretch(0, 9)
@@ -729,19 +673,13 @@ class Ui_Form(object):
         self.verticalLayout_53 = QtWidgets.QVBoxLayout()
         self.verticalLayout_53.setObjectName("verticalLayout_53")
         self.charge_img = QtWidgets.QLabel(self.tab_7)
-        self.charge_img.setStyleSheet("border-color: rgb(170, 255, 127);\n"
-"border-width: 1px;\n"
-"border-style: solid;\n"
-"border-radius:10px;\n"
-"font: 20pt \"微软雅黑\";")
+        self.charge_img.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.charge_img.setAlignment(QtCore.Qt.AlignCenter)
         self.charge_img.setObjectName("charge_img")
         self.verticalLayout_53.addWidget(self.charge_img)
         self.verticalLayout_52.addLayout(self.verticalLayout_53)
         self.charge_path = QtWidgets.QTextBrowser(self.tab_7)
-        self.charge_path.setStyleSheet("border-radius: 20px;\n"
-"font: 10pt \"微软雅黑\";\n"
-"color: rgb(170, 255, 127);")
+        self.charge_path.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.charge_path.setObjectName("charge_path")
         self.verticalLayout_52.addWidget(self.charge_path)
         self.verticalLayout_52.setStretch(0, 9)
@@ -752,19 +690,13 @@ class Ui_Form(object):
         self.verticalLayout_55 = QtWidgets.QVBoxLayout()
         self.verticalLayout_55.setObjectName("verticalLayout_55")
         self.wifi_img = QtWidgets.QLabel(self.tab_7)
-        self.wifi_img.setStyleSheet("border-color: rgb(170, 255, 127);\n"
-"border-width: 1px;\n"
-"border-style: solid;\n"
-"border-radius:10px;\n"
-"font: 20pt \"微软雅黑\";")
+        self.wifi_img.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.wifi_img.setAlignment(QtCore.Qt.AlignCenter)
         self.wifi_img.setObjectName("wifi_img")
         self.verticalLayout_55.addWidget(self.wifi_img)
         self.verticalLayout_54.addLayout(self.verticalLayout_55)
         self.wifi_path = QtWidgets.QTextBrowser(self.tab_7)
-        self.wifi_path.setStyleSheet("border-radius: 20px;\n"
-"font: 10pt \"微软雅黑\";\n"
-"color: rgb(170, 255, 127);")
+        self.wifi_path.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.wifi_path.setObjectName("wifi_path")
         self.verticalLayout_54.addWidget(self.wifi_path)
         self.verticalLayout_54.setStretch(0, 9)
@@ -775,19 +707,13 @@ class Ui_Form(object):
         self.verticalLayout_41 = QtWidgets.QVBoxLayout()
         self.verticalLayout_41.setObjectName("verticalLayout_41")
         self.timing_img = QtWidgets.QLabel(self.tab_7)
-        self.timing_img.setStyleSheet("border-color: rgb(170, 255, 127);\n"
-"border-width: 1px;\n"
-"border-style: solid;\n"
-"border-radius:10px;\n"
-"font: 20pt \"微软雅黑\";")
+        self.timing_img.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.timing_img.setAlignment(QtCore.Qt.AlignCenter)
         self.timing_img.setObjectName("timing_img")
         self.verticalLayout_41.addWidget(self.timing_img)
         self.verticalLayout_40.addLayout(self.verticalLayout_41)
         self.timing_path = QtWidgets.QTextBrowser(self.tab_7)
-        self.timing_path.setStyleSheet("border-radius: 20px;\n"
-"font: 10pt \"微软雅黑\";\n"
-"color: rgb(170, 255, 127);")
+        self.timing_path.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.timing_path.setObjectName("timing_path")
         self.verticalLayout_40.addWidget(self.timing_path)
         self.verticalLayout_40.setStretch(0, 9)
@@ -798,19 +724,13 @@ class Ui_Form(object):
         self.verticalLayout_43 = QtWidgets.QVBoxLayout()
         self.verticalLayout_43.setObjectName("verticalLayout_43")
         self.home_img = QtWidgets.QLabel(self.tab_7)
-        self.home_img.setStyleSheet("border-color: rgb(170, 255, 127);\n"
-"border-width: 1px;\n"
-"border-style: solid;\n"
-"border-radius:10px;\n"
-"font: 20pt \"微软雅黑\";")
+        self.home_img.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.home_img.setAlignment(QtCore.Qt.AlignCenter)
         self.home_img.setObjectName("home_img")
         self.verticalLayout_43.addWidget(self.home_img)
         self.verticalLayout_42.addLayout(self.verticalLayout_43)
         self.home_path = QtWidgets.QTextBrowser(self.tab_7)
-        self.home_path.setStyleSheet("border-radius: 20px;\n"
-"font: 10pt \"微软雅黑\";\n"
-"color: rgb(170, 255, 127);")
+        self.home_path.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.home_path.setObjectName("home_path")
         self.verticalLayout_42.addWidget(self.home_path)
         self.verticalLayout_42.setStretch(0, 9)
@@ -826,23 +746,16 @@ class Ui_Form(object):
         self.verticalLayout_47 = QtWidgets.QVBoxLayout()
         self.verticalLayout_47.setObjectName("verticalLayout_47")
         self.unlock_ad_img = QtWidgets.QLabel(self.tab_8)
-        self.unlock_ad_img.setStyleSheet("border-color: rgb(170, 255, 127);\n"
-"border-width: 1px;\n"
-"border-style: solid;\n"
-"border-radius:10px;\n"
-"font: 20pt \"微软雅黑\";")
+        self.unlock_ad_img.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.unlock_ad_img.setAlignment(QtCore.Qt.AlignCenter)
         self.unlock_ad_img.setObjectName("unlock_ad_img")
         self.verticalLayout_47.addWidget(self.unlock_ad_img)
         self.verticalLayout_46.addLayout(self.verticalLayout_47)
         self.label_33 = QtWidgets.QLabel(self.tab_8)
-        self.label_33.setAlignment(QtCore.Qt.AlignCenter)
         self.label_33.setObjectName("label_33")
         self.verticalLayout_46.addWidget(self.label_33)
         self.unlock_ad_path = QtWidgets.QTextBrowser(self.tab_8)
-        self.unlock_ad_path.setStyleSheet("border-radius: 20px;\n"
-"font: 10pt \"微软雅黑\";\n"
-"color: rgb(170, 255, 127);")
+        self.unlock_ad_path.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.unlock_ad_path.setObjectName("unlock_ad_path")
         self.verticalLayout_46.addWidget(self.unlock_ad_path)
         self.verticalLayout_46.setStretch(0, 8)
@@ -853,23 +766,16 @@ class Ui_Form(object):
         self.verticalLayout_44 = QtWidgets.QVBoxLayout()
         self.verticalLayout_44.setObjectName("verticalLayout_44")
         self.charge_ad_img = QtWidgets.QLabel(self.tab_8)
-        self.charge_ad_img.setStyleSheet("border-color: rgb(170, 255, 127);\n"
-"border-width: 1px;\n"
-"border-style: solid;\n"
-"border-radius:10px;\n"
-"font: 20pt \"微软雅黑\";")
+        self.charge_ad_img.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.charge_ad_img.setAlignment(QtCore.Qt.AlignCenter)
         self.charge_ad_img.setObjectName("charge_ad_img")
         self.verticalLayout_44.addWidget(self.charge_ad_img)
         self.verticalLayout_45.addLayout(self.verticalLayout_44)
         self.label_31 = QtWidgets.QLabel(self.tab_8)
-        self.label_31.setAlignment(QtCore.Qt.AlignCenter)
         self.label_31.setObjectName("label_31")
         self.verticalLayout_45.addWidget(self.label_31)
         self.charge_ad_path = QtWidgets.QTextBrowser(self.tab_8)
-        self.charge_ad_path.setStyleSheet("border-radius: 20px;\n"
-"font: 10pt \"微软雅黑\";\n"
-"color: rgb(170, 255, 127);")
+        self.charge_ad_path.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.charge_ad_path.setObjectName("charge_ad_path")
         self.verticalLayout_45.addWidget(self.charge_ad_path)
         self.verticalLayout_45.setStretch(0, 8)
@@ -880,23 +786,16 @@ class Ui_Form(object):
         self.verticalLayout_57 = QtWidgets.QVBoxLayout()
         self.verticalLayout_57.setObjectName("verticalLayout_57")
         self.home_ad_img = QtWidgets.QLabel(self.tab_8)
-        self.home_ad_img.setStyleSheet("border-color: rgb(170, 255, 127);\n"
-"border-width: 1px;\n"
-"border-style: solid;\n"
-"border-radius:10px;\n"
-"font: 20pt \"微软雅黑\";")
+        self.home_ad_img.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.home_ad_img.setAlignment(QtCore.Qt.AlignCenter)
         self.home_ad_img.setObjectName("home_ad_img")
         self.verticalLayout_57.addWidget(self.home_ad_img)
         self.verticalLayout_56.addLayout(self.verticalLayout_57)
         self.label_39 = QtWidgets.QLabel(self.tab_8)
-        self.label_39.setAlignment(QtCore.Qt.AlignCenter)
         self.label_39.setObjectName("label_39")
         self.verticalLayout_56.addWidget(self.label_39)
         self.home_ad_path = QtWidgets.QTextBrowser(self.tab_8)
-        self.home_ad_path.setStyleSheet("border-radius: 20px;\n"
-"font: 10pt \"微软雅黑\";\n"
-"color: rgb(170, 255, 127);")
+        self.home_ad_path.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.home_ad_path.setObjectName("home_ad_path")
         self.verticalLayout_56.addWidget(self.home_ad_path)
         self.verticalLayout_56.setStretch(0, 8)
@@ -907,23 +806,16 @@ class Ui_Form(object):
         self.verticalLayout_49 = QtWidgets.QVBoxLayout()
         self.verticalLayout_49.setObjectName("verticalLayout_49")
         self.wifi_ad_img = QtWidgets.QLabel(self.tab_8)
-        self.wifi_ad_img.setStyleSheet("border-color: rgb(170, 255, 127);\n"
-"border-width: 1px;\n"
-"border-style: solid;\n"
-"border-radius:10px;\n"
-"font: 20pt \"微软雅黑\";")
+        self.wifi_ad_img.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.wifi_ad_img.setAlignment(QtCore.Qt.AlignCenter)
         self.wifi_ad_img.setObjectName("wifi_ad_img")
         self.verticalLayout_49.addWidget(self.wifi_ad_img)
         self.verticalLayout_48.addLayout(self.verticalLayout_49)
         self.label_35 = QtWidgets.QLabel(self.tab_8)
-        self.label_35.setAlignment(QtCore.Qt.AlignCenter)
         self.label_35.setObjectName("label_35")
         self.verticalLayout_48.addWidget(self.label_35)
         self.wifi_ad_path = QtWidgets.QTextBrowser(self.tab_8)
-        self.wifi_ad_path.setStyleSheet("border-radius: 20px;\n"
-"font: 10pt \"微软雅黑\";\n"
-"color: rgb(170, 255, 127);")
+        self.wifi_ad_path.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.wifi_ad_path.setObjectName("wifi_ad_path")
         self.verticalLayout_48.addWidget(self.wifi_ad_path)
         self.verticalLayout_48.setStretch(0, 8)
@@ -934,23 +826,16 @@ class Ui_Form(object):
         self.verticalLayout_51 = QtWidgets.QVBoxLayout()
         self.verticalLayout_51.setObjectName("verticalLayout_51")
         self.timming_ad_img = QtWidgets.QLabel(self.tab_8)
-        self.timming_ad_img.setStyleSheet("border-color: rgb(170, 255, 127);\n"
-"border-width: 1px;\n"
-"border-style: solid;\n"
-"border-radius:10px;\n"
-"font: 20pt \"微软雅黑\";")
+        self.timming_ad_img.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.timming_ad_img.setAlignment(QtCore.Qt.AlignCenter)
         self.timming_ad_img.setObjectName("timming_ad_img")
         self.verticalLayout_51.addWidget(self.timming_ad_img)
         self.verticalLayout_50.addLayout(self.verticalLayout_51)
         self.label_37 = QtWidgets.QLabel(self.tab_8)
-        self.label_37.setAlignment(QtCore.Qt.AlignCenter)
         self.label_37.setObjectName("label_37")
         self.verticalLayout_50.addWidget(self.label_37)
         self.timming_ad_path = QtWidgets.QTextBrowser(self.tab_8)
-        self.timming_ad_path.setStyleSheet("border-radius: 20px;\n"
-"font: 10pt \"微软雅黑\";\n"
-"color: rgb(170, 255, 127);")
+        self.timming_ad_path.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.timming_ad_path.setObjectName("timming_ad_path")
         self.verticalLayout_50.addWidget(self.timming_ad_path)
         self.verticalLayout_50.setStretch(0, 8)
@@ -967,29 +852,27 @@ class Ui_Form(object):
         self.verticalLayout_81.setObjectName("verticalLayout_81")
         self.horizontalLayout_7 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_7.setObjectName("horizontalLayout_7")
-        self.ash_auto_path = QtWidgets.QLineEdit(self.tab_9)
-        self.ash_auto_path.setMinimumSize(QtCore.QSize(0, 60))
-        self.ash_auto_path.setStyleSheet("border-radius: 20px;\n"
-"font: 14pt \"微软雅黑\";\n"
-"color: rgb(170, 255, 127);")
-        self.ash_auto_path.setObjectName("ash_auto_path")
-        self.horizontalLayout_7.addWidget(self.ash_auto_path)
-        self.ash_acition_auto = QtWidgets.QPushButton(self.tab_9)
-        self.ash_acition_auto.setMinimumSize(QtCore.QSize(80, 60))
-        self.ash_acition_auto.setStyleSheet("QPushButton{background-color: rgb(0, 0, 127)}\n"
+        self.auto_path_2 = QtWidgets.QLineEdit(self.tab_9)
+        self.auto_path_2.setMinimumSize(QtCore.QSize(0, 60))
+        self.auto_path_2.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.auto_path_2.setObjectName("auto_path_2")
+        self.horizontalLayout_7.addWidget(self.auto_path_2)
+        self.acition_auto_2 = QtWidgets.QPushButton(self.tab_9)
+        self.acition_auto_2.setMinimumSize(QtCore.QSize(80, 60))
+        self.acition_auto_2.setStyleSheet("QPushButton{background-color: rgb(85, 170, 255)}\n"
 "QPushButton{border-radius:5px;}\n"
 "QPushButton:pressed{background-color:rgb(167, 167, 167);};\n"
 "")
-        self.ash_acition_auto.setObjectName("ash_acition_auto")
-        self.horizontalLayout_7.addWidget(self.ash_acition_auto)
-        self.ash_clear_auto_path = QtWidgets.QPushButton(self.tab_9)
-        self.ash_clear_auto_path.setMinimumSize(QtCore.QSize(80, 60))
-        self.ash_clear_auto_path.setStyleSheet("QPushButton{background-color: rgb(108, 72, 0)}\n"
+        self.acition_auto_2.setObjectName("acition_auto_2")
+        self.horizontalLayout_7.addWidget(self.acition_auto_2)
+        self.clear_auto_path_2 = QtWidgets.QPushButton(self.tab_9)
+        self.clear_auto_path_2.setMinimumSize(QtCore.QSize(80, 60))
+        self.clear_auto_path_2.setStyleSheet("QPushButton{background-color: rgb(255, 170, 0)}\n"
 "QPushButton{border-radius:5px;}\n"
 "QPushButton:pressed{background-color:rgb(167, 167, 167);};\n"
 "")
-        self.ash_clear_auto_path.setObjectName("ash_clear_auto_path")
-        self.horizontalLayout_7.addWidget(self.ash_clear_auto_path)
+        self.clear_auto_path_2.setObjectName("clear_auto_path_2")
+        self.horizontalLayout_7.addWidget(self.clear_auto_path_2)
         self.verticalLayout_81.addLayout(self.horizontalLayout_7)
         self.tabWidget_4 = QtWidgets.QTabWidget(self.tab_9)
         self.tabWidget_4.setObjectName("tabWidget_4")
@@ -1004,12 +887,10 @@ class Ui_Form(object):
         self.label_41 = QtWidgets.QLabel(self.tab_10)
         self.label_41.setObjectName("label_41")
         self.verticalLayout_58.addWidget(self.label_41)
-        self.ash_auto_info = QtWidgets.QTextBrowser(self.tab_10)
-        self.ash_auto_info.setStyleSheet("border-radius: 20px;\n"
-"font: 10pt \"微软雅黑\";\n"
-"color: rgb(170, 255, 127);")
-        self.ash_auto_info.setObjectName("ash_auto_info")
-        self.verticalLayout_58.addWidget(self.ash_auto_info)
+        self.auto_info_2 = QtWidgets.QTextBrowser(self.tab_10)
+        self.auto_info_2.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.auto_info_2.setObjectName("auto_info_2")
+        self.verticalLayout_58.addWidget(self.auto_info_2)
         self.tabWidget_4.addTab(self.tab_10, "")
         self.tab_11 = QtWidgets.QWidget()
         self.tab_11.setObjectName("tab_11")
@@ -1019,22 +900,16 @@ class Ui_Form(object):
         self.verticalLayout_59.setObjectName("verticalLayout_59")
         self.verticalLayout_60 = QtWidgets.QVBoxLayout()
         self.verticalLayout_60.setObjectName("verticalLayout_60")
-        self.ash_lock_img = QtWidgets.QLabel(self.tab_11)
-        self.ash_lock_img.setStyleSheet("border-color: rgb(170, 255, 127);\n"
-"border-width: 1px;\n"
-"border-style: solid;\n"
-"border-radius:10px;\n"
-"font: 20pt \"微软雅黑\";")
-        self.ash_lock_img.setAlignment(QtCore.Qt.AlignCenter)
-        self.ash_lock_img.setObjectName("ash_lock_img")
-        self.verticalLayout_60.addWidget(self.ash_lock_img)
+        self.lock_img_2 = QtWidgets.QLabel(self.tab_11)
+        self.lock_img_2.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.lock_img_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.lock_img_2.setObjectName("lock_img_2")
+        self.verticalLayout_60.addWidget(self.lock_img_2)
         self.verticalLayout_59.addLayout(self.verticalLayout_60)
-        self.ash_lock_path = QtWidgets.QTextBrowser(self.tab_11)
-        self.ash_lock_path.setStyleSheet("border-radius: 20px;\n"
-"font: 10pt \"微软雅黑\";\n"
-"color: rgb(170, 255, 127);")
-        self.ash_lock_path.setObjectName("ash_lock_path")
-        self.verticalLayout_59.addWidget(self.ash_lock_path)
+        self.lock_path_2 = QtWidgets.QTextBrowser(self.tab_11)
+        self.lock_path_2.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.lock_path_2.setObjectName("lock_path_2")
+        self.verticalLayout_59.addWidget(self.lock_path_2)
         self.verticalLayout_59.setStretch(0, 9)
         self.verticalLayout_59.setStretch(1, 1)
         self.horizontalLayout_8.addLayout(self.verticalLayout_59)
@@ -1042,22 +917,16 @@ class Ui_Form(object):
         self.verticalLayout_61.setObjectName("verticalLayout_61")
         self.verticalLayout_62 = QtWidgets.QVBoxLayout()
         self.verticalLayout_62.setObjectName("verticalLayout_62")
-        self.ash_unlock_img = QtWidgets.QLabel(self.tab_11)
-        self.ash_unlock_img.setStyleSheet("border-color: rgb(170, 255, 127);\n"
-"border-width: 1px;\n"
-"border-style: solid;\n"
-"border-radius:10px;\n"
-"font: 20pt \"微软雅黑\";")
-        self.ash_unlock_img.setAlignment(QtCore.Qt.AlignCenter)
-        self.ash_unlock_img.setObjectName("ash_unlock_img")
-        self.verticalLayout_62.addWidget(self.ash_unlock_img)
+        self.unlock_img_2 = QtWidgets.QLabel(self.tab_11)
+        self.unlock_img_2.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.unlock_img_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.unlock_img_2.setObjectName("unlock_img_2")
+        self.verticalLayout_62.addWidget(self.unlock_img_2)
         self.verticalLayout_61.addLayout(self.verticalLayout_62)
-        self.ash_unlock_path = QtWidgets.QTextBrowser(self.tab_11)
-        self.ash_unlock_path.setStyleSheet("border-radius: 20px;\n"
-"font: 10pt \"微软雅黑\";\n"
-"color: rgb(170, 255, 127);")
-        self.ash_unlock_path.setObjectName("ash_unlock_path")
-        self.verticalLayout_61.addWidget(self.ash_unlock_path)
+        self.unlock_path_2 = QtWidgets.QTextBrowser(self.tab_11)
+        self.unlock_path_2.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.unlock_path_2.setObjectName("unlock_path_2")
+        self.verticalLayout_61.addWidget(self.unlock_path_2)
         self.verticalLayout_61.setStretch(0, 9)
         self.verticalLayout_61.setStretch(1, 1)
         self.horizontalLayout_8.addLayout(self.verticalLayout_61)
@@ -1065,22 +934,16 @@ class Ui_Form(object):
         self.verticalLayout_63.setObjectName("verticalLayout_63")
         self.verticalLayout_64 = QtWidgets.QVBoxLayout()
         self.verticalLayout_64.setObjectName("verticalLayout_64")
-        self.ash_charge_img = QtWidgets.QLabel(self.tab_11)
-        self.ash_charge_img.setStyleSheet("border-color: rgb(170, 255, 127);\n"
-"border-width: 1px;\n"
-"border-style: solid;\n"
-"border-radius:10px;\n"
-"font: 20pt \"微软雅黑\";")
-        self.ash_charge_img.setAlignment(QtCore.Qt.AlignCenter)
-        self.ash_charge_img.setObjectName("ash_charge_img")
-        self.verticalLayout_64.addWidget(self.ash_charge_img)
+        self.charge_img_2 = QtWidgets.QLabel(self.tab_11)
+        self.charge_img_2.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.charge_img_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.charge_img_2.setObjectName("charge_img_2")
+        self.verticalLayout_64.addWidget(self.charge_img_2)
         self.verticalLayout_63.addLayout(self.verticalLayout_64)
-        self.ash_charge_path = QtWidgets.QTextBrowser(self.tab_11)
-        self.ash_charge_path.setStyleSheet("border-radius: 20px;\n"
-"font: 10pt \"微软雅黑\";\n"
-"color: rgb(170, 255, 127);")
-        self.ash_charge_path.setObjectName("ash_charge_path")
-        self.verticalLayout_63.addWidget(self.ash_charge_path)
+        self.charge_path_2 = QtWidgets.QTextBrowser(self.tab_11)
+        self.charge_path_2.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.charge_path_2.setObjectName("charge_path_2")
+        self.verticalLayout_63.addWidget(self.charge_path_2)
         self.verticalLayout_63.setStretch(0, 9)
         self.verticalLayout_63.setStretch(1, 1)
         self.horizontalLayout_8.addLayout(self.verticalLayout_63)
@@ -1088,22 +951,16 @@ class Ui_Form(object):
         self.verticalLayout_65.setObjectName("verticalLayout_65")
         self.verticalLayout_66 = QtWidgets.QVBoxLayout()
         self.verticalLayout_66.setObjectName("verticalLayout_66")
-        self.ash_wifi_img = QtWidgets.QLabel(self.tab_11)
-        self.ash_wifi_img.setStyleSheet("border-color: rgb(170, 255, 127);\n"
-"border-width: 1px;\n"
-"border-style: solid;\n"
-"border-radius:10px;\n"
-"font: 20pt \"微软雅黑\";")
-        self.ash_wifi_img.setAlignment(QtCore.Qt.AlignCenter)
-        self.ash_wifi_img.setObjectName("ash_wifi_img")
-        self.verticalLayout_66.addWidget(self.ash_wifi_img)
+        self.wifi_img_2 = QtWidgets.QLabel(self.tab_11)
+        self.wifi_img_2.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.wifi_img_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.wifi_img_2.setObjectName("wifi_img_2")
+        self.verticalLayout_66.addWidget(self.wifi_img_2)
         self.verticalLayout_65.addLayout(self.verticalLayout_66)
-        self.ash_wifi_path = QtWidgets.QTextBrowser(self.tab_11)
-        self.ash_wifi_path.setStyleSheet("border-radius: 20px;\n"
-"font: 10pt \"微软雅黑\";\n"
-"color: rgb(170, 255, 127);")
-        self.ash_wifi_path.setObjectName("ash_wifi_path")
-        self.verticalLayout_65.addWidget(self.ash_wifi_path)
+        self.wifi_path_2 = QtWidgets.QTextBrowser(self.tab_11)
+        self.wifi_path_2.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.wifi_path_2.setObjectName("wifi_path_2")
+        self.verticalLayout_65.addWidget(self.wifi_path_2)
         self.verticalLayout_65.setStretch(0, 9)
         self.verticalLayout_65.setStretch(1, 1)
         self.horizontalLayout_8.addLayout(self.verticalLayout_65)
@@ -1111,22 +968,16 @@ class Ui_Form(object):
         self.verticalLayout_67.setObjectName("verticalLayout_67")
         self.verticalLayout_68 = QtWidgets.QVBoxLayout()
         self.verticalLayout_68.setObjectName("verticalLayout_68")
-        self.ash_timing_img = QtWidgets.QLabel(self.tab_11)
-        self.ash_timing_img.setStyleSheet("border-color: rgb(170, 255, 127);\n"
-"border-width: 1px;\n"
-"border-style: solid;\n"
-"border-radius:10px;\n"
-"font: 20pt \"微软雅黑\";")
-        self.ash_timing_img.setAlignment(QtCore.Qt.AlignCenter)
-        self.ash_timing_img.setObjectName("ash_timing_img")
-        self.verticalLayout_68.addWidget(self.ash_timing_img)
+        self.timing_img_2 = QtWidgets.QLabel(self.tab_11)
+        self.timing_img_2.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.timing_img_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.timing_img_2.setObjectName("timing_img_2")
+        self.verticalLayout_68.addWidget(self.timing_img_2)
         self.verticalLayout_67.addLayout(self.verticalLayout_68)
-        self.ash_timing_path = QtWidgets.QTextBrowser(self.tab_11)
-        self.ash_timing_path.setStyleSheet("border-radius: 20px;\n"
-"font: 10pt \"微软雅黑\";\n"
-"color: rgb(170, 255, 127);")
-        self.ash_timing_path.setObjectName("ash_timing_path")
-        self.verticalLayout_67.addWidget(self.ash_timing_path)
+        self.timing_path_2 = QtWidgets.QTextBrowser(self.tab_11)
+        self.timing_path_2.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.timing_path_2.setObjectName("timing_path_2")
+        self.verticalLayout_67.addWidget(self.timing_path_2)
         self.verticalLayout_67.setStretch(0, 9)
         self.verticalLayout_67.setStretch(1, 1)
         self.horizontalLayout_8.addLayout(self.verticalLayout_67)
@@ -1134,22 +985,16 @@ class Ui_Form(object):
         self.verticalLayout_69.setObjectName("verticalLayout_69")
         self.verticalLayout_70 = QtWidgets.QVBoxLayout()
         self.verticalLayout_70.setObjectName("verticalLayout_70")
-        self.ash_home_img = QtWidgets.QLabel(self.tab_11)
-        self.ash_home_img.setStyleSheet("border-color: rgb(170, 255, 127);\n"
-"border-width: 1px;\n"
-"border-style: solid;\n"
-"border-radius:10px;\n"
-"font: 20pt \"微软雅黑\";")
-        self.ash_home_img.setAlignment(QtCore.Qt.AlignCenter)
-        self.ash_home_img.setObjectName("ash_home_img")
-        self.verticalLayout_70.addWidget(self.ash_home_img)
+        self.home_img_2 = QtWidgets.QLabel(self.tab_11)
+        self.home_img_2.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.home_img_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.home_img_2.setObjectName("home_img_2")
+        self.verticalLayout_70.addWidget(self.home_img_2)
         self.verticalLayout_69.addLayout(self.verticalLayout_70)
-        self.ash_home_path = QtWidgets.QTextBrowser(self.tab_11)
-        self.ash_home_path.setStyleSheet("border-radius: 20px;\n"
-"font: 10pt \"微软雅黑\";\n"
-"color: rgb(170, 255, 127);")
-        self.ash_home_path.setObjectName("ash_home_path")
-        self.verticalLayout_69.addWidget(self.ash_home_path)
+        self.home_path_2 = QtWidgets.QTextBrowser(self.tab_11)
+        self.home_path_2.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.home_path_2.setObjectName("home_path_2")
+        self.verticalLayout_69.addWidget(self.home_path_2)
         self.verticalLayout_69.setStretch(0, 9)
         self.verticalLayout_69.setStretch(1, 1)
         self.horizontalLayout_8.addLayout(self.verticalLayout_69)
@@ -1162,26 +1007,19 @@ class Ui_Form(object):
         self.verticalLayout_71.setObjectName("verticalLayout_71")
         self.verticalLayout_72 = QtWidgets.QVBoxLayout()
         self.verticalLayout_72.setObjectName("verticalLayout_72")
-        self.ash_unlock_ad_img = QtWidgets.QLabel(self.tab_12)
-        self.ash_unlock_ad_img.setStyleSheet("border-color: rgb(170, 255, 127);\n"
-"border-width: 1px;\n"
-"border-style: solid;\n"
-"border-radius:10px;\n"
-"font: 20pt \"微软雅黑\";")
-        self.ash_unlock_ad_img.setAlignment(QtCore.Qt.AlignCenter)
-        self.ash_unlock_ad_img.setObjectName("ash_unlock_ad_img")
-        self.verticalLayout_72.addWidget(self.ash_unlock_ad_img)
+        self.unlock_ad_img_2 = QtWidgets.QLabel(self.tab_12)
+        self.unlock_ad_img_2.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.unlock_ad_img_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.unlock_ad_img_2.setObjectName("unlock_ad_img_2")
+        self.verticalLayout_72.addWidget(self.unlock_ad_img_2)
         self.verticalLayout_71.addLayout(self.verticalLayout_72)
         self.label_34 = QtWidgets.QLabel(self.tab_12)
-        self.label_34.setAlignment(QtCore.Qt.AlignCenter)
         self.label_34.setObjectName("label_34")
         self.verticalLayout_71.addWidget(self.label_34)
-        self.ash_unlock_ad_path = QtWidgets.QTextBrowser(self.tab_12)
-        self.ash_unlock_ad_path.setStyleSheet("border-radius: 20px;\n"
-"font: 10pt \"微软雅黑\";\n"
-"color: rgb(170, 255, 127);")
-        self.ash_unlock_ad_path.setObjectName("ash_unlock_ad_path")
-        self.verticalLayout_71.addWidget(self.ash_unlock_ad_path)
+        self.unlock_ad_path_2 = QtWidgets.QTextBrowser(self.tab_12)
+        self.unlock_ad_path_2.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.unlock_ad_path_2.setObjectName("unlock_ad_path_2")
+        self.verticalLayout_71.addWidget(self.unlock_ad_path_2)
         self.verticalLayout_71.setStretch(0, 8)
         self.verticalLayout_71.setStretch(2, 1)
         self.horizontalLayout_19.addLayout(self.verticalLayout_71)
@@ -1189,26 +1027,19 @@ class Ui_Form(object):
         self.verticalLayout_73.setObjectName("verticalLayout_73")
         self.verticalLayout_74 = QtWidgets.QVBoxLayout()
         self.verticalLayout_74.setObjectName("verticalLayout_74")
-        self.ash_charge_ad_img = QtWidgets.QLabel(self.tab_12)
-        self.ash_charge_ad_img.setStyleSheet("border-color: rgb(170, 255, 127);\n"
-"border-width: 1px;\n"
-"border-style: solid;\n"
-"border-radius:10px;\n"
-"font: 20pt \"微软雅黑\";")
-        self.ash_charge_ad_img.setAlignment(QtCore.Qt.AlignCenter)
-        self.ash_charge_ad_img.setObjectName("ash_charge_ad_img")
-        self.verticalLayout_74.addWidget(self.ash_charge_ad_img)
+        self.charge_ad_img_2 = QtWidgets.QLabel(self.tab_12)
+        self.charge_ad_img_2.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.charge_ad_img_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.charge_ad_img_2.setObjectName("charge_ad_img_2")
+        self.verticalLayout_74.addWidget(self.charge_ad_img_2)
         self.verticalLayout_73.addLayout(self.verticalLayout_74)
         self.label_32 = QtWidgets.QLabel(self.tab_12)
-        self.label_32.setAlignment(QtCore.Qt.AlignCenter)
         self.label_32.setObjectName("label_32")
         self.verticalLayout_73.addWidget(self.label_32)
-        self.ash_charge_ad_path = QtWidgets.QTextBrowser(self.tab_12)
-        self.ash_charge_ad_path.setStyleSheet("border-radius: 20px;\n"
-"font: 10pt \"微软雅黑\";\n"
-"color: rgb(170, 255, 127);")
-        self.ash_charge_ad_path.setObjectName("ash_charge_ad_path")
-        self.verticalLayout_73.addWidget(self.ash_charge_ad_path)
+        self.charge_ad_path_2 = QtWidgets.QTextBrowser(self.tab_12)
+        self.charge_ad_path_2.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.charge_ad_path_2.setObjectName("charge_ad_path_2")
+        self.verticalLayout_73.addWidget(self.charge_ad_path_2)
         self.verticalLayout_73.setStretch(0, 8)
         self.verticalLayout_73.setStretch(2, 1)
         self.horizontalLayout_19.addLayout(self.verticalLayout_73)
@@ -1216,26 +1047,19 @@ class Ui_Form(object):
         self.verticalLayout_75.setObjectName("verticalLayout_75")
         self.verticalLayout_76 = QtWidgets.QVBoxLayout()
         self.verticalLayout_76.setObjectName("verticalLayout_76")
-        self.ash_home_ad_img = QtWidgets.QLabel(self.tab_12)
-        self.ash_home_ad_img.setStyleSheet("border-color: rgb(170, 255, 127);\n"
-"border-width: 1px;\n"
-"border-style: solid;\n"
-"border-radius:10px;\n"
-"font: 20pt \"微软雅黑\";")
-        self.ash_home_ad_img.setAlignment(QtCore.Qt.AlignCenter)
-        self.ash_home_ad_img.setObjectName("ash_home_ad_img")
-        self.verticalLayout_76.addWidget(self.ash_home_ad_img)
+        self.home_ad_img_2 = QtWidgets.QLabel(self.tab_12)
+        self.home_ad_img_2.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.home_ad_img_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.home_ad_img_2.setObjectName("home_ad_img_2")
+        self.verticalLayout_76.addWidget(self.home_ad_img_2)
         self.verticalLayout_75.addLayout(self.verticalLayout_76)
         self.label_42 = QtWidgets.QLabel(self.tab_12)
-        self.label_42.setAlignment(QtCore.Qt.AlignCenter)
         self.label_42.setObjectName("label_42")
         self.verticalLayout_75.addWidget(self.label_42)
-        self.ash_home_ad_path = QtWidgets.QTextBrowser(self.tab_12)
-        self.ash_home_ad_path.setStyleSheet("border-radius: 20px;\n"
-"font: 10pt \"微软雅黑\";\n"
-"color: rgb(170, 255, 127);")
-        self.ash_home_ad_path.setObjectName("ash_home_ad_path")
-        self.verticalLayout_75.addWidget(self.ash_home_ad_path)
+        self.home_ad_path_2 = QtWidgets.QTextBrowser(self.tab_12)
+        self.home_ad_path_2.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.home_ad_path_2.setObjectName("home_ad_path_2")
+        self.verticalLayout_75.addWidget(self.home_ad_path_2)
         self.verticalLayout_75.setStretch(0, 8)
         self.verticalLayout_75.setStretch(2, 1)
         self.horizontalLayout_19.addLayout(self.verticalLayout_75)
@@ -1243,26 +1067,19 @@ class Ui_Form(object):
         self.verticalLayout_77.setObjectName("verticalLayout_77")
         self.verticalLayout_78 = QtWidgets.QVBoxLayout()
         self.verticalLayout_78.setObjectName("verticalLayout_78")
-        self.ash_wifi_ad_img = QtWidgets.QLabel(self.tab_12)
-        self.ash_wifi_ad_img.setStyleSheet("border-color: rgb(170, 255, 127);\n"
-"border-width: 1px;\n"
-"border-style: solid;\n"
-"border-radius:10px;\n"
-"font: 20pt \"微软雅黑\";")
-        self.ash_wifi_ad_img.setAlignment(QtCore.Qt.AlignCenter)
-        self.ash_wifi_ad_img.setObjectName("ash_wifi_ad_img")
-        self.verticalLayout_78.addWidget(self.ash_wifi_ad_img)
+        self.wifi_ad_img_2 = QtWidgets.QLabel(self.tab_12)
+        self.wifi_ad_img_2.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.wifi_ad_img_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.wifi_ad_img_2.setObjectName("wifi_ad_img_2")
+        self.verticalLayout_78.addWidget(self.wifi_ad_img_2)
         self.verticalLayout_77.addLayout(self.verticalLayout_78)
         self.label_36 = QtWidgets.QLabel(self.tab_12)
-        self.label_36.setAlignment(QtCore.Qt.AlignCenter)
         self.label_36.setObjectName("label_36")
         self.verticalLayout_77.addWidget(self.label_36)
-        self.ash_wifi_ad_path = QtWidgets.QTextBrowser(self.tab_12)
-        self.ash_wifi_ad_path.setStyleSheet("border-radius: 20px;\n"
-"font: 10pt \"微软雅黑\";\n"
-"color: rgb(170, 255, 127);")
-        self.ash_wifi_ad_path.setObjectName("ash_wifi_ad_path")
-        self.verticalLayout_77.addWidget(self.ash_wifi_ad_path)
+        self.wifi_ad_path_2 = QtWidgets.QTextBrowser(self.tab_12)
+        self.wifi_ad_path_2.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.wifi_ad_path_2.setObjectName("wifi_ad_path_2")
+        self.verticalLayout_77.addWidget(self.wifi_ad_path_2)
         self.verticalLayout_77.setStretch(0, 8)
         self.verticalLayout_77.setStretch(2, 1)
         self.horizontalLayout_19.addLayout(self.verticalLayout_77)
@@ -1270,33 +1087,26 @@ class Ui_Form(object):
         self.verticalLayout_79.setObjectName("verticalLayout_79")
         self.verticalLayout_80 = QtWidgets.QVBoxLayout()
         self.verticalLayout_80.setObjectName("verticalLayout_80")
-        self.ash_timming_ad_img = QtWidgets.QLabel(self.tab_12)
-        self.ash_timming_ad_img.setStyleSheet("border-color: rgb(170, 255, 127);\n"
-"border-width: 1px;\n"
-"border-style: solid;\n"
-"border-radius:10px;\n"
-"font: 20pt \"微软雅黑\";")
-        self.ash_timming_ad_img.setAlignment(QtCore.Qt.AlignCenter)
-        self.ash_timming_ad_img.setObjectName("ash_timming_ad_img")
-        self.verticalLayout_80.addWidget(self.ash_timming_ad_img)
+        self.timming_ad_img_2 = QtWidgets.QLabel(self.tab_12)
+        self.timming_ad_img_2.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.timming_ad_img_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.timming_ad_img_2.setObjectName("timming_ad_img_2")
+        self.verticalLayout_80.addWidget(self.timming_ad_img_2)
         self.verticalLayout_79.addLayout(self.verticalLayout_80)
         self.label_38 = QtWidgets.QLabel(self.tab_12)
-        self.label_38.setAlignment(QtCore.Qt.AlignCenter)
         self.label_38.setObjectName("label_38")
         self.verticalLayout_79.addWidget(self.label_38)
-        self.ash_timming_ad_path = QtWidgets.QTextBrowser(self.tab_12)
-        self.ash_timming_ad_path.setStyleSheet("border-radius: 20px;\n"
-"font: 10pt \"微软雅黑\";\n"
-"color: rgb(170, 255, 127);")
-        self.ash_timming_ad_path.setObjectName("ash_timming_ad_path")
-        self.verticalLayout_79.addWidget(self.ash_timming_ad_path)
+        self.timming_ad_path_2 = QtWidgets.QTextBrowser(self.tab_12)
+        self.timming_ad_path_2.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.timming_ad_path_2.setObjectName("timming_ad_path_2")
+        self.verticalLayout_79.addWidget(self.timming_ad_path_2)
         self.verticalLayout_79.setStretch(0, 8)
         self.verticalLayout_79.setStretch(2, 1)
         self.horizontalLayout_19.addLayout(self.verticalLayout_79)
         self.tabWidget_4.addTab(self.tab_12, "")
         self.verticalLayout_81.addWidget(self.tabWidget_4)
         self.tabWidget.addTab(self.tab_9, "")
-        self.verticalLayout_16.addWidget(self.tabWidget)
+        self.horizontalLayout_20.addWidget(self.tabWidget)
 
         self.retranslateUi(Form)
         self.tabWidget.setCurrentIndex(0)
@@ -1307,7 +1117,7 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "查询配置"))
+        Form.setWindowTitle(_translate("Form", "Form"))
         self.label.setText(_translate("Form", "拖入出包文件夹生成路径（注意路径不可带中文）："))
         self.select_online.setText(_translate("Form", "查询"))
         self.clean_online_text.setText(_translate("Form", "清空"))
@@ -1354,15 +1164,15 @@ class Ui_Form(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.than_cfg), _translate("Form", "确认广告配置"))
         self.label_27.setText(_translate("Form", "创建五图文件夹"))
         self.mkdir_dir_2.setText(_translate("Form", "创建目录"))
-        self.img6.setText(_translate("Form", "<html><head/><body><p>图</p><p>片</p><p>预</p><p>览</p><p>区</p></body></html>"))
+        self.img6.setText(_translate("Form", "图片预览区"))
         self.scr1_2.setText(_translate("Form", "截图（1）"))
-        self.img2_2.setText(_translate("Form", "<html><head/><body><p>图</p><p>片</p><p>预</p><p>览</p><p>区</p></body></html>"))
+        self.img2_2.setText(_translate("Form", "图片预览区"))
         self.scr2_2.setText(_translate("Form", "截图（2）"))
-        self.img3_2.setText(_translate("Form", "<html><head/><body><p>图</p><p>片</p><p>预</p><p>览</p><p>区</p></body></html>"))
+        self.img3_2.setText(_translate("Form", "图片预览区"))
         self.scr3_2.setText(_translate("Form", "截图（3）"))
-        self.img4_2.setText(_translate("Form", "<html><head/><body><p>图</p><p>片</p><p>预</p><p>览</p><p>区</p></body></html>"))
+        self.img4_2.setText(_translate("Form", "图片预览区"))
         self.scr4_2.setText(_translate("Form", "截图（4）"))
-        self.img5_2.setText(_translate("Form", "<html><head/><body><p>图</p><p>片</p><p>预</p><p>览</p><p>区</p></body></html>"))
+        self.img5_2.setText(_translate("Form", "图片预览区"))
         self.scr5_2.setText(_translate("Form", "截图（5）"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), _translate("Form", "截图-五图"))
         self.mkdir_name.setText(_translate("Form", "创建目录"))
@@ -1373,47 +1183,46 @@ class Ui_Form(object):
         self.label_5.setText(_translate("Form", "自动化信息详情："))
         self.label_40.setText(_translate("Form", "前提：已配置外广，保活已启动，外广延时已通过"))
         self.tabWidget_3.setTabText(self.tabWidget_3.indexOf(self.tab_6), _translate("Form", "详情输出页"))
-        self.lock_img.setText(_translate("Form", "<html><head/><body><p>图</p><p>片</p><p>预</p><p>览</p><p>区</p></body></html>"))
-        self.unlock_img.setText(_translate("Form", "<html><head/><body><p>图</p><p>片</p><p>预</p><p>览</p><p>区</p></body></html>"))
-        self.charge_img.setText(_translate("Form", "<html><head/><body><p>图</p><p>片</p><p>预</p><p>览</p><p>区</p></body></html>"))
-        self.wifi_img.setText(_translate("Form", "<html><head/><body><p>图</p><p>片</p><p>预</p><p>览</p><p>区</p></body></html>"))
-        self.timing_img.setText(_translate("Form", "<html><head/><body><p>图</p><p>片</p><p>预</p><p>览</p><p>区</p></body></html>"))
-        self.home_img.setText(_translate("Form", "<html><head/><body><p>图</p><p>片</p><p>预</p><p>览</p><p>区</p></body></html>"))
+        self.lock_img.setText(_translate("Form", "图片展示区"))
+        self.unlock_img.setText(_translate("Form", "图片展示区"))
+        self.charge_img.setText(_translate("Form", "图片展示区"))
+        self.wifi_img.setText(_translate("Form", "图片展示区"))
+        self.timing_img.setText(_translate("Form", "图片展示区"))
+        self.home_img.setText(_translate("Form", "图片展示区"))
         self.tabWidget_3.setTabText(self.tabWidget_3.indexOf(self.tab_7), _translate("Form", "弹窗截图页"))
-        self.unlock_ad_img.setText(_translate("Form", "<html><head/><body><p>图</p><p>片</p><p>预</p><p>览</p><p>区</p></body></html>"))
+        self.unlock_ad_img.setText(_translate("Form", "图片展示区"))
         self.label_33.setText(_translate("Form", "解锁后弹窗广告展示"))
-        self.charge_ad_img.setText(_translate("Form", "<html><head/><body><p>图</p><p>片</p><p>预</p><p>览</p><p>区</p></body></html>"))
+        self.charge_ad_img.setText(_translate("Form", "图片展示区"))
         self.label_31.setText(_translate("Form", "插拔电弹窗广告展示"))
-        self.home_ad_img.setText(_translate("Form", "<html><head/><body><p>图</p><p>片</p><p>预</p><p>览</p><p>区</p></body></html>"))
+        self.home_ad_img.setText(_translate("Form", "图片展示区"))
         self.label_39.setText(_translate("Form", "home弹窗广告展示"))
-        self.wifi_ad_img.setText(_translate("Form", "<html><head/><body><p>图</p><p>片</p><p>预</p><p>览</p><p>区</p></body></html>"))
+        self.wifi_ad_img.setText(_translate("Form", "图片展示区"))
         self.label_35.setText(_translate("Form", "wifi切换弹窗广告展示"))
-        self.timming_ad_img.setText(_translate("Form", "<html><head/><body><p>图</p><p>片</p><p>预</p><p>览</p><p>区</p></body></html>"))
+        self.timming_ad_img.setText(_translate("Form", "图片展示区"))
         self.label_37.setText(_translate("Form", "定时弹窗广告展示"))
         self.tabWidget_3.setTabText(self.tabWidget_3.indexOf(self.tab_8), _translate("Form", "广告截图页"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_5), _translate("Form", "外广-自动化（强停一次）"))
-        self.ash_acition_auto.setText(_translate("Form", "启动"))
-        self.ash_clear_auto_path.setText(_translate("Form", "清空文本"))
+        self.acition_auto_2.setText(_translate("Form", "启动"))
+        self.clear_auto_path_2.setText(_translate("Form", "清空文本"))
         self.label_21.setText(_translate("Form", "自动化信息详情："))
         self.label_41.setText(_translate("Form", "前提：已配置外广，保活已启动，外广延时已通过"))
         self.tabWidget_4.setTabText(self.tabWidget_4.indexOf(self.tab_10), _translate("Form", "详情输出页"))
-        self.ash_lock_img.setText(_translate("Form", "<html><head/><body><p>图</p><p>片</p><p>预</p><p>览</p><p>区</p></body></html>"))
-        self.ash_unlock_img.setText(_translate("Form", "<html><head/><body><p>图</p><p>片</p><p>预</p><p>览</p><p>区</p></body></html>"))
-        self.ash_charge_img.setText(_translate("Form", "<html><head/><body><p>图</p><p>片</p><p>预</p><p>览</p><p>区</p></body></html>"))
-        self.ash_wifi_img.setText(_translate("Form", "<html><head/><body><p>图</p><p>片</p><p>预</p><p>览</p><p>区</p></body></html>"))
-        self.ash_timing_img.setText(_translate("Form", "<html><head/><body><p>图</p><p>片</p><p>预</p><p>览</p><p>区</p></body></html>"))
-        self.ash_home_img.setText(_translate("Form", "<html><head/><body><p>图</p><p>片</p><p>预</p><p>览</p><p>区</p></body></html>"))
+        self.lock_img_2.setText(_translate("Form", "图片展示区"))
+        self.unlock_img_2.setText(_translate("Form", "图片展示区"))
+        self.charge_img_2.setText(_translate("Form", "图片展示区"))
+        self.wifi_img_2.setText(_translate("Form", "图片展示区"))
+        self.timing_img_2.setText(_translate("Form", "图片展示区"))
+        self.home_img_2.setText(_translate("Form", "图片展示区"))
         self.tabWidget_4.setTabText(self.tabWidget_4.indexOf(self.tab_11), _translate("Form", "弹窗截图页"))
-        self.ash_unlock_ad_img.setText(_translate("Form", "<html><head/><body><p>图</p><p>片</p><p>预</p><p>览</p><p>区</p></body></html>"))
+        self.unlock_ad_img_2.setText(_translate("Form", "图片展示区"))
         self.label_34.setText(_translate("Form", "解锁后弹窗广告展示"))
-        self.ash_charge_ad_img.setText(_translate("Form", "<html><head/><body><p>图</p><p>片</p><p>预</p><p>览</p><p>区</p></body></html>"))
+        self.charge_ad_img_2.setText(_translate("Form", "图片展示区"))
         self.label_32.setText(_translate("Form", "插拔电弹窗广告展示"))
-        self.ash_home_ad_img.setText(_translate("Form", "<html><head/><body><p>图</p><p>片</p><p>预</p><p>览</p><p>区</p></body></html>"))
+        self.home_ad_img_2.setText(_translate("Form", "图片展示区"))
         self.label_42.setText(_translate("Form", "home弹窗广告展示"))
-        self.ash_wifi_ad_img.setText(_translate("Form", "<html><head/><body><p>图</p><p>片</p><p>预</p><p>览</p><p>区</p></body></html>"))
+        self.wifi_ad_img_2.setText(_translate("Form", "图片展示区"))
         self.label_36.setText(_translate("Form", "wifi切换弹窗广告展示"))
-        self.ash_timming_ad_img.setText(_translate("Form", "<html><head/><body><p>图</p><p>片</p><p>预</p><p>览</p><p>区</p></body></html>"))
+        self.timming_ad_img_2.setText(_translate("Form", "图片展示区"))
         self.label_38.setText(_translate("Form", "定时弹窗广告展示"))
         self.tabWidget_4.setTabText(self.tabWidget_4.indexOf(self.tab_12), _translate("Form", "广告截图页"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_9), _translate("Form", "外广-自动化（强停置灰）"))
-import images_rc

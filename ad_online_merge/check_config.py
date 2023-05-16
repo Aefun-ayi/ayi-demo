@@ -19,6 +19,9 @@ import Screen_Img
 import Mkdir_name
 import Mk_five_dirname
 from Worker_auto import Worker_Auto
+from qt_material import apply_stylesheet
+from Worker_Ash import Worker_Ash_Pross
+
 
 class MainWindow(QWidget, check_cfg_frame.Ui_Form):
     def __init__(self, parent=None):
@@ -27,27 +30,45 @@ class MainWindow(QWidget, check_cfg_frame.Ui_Form):
         self.setupUi(self)
         self.queue = Queue()
         self.auto_queue = Queue()
+        self.ash_queue = Queue()
         # 创建一个工作线程，并将其信号连接到updateLabel方法
         self.thread = Worker(self.queue)
         self.thread.sig1.connect(self.updateSucCfg)
         self.thread.sig2.connect(self.updateFailCfg)
-        self.threar1 = Worker_Auto(self.auto_queue)
-        self.threar1.log.connect(self.updateAutoCfg)
-        self.threar1.lock_img_path.connect(self.Lock_update)
-        self.threar1.unlock_img_path.connect(self.Unlock_update)
-        self.threar1.unlock_ad_path.connect(self.Unlock_Ad_update)
-        self.threar1.charge_img_path.connect(self.Charge_updata)
-        self.threar1.charge_ad_path.connect(self.Charge_Ad_update)
-        self.threar1.wifi_img_path.connect(self.Wifi_update)
-        self.threar1.wifi_ad_path.connect(self.Wifi_Ad_update)
-        self.threar1.home_img_path.connect(self.Home_update)
-        self.threar1.home_ad_path.connect(self.Home_Ad_update)
-        self.threar1.timing_img_path.connect(self.Timing_update)
-        self.threar1.timing_ad_path.connect(self.Timing_Ad_update)
+        self.auto_thread = Worker_Auto(self.auto_queue)
+        self.auto_thread.log.connect(self.updateAutoCfg)
+        self.auto_thread.lock_img_path.connect(self.Lock_update)
+        self.auto_thread.unlock_img_path.connect(self.Unlock_update)
+        self.auto_thread.unlock_ad_path.connect(self.Unlock_Ad_update)
+        self.auto_thread.charge_img_path.connect(self.Charge_updata)
+        self.auto_thread.charge_ad_path.connect(self.Charge_Ad_update)
+        self.auto_thread.wifi_img_path.connect(self.Wifi_update)
+        self.auto_thread.wifi_ad_path.connect(self.Wifi_Ad_update)
+        self.auto_thread.home_img_path.connect(self.Home_update)
+        self.auto_thread.home_ad_path.connect(self.Home_Ad_update)
+        self.auto_thread.timing_img_path.connect(self.Timing_update)
+        self.auto_thread.timing_ad_path.connect(self.Timing_Ad_update)
+        self.ash_thread = Worker_Ash_Pross(self.ash_queue)
+        self.ash_thread.log.connect(self.Update_Ash_Cfg)
+        # self.ash_thread.lock_img_path.connect(self.Ash_Lock_update)
+
+        # self.ash_thread.unlock_img_path.connect(self.Ash_Unlock_update)
+        # self.ash_thread.unlock_ad_path.connect(self.Ash_Unlock_Ad_update)
+        # self.ash_thread.charge_img_path.connect(self.Ash_Charge_updata)
+        # self.ash_thread.charge_ad_path.connect(self.Ash_Charge_Ad_update)
+        # self.ash_thread.wifi_img_path.connect(self.Ash_Wifi_update)
+        # self.ash_thread.wifi_ad_path.connect(self.Ash_Wifi_Ad_update)
+        # self.ash_thread.home_img_path.connect(self.Ash_Home_update)
+        # self.ash_thread.home_ad_path.connect(self.Ash_Home_Ad_update)
+        # self.ash_thread.timing_img_path.connect(self.Ash_Timing_update)
+        # self.ash_thread.timing_ad_path.connect(self.Ash_Timing_Ad_update)
+
         #连接按钮点击信号到buttonClicked方法
         line_apk_path = self.line_apkdir_path.installEventFilter(QEventHandler(self.line_apkdir_path))
         auto_path = self.auto_path.installEventFilter(QEventHandler(self.auto_path))
+        ash_path = self.ash_auto_path.installEventFilter(QEventHandler(self.ash_auto_path))
         self.auto_path.setPlaceholderText("请拖入安装包获取路径开始操作")
+        self.ash_auto_path.setPlaceholderText("请拖入安装包获取路径开始操作")
         self.select_online.clicked.connect(self.online_select_click)
         self.clean_online_text.clicked.connect(self.online_clean_click)
         self.select_ad.clicked.connect(self.ad_select_click)
@@ -69,6 +90,20 @@ class MainWindow(QWidget, check_cfg_frame.Ui_Form):
         self.option = QTextOption()
         self.option.setAlignment(Qt.AlignCenter)
         self.acition_auto.clicked.connect(self.auto_driver)
+        self.clear_auto_path.clicked.connect(self.clear_Auto_text)
+        self.ash_acition_auto.clicked.connect(self.Ash_Auto_Driver)
+
+    def Update_Ash_Cfg(self, text):
+        self.ash_auto_info.append(text)
+
+    def Ash_Auto_Driver(self):
+
+        auto_path = self.ash_auto_path.text()
+        self.ash_queue.put(auto_path)
+        self.ash_thread.start()
+
+    def clear_Auto_text(self):
+        self.auto_path.clear()
 
     def Lock_update(self,text):
         showImage = QPixmap(text).scaled(self.lock_img.width(), self.lock_img.height())
@@ -143,7 +178,7 @@ class MainWindow(QWidget, check_cfg_frame.Ui_Form):
     def auto_driver(self):
         auto_path = self.auto_path.text()
         self.auto_queue.put(auto_path)
-        self.threar1.start()
+        self.auto_thread.start()
 
     def online_select_click(self):
         path = self.line_apkdir_path.text()
@@ -357,6 +392,7 @@ class MainWindow(QWidget, check_cfg_frame.Ui_Form):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
+    apply_stylesheet(app, theme='dark_lightgreen.xml')
     main_window = MainWindow()
     main_window.show()
     sys.exit(app.exec_())
