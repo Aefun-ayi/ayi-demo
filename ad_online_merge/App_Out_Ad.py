@@ -56,18 +56,18 @@ class Out_Ad():
             return path
         else:
             info = '锁屏新闻触发失败'
-            print('锁屏新闻触发失败')
+            # print('锁屏新闻触发失败')
             return info
 
     def unlock_dig(self):
         self.dirver.swipe_points([(0.2, 0.5), (0.8, 0.5)], 0.5)
         if self.dirver(text='手机卫士').wait(timeout=5.0):
             path = self.dirver.screenshot(fr"{self.img_dir()}/{self.filetime}-解锁后弹窗展示成功.jpg")
-            print('解锁后弹窗展示成功')
+            # print('解锁后弹窗展示成功')
             return path
         else:
             info = '解锁后弹窗展示失败'
-            print('解锁后弹窗展示失败')
+            # print('解锁后弹窗展示失败')
             return info
 
     def charge_dig(self):
@@ -76,12 +76,12 @@ class Out_Ad():
         os.popen('adb shell dumpsys battery set status 1')  # 模拟断电状态
         os.popen('adb shell dumpsys battery reset')  # 恢复电池原本状态
         if self.dirver(text='手机卫士').wait(timeout=5.0):
-            path = self.dirver.screenshot(fr"{self.img_dir()}\{self.filetime}-插拔电弹窗展示成功.jpg")
-            print('插拔电弹窗展示成功')
+            path = self.dirver.screenshot(fr"{self.img_dir()}/{self.filetime}-插拔电弹窗展示成功.jpg")
+            # print('插拔电弹窗展示成功')
             return path
         else:
             info = '插拔电弹窗展示失败'
-            print('插拔电弹窗展示失败')
+            # print('插拔电弹窗展示失败')
             return info
 
     def wifi_switch(self):
@@ -89,40 +89,40 @@ class Out_Ad():
         sleep(1)
         os.popen('adb shell svc wifi enable')  # 控制wifi开关-开
         if self.dirver(text='手机卫士').wait(timeout=5.0):
-            path = self.dirver.screenshot(fr"{self.img_dir()}\{self.filetime}-wifi切换弹窗展示成功.jpg")
-            print('wifi切换弹窗展示成功')
+            path = self.dirver.screenshot(fr"{self.img_dir()}/{self.filetime}-wifi切换弹窗展示成功.jpg")
+            # print('wifi切换弹窗展示成功')
             return path
         else:
             info = 'wifi切换弹窗弹窗展示失败'
-            print('wifi切换弹窗展示失败')
+            # print('wifi切换弹窗展示失败')
             return info
 
     def home_dig(self):
         self.dirver.press("home")
         if self.dirver(text='手机卫士').wait(timeout=5.0):
-            path = self.dirver.screenshot(fr"{self.img_dir()}\{self.filetime}-home键弹窗展示成功.jpg")
-            print('home键弹窗展示成功')
+            path = self.dirver.screenshot(fr"{self.img_dir()}/{self.filetime}-home键弹窗展示成功.jpg")
+            # print('home键弹窗展示成功')
             return path
         else:
             info = 'home键弹窗弹窗展示失败'
-            print('home键弹窗展示失败')
+            # print('home键弹窗展示失败')
             return info
 
     def timming_dig(self):
         if self.dirver(text='手机卫士').wait(timeout=600.0):
-            path = self.dirver.screenshot(fr"{self.img_dir()}\{self.filetime}-定时弹窗展示成功.jpg")
-            print('定时弹窗展示成功')
+            path = self.dirver.screenshot(fr"{self.img_dir()}/{self.filetime}-定时弹窗展示成功.jpg")
+            # print('定时弹窗展示成功')
             return path
         else:
             info = '定时弹窗展示失败'
-            print('定时弹窗展示失败')
+            # print('定时弹窗展示失败')
             return info
 
     def ad_dig(self):
         if self.dirver(text='正在进行优化').wait_gone(timeout=20):
             if self.dirver(text='反馈').wait(timeout=15.0) or self.dirver(text='跳过').wait(timeout=15.0):
-                path = self.dirver.screenshot(fr"{self.img_dir()}\{self.filetime}-广告展示成功.jpg")
-                print('广告展示成功')
+                path = self.dirver.screenshot(fr"{self.img_dir()}/{self.filetime}-广告展示成功.jpg")
+                # print('广告展示成功')
                 # 点击关闭
                 sleep(30)
                 self.dirver.click(0.891, 0.041)
@@ -133,17 +133,17 @@ class Out_Ad():
                 return path
             else:
                 info = '广告展示失败'
-                print('广告展示失败')
+                # print('广告展示失败')
                 self.dirver.press('back')
                 self.dirver.press('home')
                 self.dirver.press('back')
                 return info
 
 
-
-if __name__ == '__main__':
-    a = Out_Ad(r"D:\laying-file\39432004_com.android.ljyctsusj.axuctsking_1.0.0_csj_20230423.apk")
-    print(a.appinfo())
+#
+# if __name__ == '__main__':
+#     a = Out_Ad(r"D:\laying-file\39432004_com.android.ljyctsusj.axuctsking_1.0.0_csj_20230423.apk")
+#     print(a.appinfo())
     # a.img_dir()
     # a.connect_phone()
     # print(a.connect_phone())

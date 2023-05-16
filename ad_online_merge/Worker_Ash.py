@@ -1,7 +1,6 @@
 from PyQt5.QtCore import QThread, pyqtSignal, QMutex
 from App_Out_Ad import Out_Ad
 from time import sleep
-import os
 
 
 class Worker_Ash_Pross(QThread):
@@ -78,3 +77,70 @@ class Worker_Ash_Pross(QThread):
                     self.lock_img_path.emit(double_lock)
                 else:
                     self.log.emit(f'二次{double_lock}，查看进程是否已挂掉')
+            unlock = self.d.unlock_dig()
+            if '解锁后弹窗展示成功' in unlock:
+                self.log.emit(f'解锁后弹窗展示成功，已截图保存至{unlock}')
+                self.unlock_img_path.emit(unlock)
+                unlock_ad = self.d.ad_dig()
+                if '广告展示成功' in unlock_ad:
+                    self.log.emit(f'解锁后弹窗广告展示成功，已截图保存至{unlock_ad}')
+                    self.unlock_ad_path.emit(unlock_ad)
+                else:
+                    self.log.emit(f'解锁后弹窗{unlock_ad}，请手动排查失败原因')
+            else:
+                self.log.emit(unlock)
+            self.log.emit('等待20秒后触发插拔电弹窗')
+            sleep(20)
+            charge = self.d.charge_dig()
+            if '插拔电弹窗展示成功' in charge:
+                self.log.emit(f'插拔电弹窗展示成功，已截图保存至{charge}')
+                self.charge_img_path.emit(charge)
+                charge_ad = self.d.ad_dig()
+                if '广告展示成功' in charge_ad:
+                    self.log.emit(f'插拔电弹窗广告展示成功，已截图保存至{charge_ad}')
+                    self.charge_ad_path.emit(charge_ad)
+                else:
+                    self.log.emit(f'插拔电弹窗{charge_ad}，请手动排查失败原因')
+            else:
+                self.log.emit(charge)
+            self.log.emit('等待20秒后触发wifi切换弹窗')
+            sleep(20)
+            wifi = self.d.wifi_switch()
+            if 'wifi切换弹窗展示成功' in wifi:
+                self.log.emit(f'wifi弹窗展示成功，已截图保存至{wifi}')
+                self.wifi_img_path.emit(wifi)
+                wifi_ad = self.d.ad_dig()
+                if '广告展示成功' in wifi_ad:
+                    self.log.emit(f'wifi弹窗广告展示成功，已截图保存至{wifi_ad}')
+                    self.wifi_ad_path.emit(wifi_ad)
+                else:
+                    self.log.emit(f'wifi弹窗{wifi_ad}，请手动排查失败原因')
+            else:
+                self.log.emit(wifi)
+            self.log.emit('等待20秒后触发home键弹窗')
+            sleep(20)
+            home = self.d.home_dig()
+            if 'home键弹窗展示成功' in home:
+                self.log.emit(f'home弹窗展示成功，已截图保存至{home}')
+                self.home_img_path.emit(home)
+                home_ad = self.d.ad_dig()
+                if '广告展示成功' in home_ad:
+                    self.log.emit(f'home弹窗广告展示成功，已截图保存至{home_ad}')
+                    self.home_ad_path.emit(home_ad)
+                else:
+                    self.log.emit(f'home弹窗{home_ad}，请手动排查失败原因')
+            else:
+                self.log.emit(home)
+            self.log.emit('开始等待定时弹窗触发...')
+            timming = self.d.timming_dig()
+            if '定时弹窗展示成功' in timming:
+                self.log.emit(f'定时弹窗展示成功，已截图保存至{timming}')
+                self.timing_img_path.emit(timming)
+                timming_ad = self.d.ad_dig()
+                if '广告展示成功' in timming_ad:
+                    self.log.emit(f'定时弹窗广告展示成功，已截图保存至{timming_ad}')
+                    self.timing_ad_path.emit(timming_ad)
+                else:
+                    self.log.emit(f'定时弹窗{timming_ad}，请手动排查失败原因')
+            else:
+                self.log.emit(timming)

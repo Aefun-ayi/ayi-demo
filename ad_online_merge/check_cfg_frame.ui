@@ -1339,6 +1339,9 @@ QPushButton:pressed{background-color:rgb(167, 167, 167);};
            </item>
            <item>
             <widget class="QLabel" name="label_40">
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 255, 127);</string>
+             </property>
              <property name="text">
               <string>前提：已配置外广，保活已启动，外广延时已通过</string>
              </property>
@@ -1881,6 +1884,9 @@ QPushButton:pressed{background-color:rgb(167, 167, 167);};
            </item>
            <item>
             <widget class="QLabel" name="label_41">
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 255, 127);</string>
+             </property>
              <property name="text">
               <string>前提：已配置外广，保活已启动，外广延时已通过</string>
              </property>

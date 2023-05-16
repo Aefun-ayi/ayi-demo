@@ -50,18 +50,17 @@ class MainWindow(QWidget, check_cfg_frame.Ui_Form):
         self.auto_thread.timing_ad_path.connect(self.Timing_Ad_update)
         self.ash_thread = Worker_Ash_Pross(self.ash_queue)
         self.ash_thread.log.connect(self.Update_Ash_Cfg)
-        # self.ash_thread.lock_img_path.connect(self.Ash_Lock_update)
-
-        # self.ash_thread.unlock_img_path.connect(self.Ash_Unlock_update)
-        # self.ash_thread.unlock_ad_path.connect(self.Ash_Unlock_Ad_update)
-        # self.ash_thread.charge_img_path.connect(self.Ash_Charge_updata)
-        # self.ash_thread.charge_ad_path.connect(self.Ash_Charge_Ad_update)
-        # self.ash_thread.wifi_img_path.connect(self.Ash_Wifi_update)
-        # self.ash_thread.wifi_ad_path.connect(self.Ash_Wifi_Ad_update)
-        # self.ash_thread.home_img_path.connect(self.Ash_Home_update)
-        # self.ash_thread.home_ad_path.connect(self.Ash_Home_Ad_update)
-        # self.ash_thread.timing_img_path.connect(self.Ash_Timing_update)
-        # self.ash_thread.timing_ad_path.connect(self.Ash_Timing_Ad_update)
+        self.ash_thread.lock_img_path.connect(self.Ash_Lock_update)
+        self.ash_thread.unlock_img_path.connect(self.Ash_Unlock_update)
+        self.ash_thread.unlock_ad_path.connect(self.Ash_Unlock_Ad_update)
+        self.ash_thread.charge_img_path.connect(self.Ash_Charge_updata)
+        self.ash_thread.charge_ad_path.connect(self.Ash_Charge_Ad_update)
+        self.ash_thread.wifi_img_path.connect(self.Ash_Wifi_update)
+        self.ash_thread.wifi_ad_path.connect(self.Ash_Wifi_Ad_update)
+        self.ash_thread.home_img_path.connect(self.Ash_Home_update)
+        self.ash_thread.home_ad_path.connect(self.Ash_Home_Ad_update)
+        self.ash_thread.timing_img_path.connect(self.Ash_Timing_update)
+        self.ash_thread.timing_ad_path.connect(self.Ash_Timing_Ad_update)
 
         #连接按钮点击信号到buttonClicked方法
         line_apk_path = self.line_apkdir_path.installEventFilter(QEventHandler(self.line_apkdir_path))
@@ -92,15 +91,84 @@ class MainWindow(QWidget, check_cfg_frame.Ui_Form):
         self.acition_auto.clicked.connect(self.auto_driver)
         self.clear_auto_path.clicked.connect(self.clear_Auto_text)
         self.ash_acition_auto.clicked.connect(self.Ash_Auto_Driver)
+        self.ash_clear_auto_path.clicked.connect(self.Clear_Ash_Text)
+
+    def Ash_Lock_update(self,text):
+        showImage = QPixmap(text).scaled(self.ash_lock_img.width(), self.ash_lock_img.height())
+        # 展示图片，达到预览效果
+        self.ash_lock_img.setPixmap(showImage)
+        self.ash_lock_path.setText(text)
+
+    def Ash_Unlock_update(self,text):
+        showImage = QPixmap(text).scaled(self.ash_unlock_img.width(), self.ash_unlock_img.height())
+        # 展示图片，达到预览效果
+        self.ash_unlock_img.setPixmap(showImage)
+        self.ash_unlock_path.setText(text)
+
+    def Ash_Unlock_Ad_update(self,text):
+        showImage = QPixmap(text).scaled(self.ash_unlock_ad_img.width(), self.ash_unlock_ad_img.height())
+        # 展示图片，达到预览效果
+        self.ash_unlock_ad_img.setPixmap(showImage)
+        self.ash_unlock_ad_path.setText(text)
+
+    def Ash_Charge_updata(self,text):
+        showImage = QPixmap(text).scaled(self.ash_charge_img.width(), self.ash_charge_img.height())
+        # 展示图片，达到预览效果
+        self.ash_charge_img.setPixmap(showImage)
+        self.ash_charge_path.setText(text)
+
+    def Ash_Charge_Ad_update(self,text):
+        showImage = QPixmap(text).scaled(self.ash_charge_ad_img.width(), self.ash_charge_ad_img.height())
+        # 展示图片，达到预览效果
+        self.ash_charge_ad_img.setPixmap(showImage)
+        self.ash_charge_ad_path.setText(text)
+
+    def Ash_Wifi_update(self,text):
+        showImage = QPixmap(text).scaled(self.ash_wifi_img.width(), self.ash_wifi_img.height())
+        # 展示图片，达到预览效果
+        self.ash_wifi_img.setPixmap(showImage)
+        self.ash_wifi_path.setText(text)
+
+    def Ash_Wifi_Ad_update(self,text):
+        showImage = QPixmap(text).scaled(self.ash_wifi_ad_img.width(), self.ash_wifi_ad_img.height())
+        # 展示图片，达到预览效果
+        self.ash_wifi_ad_img.setPixmap(showImage)
+        self.ash_wifi_ad_path.setText(text)
+
+    def Ash_Home_update(self,text):
+        showImage = QPixmap(text).scaled(self.ash_home_img.width(), self.ash_home_img.height())
+        # 展示图片，达到预览效果
+        self.ash_home_img.setPixmap(showImage)
+        self.ash_home_path.setText(text)
+
+    def Ash_Home_Ad_update(self,text):
+        showImage = QPixmap(text).scaled(self.ash_home_ad_img.width(), self.ash_home_ad_img.height())
+        # 展示图片，达到预览效果
+        self.ash_home_ad_img.setPixmap(showImage)
+        self.ash_home_ad_path.setText(text)
+
+    def Ash_Timing_update(self,text):
+        showImage = QPixmap(text).scaled(self.ash_timing_img.width(), self.ash_timing_img.height())
+        # 展示图片，达到预览效果
+        self.ash_timing_img.setPixmap(showImage)
+        self.ash_timing_path.setText(text)
+
+    def Ash_Timing_Ad_update(self,text):
+        showImage = QPixmap(text).scaled(self.ash_timming_ad_img.width(), self.ash_timming_ad_img.height())
+        # 展示图片，达到预览效果
+        self.ash_timming_ad_img.setPixmap(showImage)
+        self.ash_timming_ad_path.setText(text)
 
     def Update_Ash_Cfg(self, text):
         self.ash_auto_info.append(text)
 
     def Ash_Auto_Driver(self):
-
         auto_path = self.ash_auto_path.text()
         self.ash_queue.put(auto_path)
         self.ash_thread.start()
+
+    def Clear_Ash_Text(self):
+        self.ash_auto_path.clear()
 
     def clear_Auto_text(self):
         self.auto_path.clear()

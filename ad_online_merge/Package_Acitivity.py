@@ -7,7 +7,7 @@ def get_package_name(apk_path):
     :return: 包名
     """
     cmd = ["aapt", "dump", "badging", apk_path]
-    output = subprocess.check_output(cmd, universal_newlines=True)
+    output = subprocess.check_output(cmd, universal_newlines=True, encoding="utf-8")
 
     package_start = output.find("package: name='") + len("package: name='")
     package_end = output.find("'", package_start)
@@ -23,7 +23,7 @@ def get_activity_name(apk_path):
     :return: 启动Activity名
     """
     cmd = ["aapt", "dump", "badging", apk_path]
-    output = subprocess.check_output(cmd, universal_newlines=True)
+    output = subprocess.check_output(cmd, universal_newlines=True, encoding="utf-8")
 
     activity_start = output.find("launchable-activity: name='") + len("launchable-activity: name='")
     activity_end = output.find("'", activity_start)

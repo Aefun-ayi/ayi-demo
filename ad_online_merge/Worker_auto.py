@@ -58,7 +58,8 @@ class Worker_Auto(QThread):
                 self.log.emit(f'解锁后弹窗{unlock_ad}，请手动排查失败原因')
         else:
             self.log.emit(unlock)
-        sleep(3)
+        self.log.emit('等待20秒后触发插拔电弹窗')
+        sleep(20)
         charge = self.d.charge_dig()
         if '插拔电弹窗展示成功' in charge:
             self.log.emit(f'插拔电弹窗展示成功，已截图保存至{charge}')
@@ -71,7 +72,8 @@ class Worker_Auto(QThread):
                 self.log.emit(f'插拔电弹窗{charge_ad}，请手动排查失败原因')
         else:
             self.log.emit(charge)
-        sleep(3)
+        self.log.emit('等待20秒后触发wifi切换弹窗')
+        sleep(20)
         wifi = self.d.wifi_switch()
         if 'wifi切换弹窗展示成功' in wifi:
             self.log.emit(f'wifi弹窗展示成功，已截图保存至{wifi}')
@@ -84,7 +86,8 @@ class Worker_Auto(QThread):
                 self.log.emit(f'wifi弹窗{wifi_ad}，请手动排查失败原因')
         else:
             self.log.emit(wifi)
-        sleep(3)
+        self.log.emit('等待20秒后触发home键弹窗')
+        sleep(20)
         home = self.d.home_dig()
         if 'home键弹窗展示成功' in home:
             self.log.emit(f'home弹窗展示成功，已截图保存至{home}')
@@ -97,10 +100,8 @@ class Worker_Auto(QThread):
                 self.log.emit(f'home弹窗{home_ad}，请手动排查失败原因')
         else:
             self.log.emit(home)
-        sleep(3)
         self.log.emit('开始等待定时弹窗触发...')
         timming = self.d.timming_dig()
-
         if '定时弹窗展示成功' in timming:
             self.log.emit(f'定时弹窗展示成功，已截图保存至{timming}')
             self.timing_img_path.emit(timming)
