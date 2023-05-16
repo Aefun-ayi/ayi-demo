@@ -31,11 +31,23 @@ class MainWindow(QWidget, check_cfg_frame.Ui_Form):
         self.thread = Worker(self.queue)
         self.thread.sig1.connect(self.updateSucCfg)
         self.thread.sig2.connect(self.updateFailCfg)
-        self.threar1 = Worker_Auto(self.queue)
+        self.threar1 = Worker_Auto(self.auto_queue)
         self.threar1.log.connect(self.updateAutoCfg)
+        self.threar1.lock_img_path.connect(self.Lock_update)
+        self.threar1.unlock_img_path.connect(self.Unlock_update)
+        self.threar1.unlock_ad_path.connect(self.Unlock_Ad_update)
+        self.threar1.charge_img_path.connect(self.Charge_updata)
+        self.threar1.charge_ad_path.connect(self.Charge_Ad_update)
+        self.threar1.wifi_img_path.connect(self.Wifi_update)
+        self.threar1.wifi_ad_path.connect(self.Wifi_Ad_update)
+        self.threar1.home_img_path.connect(self.Home_update)
+        self.threar1.home_ad_path.connect(self.Home_Ad_update)
+        self.threar1.timing_img_path.connect(self.Timing_update)
+        self.threar1.timing_ad_path.connect(self.Timing_Ad_update)
         #连接按钮点击信号到buttonClicked方法
         line_apk_path = self.line_apkdir_path.installEventFilter(QEventHandler(self.line_apkdir_path))
         auto_path = self.auto_path.installEventFilter(QEventHandler(self.auto_path))
+        self.auto_path.setPlaceholderText("请拖入安装包获取路径开始操作")
         self.select_online.clicked.connect(self.online_select_click)
         self.clean_online_text.clicked.connect(self.online_clean_click)
         self.select_ad.clicked.connect(self.ad_select_click)
@@ -57,6 +69,73 @@ class MainWindow(QWidget, check_cfg_frame.Ui_Form):
         self.option = QTextOption()
         self.option.setAlignment(Qt.AlignCenter)
         self.acition_auto.clicked.connect(self.auto_driver)
+
+    def Lock_update(self,text):
+        showImage = QPixmap(text).scaled(self.lock_img.width(), self.lock_img.height())
+        # 展示图片，达到预览效果
+        self.lock_img.setPixmap(showImage)
+        self.lock_path.setText(text)
+
+    def Unlock_update(self,text):
+        showImage = QPixmap(text).scaled(self.unlock_img.width(), self.unlock_img.height())
+        # 展示图片，达到预览效果
+        self.unlock_img.setPixmap(showImage)
+        self.unlock_path.setText(text)
+
+    def Unlock_Ad_update(self,text):
+        showImage = QPixmap(text).scaled(self.unlock_ad_img.width(), self.unlock_ad_img.height())
+        # 展示图片，达到预览效果
+        self.unlock_ad_img.setPixmap(showImage)
+        self.unlock_ad_path.setText(text)
+
+    def Charge_updata(self,text):
+        showImage = QPixmap(text).scaled(self.charge_img.width(), self.charge_img.height())
+        # 展示图片，达到预览效果
+        self.charge_img.setPixmap(showImage)
+        self.charge_path.setText(text)
+
+    def Charge_Ad_update(self,text):
+        showImage = QPixmap(text).scaled(self.charge_ad_img.width(), self.charge_ad_img.height())
+        # 展示图片，达到预览效果
+        self.charge_ad_img.setPixmap(showImage)
+        self.charge_ad_path.setText(text)
+
+    def Wifi_update(self,text):
+        showImage = QPixmap(text).scaled(self.wifi_img.width(), self.wifi_img.height())
+        # 展示图片，达到预览效果
+        self.wifi_img.setPixmap(showImage)
+        self.wifi_path.setText(text)
+
+    def Wifi_Ad_update(self,text):
+        showImage = QPixmap(text).scaled(self.wifi_ad_img.width(), self.wifi_ad_img.height())
+        # 展示图片，达到预览效果
+        self.wifi_ad_img.setPixmap(showImage)
+        self.wifi_ad_path.setText(text)
+
+    def Home_update(self,text):
+        showImage = QPixmap(text).scaled(self.home_img.width(), self.home_img.height())
+        # 展示图片，达到预览效果
+        self.home_img.setPixmap(showImage)
+        self.home_path.setText(text)
+
+    def Home_Ad_update(self,text):
+        showImage = QPixmap(text).scaled(self.home_ad_img.width(), self.home_ad_img.height())
+        # 展示图片，达到预览效果
+        self.home_ad_img.setPixmap(showImage)
+        self.home_ad_path.setText(text)
+
+    def Timing_update(self,text):
+        showImage = QPixmap(text).scaled(self.timing_img.width(), self.timing_img.height())
+        # 展示图片，达到预览效果
+        self.timing_img.setPixmap(showImage)
+
+        self.timing_path.setText(text)
+
+    def Timing_Ad_update(self,text):
+        showImage = QPixmap(text).scaled(self.timming_ad_img.width(), self.timming_ad_img.height())
+        # 展示图片，达到预览效果
+        self.timming_ad_img.setPixmap(showImage)
+        self.timming_ad_path.setText(text)
 
     def updateAutoCfg(self, text):
         self.auto_info.append(text)
