@@ -1,5 +1,6 @@
 import url_cfg
 import requests
+import Get_Umid
 
 class OnlineCfg():
     def __init__(self, appid, cha, pid):
@@ -12,6 +13,7 @@ class OnlineCfg():
         self.first_cfg = url_cfg.first
         self.dmo_cfg = url_cfg.dmo
         self.jh_cfg = url_cfg.jh
+        self.blackCfg = url_cfg.blackcfg
         self.appid = appid
         self.pid = pid
         self.cha = cha
@@ -43,15 +45,23 @@ class OnlineCfg():
     def v3fk(self):
         v3_url = f'{self.ip}{self.v3fk_cfg}'
         v3_head = {'token': f'{self.login()}',
-                   'appidList': '',
+                   'appidList': f'{self.appid}',
                    'chaList': '',
-                   'prjid': f'{self.pid}',
+                   'prjid': f'',
                    'status': '',
                    'start': '1',
                    'limit': '100',
                    'indexCode': 'cHJvTmV3Umlza01hbmFnZW1lbnRDb25maWc%3D'}
         v3_res = requests.post(v3_url, v3_head)
-        return v3_res.json()['data']
+        V3_collect = v3_res.json()['data']['list']
+        if V3_collect != []:
+            for d_res in V3_collect:
+                if 'prjid' in dict(d_res).keys() and self.pid in dict(d_res)['prjid'] and self.pid != '':
+                    return d_res
+            for d_res in V3_collect:
+                if 'cha' in dict(d_res).keys() and self.cha in dict(d_res)['cha']:
+                    return d_res
+        # return v3_res.json()['data']
 
     def audit(self):
         audit_url = f'{self.ip}{self.audit_cfg}'
@@ -121,7 +131,7 @@ class OnlineCfg():
                    'limit': "100",
                    'start': "0",
                    'token': f'{self.login()}',
-                   'indexCode': 'Y2xlYW5BcHBVbmlvbkNoZWNrX0ZvTW92ZQ%3D%3D'}
+                   'indexCode': 'QmxhY2tsaXN0RGV2aWNlRmlsdGVyaW5nXzJGb01vdmU='}
 
         jh_res = requests.post(jh_url, jh_head)
         res_collect = jh_res.json()['data']
@@ -134,8 +144,10 @@ class OnlineCfg():
                 if 'cha' in dict(res).keys() and self.cha in dict(res)['cha']:
                     return res
 
+
+#
 # if __name__ == '__main__':
 #     a = OnlineCfg()
-#     # a.login_cfg()
-#     # print(a.login_cfg())
+#     a.Black_Cfg()
+#     print(a.Black_Cfg())
 
