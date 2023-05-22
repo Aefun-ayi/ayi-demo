@@ -1,5 +1,6 @@
 import url_cfg
 import requests
+import urllib.parse
 import Get_Umid
 
 class OnlineCfg():
@@ -144,8 +145,22 @@ class OnlineCfg():
                 if 'cha' in dict(res).keys() and self.cha in dict(res)['cha']:
                     return res
 
+    def Black_List(self):  # 查询设备是否有风控加白
+        black_list_url = 'https://edc.vigame.cn:6115/mobile/blackConfig/list'
+        black_list_data = {"start": "0",
+                           "limit": "100",
+                           "type": "white",
+                           "key": f"{Get_Umid.UmId()}",
+                           "token": f"{self.login()}",
+                           "indexCode": "QmxhY2tsaXN0RGV2aWNlRmlsdGVyaW5nXzJGb01vdmU="}
+        black_list_headers = {"Content-Type": "application/x-www-form-urlencoded"}
+        black_encoded_data = urllib.parse.urlencode(black_list_data)
+        black = requests.post(url=black_list_url, headers=black_list_headers, data=black_encoded_data)
+        # print(black.json())
+        return black.json()
 
-#
+
+
 # if __name__ == '__main__':
 #     a = OnlineCfg()
 #     a.Black_Cfg()
