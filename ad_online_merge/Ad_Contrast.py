@@ -11,7 +11,7 @@ class Ad_Than_Cfg():
 
     def ad_contrast_select(self):
         sids = ['all', '1066A_A', '1066B_B', '1066C_C']  # 把目前在用的4个分组放在列表
-        res = requests.get('http://192.168.7.30:8008/ad')
+        res = requests.get('http://192.168.7.43:8008/ad')
         if self.pro not in res.json():
             pro_msg_box = QMessageBox(QMessageBox.Critical, '错误', '输入的key有误')
             pro_msg_box.exec_()
