@@ -120,7 +120,7 @@ class Out_Ad():
 
     def ad_dig(self):
         if self.dirver(text='正在进行优化').wait_gone(timeout=20):
-            if self.dirver(text='反馈').wait(timeout=15.0) or self.dirver(text='跳过').wait(timeout=15.0):
+            if self.dirver(text='反馈').wait(timeout=15.0) or self.dirver(text='跳过').wait(timeout=15.0) or self.dirver(text='广告').wait(timeout=15.0):
                 path = self.dirver.screenshot(fr"{self.img_dir()}/{self.filetime}-广告展示成功.jpg")
                 # print('广告展示成功')
                 # 点击关闭
