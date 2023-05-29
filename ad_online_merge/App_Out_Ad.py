@@ -61,14 +61,25 @@ class Out_Ad():
 
     def unlock_dig(self):
         self.dirver.swipe_points([(0.2, 0.5), (0.8, 0.5)], 0.5)
-        if self.dirver(text='手机卫士').wait(timeout=5.0):
-            path = self.dirver.screenshot(fr"{self.img_dir()}/{self.filetime}-解锁后弹窗展示成功.jpg")
-            # print('解锁后弹窗展示成功')
-            return path
+        if self.dirver(text='热门视频').wait(timeout=5.0):
+            self.dirver.press("home")
+            if self.dirver(text='手机卫士').wait(timeout=5.0):
+                path = self.dirver.screenshot(fr"{self.img_dir()}/{self.filetime}-解锁后弹窗展示成功.jpg")
+                # print('解锁后弹窗展示成功')
+                return path
+            else:
+                info = '解锁后弹窗展示失败'
+                # print('解锁后弹窗展示失败')
+                return info
         else:
-            info = '解锁后弹窗展示失败'
-            # print('解锁后弹窗展示失败')
-            return info
+            if self.dirver(text='手机卫士').wait(timeout=5.0):
+                path = self.dirver.screenshot(fr"{self.img_dir()}/{self.filetime}-解锁后弹窗展示成功.jpg")
+                # print('解锁后弹窗展示成功')
+                return path
+            else:
+                info = '解锁后弹窗展示失败'
+                # print('解锁后弹窗展示失败')
+                return info
 
     def charge_dig(self):
         os.popen('adb shell dumpsys battery set status 2')  # 模拟充电状态
@@ -120,7 +131,8 @@ class Out_Ad():
 
     def ad_dig(self):
         if self.dirver(text='正在进行优化').wait_gone(timeout=20):
-            if self.dirver(text='反馈').wait(timeout=15.0) or self.dirver(text='跳过').wait(timeout=15.0) or self.dirver(text='广告').wait(timeout=15.0):
+            if self.dirver(text='反馈').wait(timeout=15.0) or self.dirver(text='跳过').wait(timeout=15.0) or \
+                    self.dirver(text='浏览页面').wait(timeout=15.0) or self.dirver(text='恭喜获得奖励！').wait(timeout=15.0):
                 path = self.dirver.screenshot(fr"{self.img_dir()}/{self.filetime}-广告展示成功.jpg")
                 # print('广告展示成功')
                 # 点击关闭

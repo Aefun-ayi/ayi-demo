@@ -17,19 +17,20 @@ class MainWindow(QWidget, untitled.Ui_Form):
 
     def check_version(self):
         try:
-            sion = self.session.get('http://192.168.7.111:8008/version')
+            sion = self.session.get('http://192.168.7.111:8008/version')  # http://192.168.7.43:8008/version
             remote_version = sion.text
             print(remote_version)
             if self.current_version != remote_version:
                 QMessageBox.warning(self, "提示", "开始版本更新")
                 url = 'http://192.168.7.111/main_version_V1.1.exe'  # 地址写下一代的版本号 预设版本号
                 res = requests.get(url)
-                exe = r'D:\\keep\\公用-储存安装包\\05_moon\\0523-11-37头-充电多多\\main_version_V1.1.exe'
+                desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
+                exe = fr'{desktop_path}\main_version_V1.1.exe'  # 文件存放地址
                 with open(exe, 'wb') as f:
                     f.write(res.content)
                 QMessageBox.warning(self, "提示", "更新完成")
-                self.session.close()
-                QCoreApplication.instance().quit()
+                self.session.close()  # 关闭接口链接
+                QCoreApplication.instance().quit()  # 退出程序页面
                 QApplication.exit()
 
         except Exception:

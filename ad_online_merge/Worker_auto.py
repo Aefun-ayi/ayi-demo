@@ -29,7 +29,7 @@ class Worker_Auto(QThread):
         self.log.emit("自动化启动，本次自动化操作：启动app-->强停一次app-->触发锁屏新闻-->解锁后弹窗-->插拔电弹窗-->wifi切换弹窗-->home键弹窗-->定时弹窗")
         self.log.emit(f"手机设备信息-->品牌：{driver_info['brand']}，系统版本：{driver_info['version']}，型号：{driver_info['model']}")
         self.d.start_app()
-        self.log.emit('正在启动app'+self.d.appinfo())
+        self.log.emit('正在启动app：'+self.d.appinfo())
         sleep(5)
         self.d.stop_app()
         first_lock = self.d.lock_news()
@@ -69,7 +69,7 @@ class Worker_Auto(QThread):
                 self.log.emit(f'插拔电弹窗广告展示成功，已截图保存至{charge_ad}')
                 self.charge_ad_path.emit(charge_ad)
             else:
-                self.log.emit(f'插拔电弹窗{charge_ad}，请手动排查失败原因')
+                self.log.emit(f'插拔电弹窗{charge_ad}，可能断言方式有误，请手动排查失败原因')
         else:
             self.log.emit(charge)
         self.log.emit('等待20秒后触发wifi切换弹窗')
@@ -83,7 +83,7 @@ class Worker_Auto(QThread):
                 self.log.emit(f'wifi弹窗广告展示成功，已截图保存至{wifi_ad}')
                 self.wifi_ad_path.emit(wifi_ad)
             else:
-                self.log.emit(f'wifi弹窗{wifi_ad}，请手动排查失败原因')
+                self.log.emit(f'wifi弹窗{wifi_ad}，可能断言方式有误，请手动排查失败原因')
         else:
             self.log.emit(wifi)
         self.log.emit('等待20秒后触发home键弹窗')
@@ -97,7 +97,7 @@ class Worker_Auto(QThread):
                 self.log.emit(f'home弹窗广告展示成功，已截图保存至{home_ad}')
                 self.home_ad_path.emit(home_ad)
             else:
-                self.log.emit(f'home弹窗{home_ad}，请手动排查失败原因')
+                self.log.emit(f'home弹窗{home_ad}，可能断言方式有误，请手动排查失败原因')
         else:
             self.log.emit(home)
         self.log.emit('开始等待定时弹窗触发...')
@@ -110,6 +110,6 @@ class Worker_Auto(QThread):
                 self.log.emit(f'定时弹窗广告展示成功，已截图保存至{timming_ad}')
                 self.timing_ad_path.emit(timming_ad)
             else:
-                self.log.emit(f'定时弹窗{timming_ad}，请手动排查失败原因')
+                self.log.emit(f'定时弹窗{timming_ad}，可能断言方式有误，请手动排查失败原因')
         else:
             self.log.emit(timming)
