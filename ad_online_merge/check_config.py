@@ -29,7 +29,7 @@ class MainWindow(QWidget, check_cfg_frame.Ui_Form):
         # 通过调用父类构造函数并设置UI来初始化主窗口
         super(MainWindow, self).__init__(parent)
         self.setupUi(self)
-        self.current_version = '2.3'
+        self.current_version = '2.4'   # 当前版本号
         self.session = requests.Session()
         self.check_version()
         self.queue = Queue()
@@ -103,10 +103,10 @@ class MainWindow(QWidget, check_cfg_frame.Ui_Form):
             remote_version = version_api.text
             if self.current_version != remote_version:
                 QMessageBox.warning(self, "提示", f"发现新版本{remote_version}，开始更新")
-                url = 'http://192.168.7.111/查询配置V2.4.exe'  # 地址写下一代的版本号 预设版本号
+                url = 'http://192.168.7.111/查询配置V2.5.exe'  # 地址写下一代的版本号 预设版本号
                 res = requests.get(url)
                 desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")  # 定义桌面路径 获取任意使用的当前电脑的桌面路径
-                exe = fr'{desktop_path}\查询配置V2.4.exe'  # 文件存放地址
+                exe = fr'{desktop_path}\查询配置V2.5.exe'  # 文件存放地址
                 with open(exe, 'wb') as f:
                     f.write(res.content)
                 QMessageBox.warning(self, "提示", f"更新完成，存放路径{exe}，已放置桌面，请关闭旧版本，启动新版本开始使用")
