@@ -1,0 +1,28 @@
+<RCC>
+  <qresource prefix="蓝">
+    <file>安装.png</file>
+    <file>查看进程.png</file>
+    <file>关debug.png</file>
+    <file>进程清空.png</file>
+    <file>开debug.png</file>
+    <file>路径清空.png</file>
+    <file>启动应用.png</file>
+    <file>强停应用.png</file>
+    <file>清除应用信息.png</file>
+    <file>刷新.png</file>
+    <file>卸载应用.png</file>
+  </qresource>
+  <qresource prefix="白、">
+    <file>清空路径-白.png</file>
+    <file>开debug-白.png</file>
+    <file>刷新-白.png</file>
+    <file>清空进程信息-白.png</file>
+    <file>强停应用-白.png</file>
+    <file>启动应用-白.png</file>
+    <file>清楚应用信息-白.png</file>
+    <file>安装-白.png</file>
+    <file>卸载应用-白.png</file>
+    <file>关debug-白.png</file>
+    <file>查看进程-白.png</file>
+  </qresource>
+</RCC>

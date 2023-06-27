@@ -61,7 +61,7 @@ class Out_Ad():
 
     def unlock_dig(self):
         self.dirver.swipe_points([(0.2, 0.5), (0.8, 0.5)], 0.5)
-        if self.dirver(text='热门视频').wait(timeout=5.0):
+        if self.dirver(text='热门视频').wait(timeout=1.0):
             self.dirver.press("home")
             if self.dirver(text='手机卫士').wait(timeout=5.0):
                 path = self.dirver.screenshot(fr"{self.img_dir()}/{self.filetime}-解锁后弹窗展示成功.jpg")
