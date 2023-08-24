@@ -5,6 +5,7 @@ from PyQt5 import QtCore
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import QMessageBox
+from PyQt5.QtCore import QTimer
 from queue import Queue
 import requests
 from Worker_run import Worker
@@ -22,6 +23,8 @@ import Mk_five_dirname
 from Worker_auto import Worker_Auto
 from qt_material import apply_stylesheet
 from Worker_Ash import Worker_Ash_Pross
+import download_frame
+import download_window
 
 
 class MainWindow(QWidget, check_cfg_frame.Ui_Form):
@@ -98,23 +101,20 @@ class MainWindow(QWidget, check_cfg_frame.Ui_Form):
         self.ash_clear_auto_path.clicked.connect(self.Clear_Ash_Text)
 
     def check_version(self):
-        try:
-            version_api = self.session.get('http://192.168.7.43:8008/version')
-            remote_version = version_api.text
-            if self.current_version != remote_version:
-                QMessageBox.warning(self, "提示", f"发现新版本{remote_version}，开始更新")
-                url = 'http://192.168.7.111/查询配置V2.5.exe'  # 地址写下一代的版本号 预设版本号
-                res = requests.get(url)
-                desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")  # 定义桌面路径 获取任意使用的当前电脑的桌面路径
-                exe = fr'{desktop_path}\查询配置V2.5.exe'  # 文件存放地址
-                with open(exe, 'wb') as f:
-                    f.write(res.content)
-                QMessageBox.warning(self, "提示", f"更新完成，存放路径{exe}，已放置桌面，请关闭旧版本，启动新版本开始使用")
-                self.session.close()  # 关闭接口链接
-                QCoreApplication.instance().quit()  # 退出程序页面
-                QApplication.exit()
-        except Exception:
-            pass
+        version_api = self.session.get('http://192.168.7.43:8008/version')
+        remote_version = version_api.text
+        if self.current_version != remote_version:
+            QMessageBox.warning(self, "提示", f"发现新版本{remote_version}，开始更新")
+            self.chile_Win = download_window.MainWindow()
+            self.chile_Win.show()
+            desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")  # 定义桌面路径 获取任意使用的当前电脑的桌面路径
+            exe = fr'{desktop_path}\查询配置V2.5.exe'  # 文件存放地址
+            QMessageBox.warning(self, "提示", f"更新完成，存放路径{exe}，已放置桌面，请关闭旧版本，启动新版本开始使用")
+            delay = 2000  # 延时2秒关闭窗口
+            timer = QTimer()
+            timer.start(delay)  # 启动定时器
+            app.exec_()
+
 
     def Ash_Lock_update(self,text):
         showImage = QPixmap(text).scaled(self.ash_lock_img.width(), self.ash_lock_img.height())
