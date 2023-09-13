@@ -62,12 +62,12 @@ if __name__ == '__main__':
 # import sys
 # import time
 #
-# class Worker(QThread):
+# class WorkerAutoDriver(QThread):
 #     # 定义一个信号，用于更新进度条
 #     progress_signal = pyqtSignal(int)
 #
 #     def __init__(self, parent=None):
-#         super(Worker, self).__init__(parent)
+#         super(WorkerAutoDriver, self).__init__(parent)
 #
 #     def run(self):
 #         for i in range(1, 101):
@@ -96,7 +96,7 @@ if __name__ == '__main__':
 #
 #     def on_start_button_click(self):
 #         # 创建工作线程
-#         self.worker = Worker()
+#         self.worker = WorkerAutoDriver()
 #         # 绑定信号和槽函数
 #         self.worker.progress_signal.connect(self.update_progress)
 #         # 启动工作线程

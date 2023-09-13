@@ -25,6 +25,9 @@ from qt_material import apply_stylesheet
 from Worker_Ash import Worker_Ash_Pross
 import download_frame
 import download_window
+from PIL import Image
+from device_list import get_connected_device_models
+
 
 
 class MainWindow(QWidget, check_cfg_frame.Ui_Form):
@@ -42,7 +45,7 @@ class MainWindow(QWidget, check_cfg_frame.Ui_Form):
         self.thread = Worker(self.queue)
         self.thread.sig1.connect(self.updateSucCfg)
         self.thread.sig2.connect(self.updateFailCfg)
-        self.auto_thread = Worker_Auto(self.auto_queue)
+        self.auto_thread = Worker_Auto(self.auto_queue,devices_id=self.devices_info)
         self.auto_thread.log.connect(self.updateAutoCfg)
         self.auto_thread.lock_img_path.connect(self.Lock_update)
         self.auto_thread.unlock_img_path.connect(self.Unlock_update)
@@ -99,6 +102,17 @@ class MainWindow(QWidget, check_cfg_frame.Ui_Form):
         self.clear_auto_path.clicked.connect(self.clear_Auto_text)
         self.ash_acition_auto.clicked.connect(self.Ash_Auto_Driver)
         self.ash_clear_auto_path.clicked.connect(self.Clear_Ash_Text)
+        self.img_device_refresh.clicked.connect(self.ImgDeviceRefresh)
+
+    def ImgDeviceRefresh(self):
+        self.img_device.clear()
+        for i in get_connected_device_models():
+            self.img_device.addItem(f'{i}')
+
+    def devices_info(self):
+        devices_id = self.img_device.currentText()
+        id = devices_id.split("/")[-1]
+        return id
 
     def check_version(self):
         version_api = self.session.get('http://192.168.7.43:8008/version')
@@ -446,31 +460,31 @@ class MainWindow(QWidget, check_cfg_frame.Ui_Form):
         Mk_five_dirname.linetxt(self.dir_name_2.text())
 
     def scra(self):
-        path = Screen_Img.scr(self.dir_name_2.text())
+        path = Screen_Img.scr(self.dir_name_2.text(), device_id=self.devices_info())
         showImage = QPixmap(path).scaled(self.img6.width(), self.img6.height())
         # 展示图片，达到预览效果
         self.img6.setPixmap(showImage)
 
     def scrb(self):
-        path = Screen_Img.scr(self.dir_name_2.text())
+        path = Screen_Img.scr(self.dir_name_2.text(), device_id=self.devices_info())
         showImage = QPixmap(path).scaled(self.img2_2.width(), self.img2_2.height())
         # 展示图片，达到预览效果
         self.img2_2.setPixmap(showImage)
 
     def scrc(self):
-        path = Screen_Img.scr(self.dir_name_2.text())
+        path = Screen_Img.scr(self.dir_name_2.text(), device_id=self.devices_info())
         showImage = QPixmap(path).scaled(self.img3_2.width(), self.img3_2.height())
         # 展示图片，达到预览效果
         self.img3_2.setPixmap(showImage)
 
     def scrd(self):
-        path = Screen_Img.scr(self.dir_name_2.text())
+        path = Screen_Img.scr(self.dir_name_2.text(), device_id=self.devices_info())
         showImage = QPixmap(path).scaled(self.img4_2.width(), self.img4_2.height())
         # 展示图片，达到预览效果
         self.img4_2.setPixmap(showImage)
 
     def scre(self):
-        path = Screen_Img.scr(self.dir_name_2.text())
+        path = Screen_Img.scr(self.dir_name_2.text(), device_id=self.devices_info())
         showImage = QPixmap(path).scaled(self.img5_2.width(), self.img5_2.height())
          # 展示图片，达到预览效果
         self.img5_2.setPixmap(showImage)

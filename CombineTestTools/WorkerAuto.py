@@ -1,5 +1,5 @@
 from PyQt5.QtCore import QThread, pyqtSignal, QMutex
-from App_Out_Ad import Out_Ad
+from OutAppAd import Out_Ad
 from time import sleep
 
 
@@ -17,22 +17,24 @@ class Worker_Auto(QThread):
     timing_img_path = pyqtSignal(str)
     timing_ad_path = pyqtSignal(str)
 
-    def __init__(self, queue, devices_id):
+    def __init__(self, queue):
         # 通过调用父类构造函数并设置初始计数值来初始化工作线程
         super().__init__()
         self.queue = queue
-        self.devices_id = devices_id
+
 
     def run(self):
-        path = self.queue.get()
-        driver_info = Out_Ad(path).connect_phone(devices_id=self.devices_id)
+        info = self.queue.get()
+        path = info.split("&")[0]
+        devices_id = info.split("&")[-1]
+        driver_info = Out_Ad(path).connect_phone(devices_id=devices_id)
         self.d = Out_Ad(path)
         self.log.emit("自动化启动，本次自动化操作：启动app-->强停一次app-->触发锁屏新闻-->解锁后弹窗-->插拔电弹窗-->wifi切换弹窗-->home键弹窗-->定时弹窗")
         self.log.emit(f"手机设备信息-->品牌：{driver_info['brand']}，系统版本：{driver_info['version']}，型号：{driver_info['model']}")
-        self.d.start_app(devices_id=self.devices_id)
+        self.d.start_app(devices_id=devices_id)
         self.log.emit('正在启动app：'+self.d.appinfo())
         sleep(5)
-        self.d.stop_app(self.devices_id)
+        self.d.stop_app(devices_id)
         first_lock = self.d.lock_news()
         if '锁屏新闻展示成功' in first_lock:
             sleep(3)

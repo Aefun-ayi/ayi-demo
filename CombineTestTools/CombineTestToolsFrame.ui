@@ -1,0 +1,2848 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1004</width>
+    <height>711</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>测试工具箱-Ae</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="ico.qrc">
+    <normaloff>:/WindowTitle/WindowIco.png</normaloff>:/WindowTitle/WindowIco.png</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="styleSheet">
+      <string notr="true">QTabWidget::tab-bar {alignment: center;}
+QTabBar::tab{width:200px;}</string>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>       查询       </string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetDefaultConstraint</enum>
+       </property>
+       <item>
+        <widget class="QTabWidget" name="tabWidget_2">
+         <property name="styleSheet">
+          <string notr="true">QTabBar::tab{width:200px;}</string>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="tab_3">
+          <attribute name="title">
+           <string>    查询在线配置    </string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_7" stretch="1,9">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="8,1,1">
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_4" stretch="2,8">
+               <item>
+                <widget class="QLabel" name="label">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>拖入出包文件夹生成路径（注意路径不可带中文）：</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="LineApkdirPath">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border-radius: 20px;
+font: 14pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QPushButton" name="SelectOnline">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>80</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+               </property>
+               <property name="text">
+                <string>查询</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="ClearOnlineText">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>80</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+               </property>
+               <property name="text">
+                <string>清空</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_5">
+               <item>
+                <widget class="QLabel" name="label_2">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>失败</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTextBrowser" name="FailConfig">
+                 <property name="styleSheet">
+                  <string notr="true">border-radius: 20px;
+font: 14pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_6">
+               <item>
+                <widget class="QLabel" name="label_3">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>成功</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTextBrowser" name="SucConfig">
+                 <property name="styleSheet">
+                  <string notr="true">border-radius: 20px;
+font: 14pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_4">
+          <attribute name="title">
+           <string>    查询广告配置    </string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_12" stretch="1,3,6">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,2,1,2,2,2">
+             <item>
+              <widget class="QLabel" name="label_4">
+               <property name="styleSheet">
+                <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+               </property>
+               <property name="text">
+                <string>项目ID：</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="SelectPrid">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">border-radius: 20px;
+font: 14pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_5">
+               <property name="styleSheet">
+                <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+               </property>
+               <property name="text">
+                <string>渠道：</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="SelectChan">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">border-radius: 20px;
+font: 14pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="SelectAd">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+               </property>
+               <property name="text">
+                <string>查询</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="ClearAdText">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+               </property>
+               <property name="text">
+                <string>清空</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_5">
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_10">
+               <item>
+                <widget class="QLabel" name="label_8">
+                 <property name="styleSheet">
+                  <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>all分组：</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTextBrowser" name="AllGroupText">
+                 <property name="styleSheet">
+                  <string notr="true">border-radius: 20px;
+font: 10pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_9">
+               <item>
+                <widget class="QLabel" name="label_7">
+                 <property name="styleSheet">
+                  <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>1066A_A分组：</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTextBrowser" name="AGroupText">
+                 <property name="styleSheet">
+                  <string notr="true">border-radius: 20px;
+font: 10pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_8">
+               <item>
+                <widget class="QLabel" name="label_6">
+                 <property name="styleSheet">
+                  <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>1066B_B分组：</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTextBrowser" name="BGroupText">
+                 <property name="styleSheet">
+                  <string notr="true">border-radius: 20px;
+font: 10pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_11">
+               <item>
+                <widget class="QLabel" name="label_9">
+                 <property name="styleSheet">
+                  <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>1066C_C分组：</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTextBrowser" name="CGroupText">
+                 <property name="styleSheet">
+                  <string notr="true">border-radius: 20px;
+font: 10pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QTabWidget" name="tabWidget_4">
+             <property name="styleSheet">
+              <string notr="true">QTabBar::tab{width:300px;}</string>
+             </property>
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <widget class="QWidget" name="tab_11">
+              <attribute name="title">
+               <string>广告位</string>
+              </attribute>
+              <layout class="QHBoxLayout" name="horizontalLayout_6">
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_14">
+                 <item>
+                  <widget class="QLabel" name="label_11">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>已配置的开屏广告位：</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextBrowser" name="SplashCfgText">
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;
+font: 14pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                   </property>
+                   <property name="html">
+                    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'微软雅黑'; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'幼圆';&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_15">
+                 <item>
+                  <widget class="QLabel" name="label_12">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>已配置的信息流广告位：</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextBrowser" name="MsgCfgText">
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;
+font: 14pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_13">
+                 <item>
+                  <widget class="QLabel" name="label_10">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>已配置的插屏广告位：</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextBrowser" name="PlaqueCfgText">
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;
+font: 14pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_16">
+                 <item>
+                  <widget class="QLabel" name="label_13">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>已配置的视频广告位：</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextBrowser" name="VideoCfgText">
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;
+font: 14pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="tab_12">
+              <attribute name="title">
+               <string>广告源</string>
+              </attribute>
+              <layout class="QHBoxLayout" name="horizontalLayout_7">
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_18">
+                 <item>
+                  <widget class="QLabel" name="label_15">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>已配置的开屏广告源：</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextBrowser" name="SplashSourceText">
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;
+font: 10pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_19">
+                 <item>
+                  <widget class="QLabel" name="label_16">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>已配置的信息流广告源：</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextBrowser" name="MsgSourceText">
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;
+font: 10pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_20">
+                 <item>
+                  <widget class="QLabel" name="label_17">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>已配置的插屏广告源：</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextBrowser" name="PlaqueSourceText">
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;
+font: 10pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_17">
+                 <item>
+                  <widget class="QLabel" name="label_14">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>已配置的视频广告源：</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextBrowser" name="VideoSourceText">
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;
+font: 10pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_5">
+          <attribute name="title">
+           <string>    确认广告配置    </string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_25">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_10" stretch="6,2,2">
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_21">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_8">
+                 <item>
+                  <widget class="QLabel" name="label_18">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>项目id：</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="VerifyPrid">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;
+font: 14pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_19">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>渠道：</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="VerifyChan">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;
+font: 14pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_9">
+                 <item>
+                  <widget class="QLabel" name="label_20">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>出包备注：</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="PackageInfo">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;
+font: 14pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QPushButton" name="VerifyAd">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>90</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{border-radius:10px;
+font: 28pt &quot;幼圆&quot;;}</string>
+               </property>
+               <property name="text">
+                <string>查询</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="ClearVerifyAdText">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>90</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{border-radius:10px;
+font: 28pt &quot;幼圆&quot;;}</string>
+               </property>
+               <property name="text">
+                <string>清空</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_11">
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_22">
+               <item>
+                <widget class="QLabel" name="label_21">
+                 <property name="styleSheet">
+                  <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>匹配的广告位：</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTextBrowser" name="MatchText">
+                 <property name="styleSheet">
+                  <string notr="true">border-radius: 20px;
+font: 14pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_23">
+               <item>
+                <widget class="QLabel" name="label_22">
+                 <property name="styleSheet">
+                  <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>缺少的广告位：</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTextBrowser" name="LackText">
+                 <property name="styleSheet">
+                  <string notr="true">border-radius: 20px;
+font: 14pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_24">
+               <item>
+                <widget class="QLabel" name="label_23">
+                 <property name="styleSheet">
+                  <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>冗余的广告位：</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTextBrowser" name="TmrText">
+                 <property name="styleSheet">
+                  <string notr="true">border-radius: 20px;
+font: 14pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>       设备       </string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,9">
+       <property name="spacing">
+        <number>5</number>
+       </property>
+       <property name="leftMargin">
+        <number>5</number>
+       </property>
+       <property name="topMargin">
+        <number>5</number>
+       </property>
+       <property name="rightMargin">
+        <number>5</number>
+       </property>
+       <property name="bottomMargin">
+        <number>5</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout" stretch="8,2">
+         <item>
+          <widget class="QComboBox" name="DevicesList">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-radius: 20px;
+font: 14pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="DevicesRefresh">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+           </property>
+           <property name="text">
+            <string>刷新</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QTabWidget" name="tabWidget_3">
+         <property name="styleSheet">
+          <string notr="true">QTabBar::tab{width:180px;}</string>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="tab_10">
+          <attribute name="title">
+           <string>截图-五图</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_31" stretch="1,8">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_12" stretch="1,8,2">
+             <item>
+              <widget class="QLabel" name="label_24">
+               <property name="styleSheet">
+                <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+               </property>
+               <property name="text">
+                <string>创建五图文件夹</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="ImgDriName">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">border-radius: 20px;
+font: 14pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="ImgMkdirName">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+               </property>
+               <property name="text">
+                <string>创建目录</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_13">
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_27">
+               <item>
+                <widget class="QLabel" name="ImgOne">
+                 <property name="styleSheet">
+                  <string notr="true">font: 14pt &quot;幼圆&quot;;
+border-color: rgb(170, 255, 127);
+border-width: 1px;
+border-style: solid;
+border-radius:10px;</string>
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;图&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;片&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;预&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;览&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;区&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="ScreenOne">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+                 </property>
+                 <property name="text">
+                  <string>截图（1）</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_28">
+               <item>
+                <widget class="QLabel" name="ImgTwo">
+                 <property name="styleSheet">
+                  <string notr="true">font: 14pt &quot;幼圆&quot;;
+border-color: rgb(170, 255, 127);
+border-width: 1px;
+border-style: solid;
+border-radius:10px;</string>
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;图&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;片&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;预&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;览&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;区&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="ScreenTwo">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+                 </property>
+                 <property name="text">
+                  <string>截图（2）</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_30">
+               <item>
+                <widget class="QLabel" name="ImgThree">
+                 <property name="styleSheet">
+                  <string notr="true">font: 14pt &quot;幼圆&quot;;
+border-color: rgb(170, 255, 127);
+border-width: 1px;
+border-style: solid;
+border-radius:10px;</string>
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;图&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;片&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;预&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;览&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;区&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="ScreenThree">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+                 </property>
+                 <property name="text">
+                  <string>截图（3）</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_29">
+               <item>
+                <widget class="QLabel" name="ImgFour">
+                 <property name="styleSheet">
+                  <string notr="true">font: 14pt &quot;幼圆&quot;;
+border-color: rgb(170, 255, 127);
+border-width: 1px;
+border-style: solid;
+border-radius:10px;</string>
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;图&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;片&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;预&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;览&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;区&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="ScreenFour">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+                 </property>
+                 <property name="text">
+                  <string>截图（4）</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_26">
+               <item>
+                <widget class="QLabel" name="ImgFive">
+                 <property name="styleSheet">
+                  <string notr="true">font: 14pt &quot;幼圆&quot;;
+border-color: rgb(170, 255, 127);
+border-width: 1px;
+border-style: solid;
+border-radius:10px;</string>
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;图&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;片&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;预&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;览&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;区&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="ScreenFive">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+                 </property>
+                 <property name="text">
+                  <string>截图（5）</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_9">
+          <attribute name="title">
+           <string>测试-工具</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_32">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_14">
+             <item>
+              <widget class="QLineEdit" name="TestToolsPathText">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">border-radius: 20px;
+font: 14pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="ClearPathText">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+               </property>
+               <property name="text">
+                <string>清空</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_15" stretch="1,8,2">
+             <item>
+              <widget class="QLabel" name="label_30">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+               </property>
+               <property name="text">
+                <string>选择安装来源（模拟来源安装）：</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="DemoApp">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">border-radius: 20px;
+font: 14pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+               </property>
+               <item>
+                <property name="text">
+                 <string>选择后点击安装按钮</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>模拟小米安装来源</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>模拟华为安装来源</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>模拟vivo安装来源</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>模拟oppo安装来源</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>debug安装（安装后同时开启debug）</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>正常安装</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="InstallApp">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+               </property>
+               <property name="text">
+                <string>安装</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_16">
+             <item>
+              <widget class="QPushButton" name="StartApp">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+               </property>
+               <property name="text">
+                <string>启动应用</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="CheckProcess">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+               </property>
+               <property name="text">
+                <string>查看进程</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="StopApp">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+               </property>
+               <property name="text">
+                <string>强停应用</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="UninstallApp">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+               </property>
+               <property name="text">
+                <string>卸载应用</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="ClearApp">
+               <property name="minimumSize">
+                <size>
+                 <width>180</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+               </property>
+               <property name="text">
+                <string>清除应用信息</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="DebugApp">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+               </property>
+               <property name="text">
+                <string>开Debug</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="UndebugApp">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+               </property>
+               <property name="text">
+                <string>关Debug</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_17">
+             <item>
+              <widget class="QLabel" name="label_31">
+               <property name="styleSheet">
+                <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:28pt;&quot;&gt;进&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:28pt;&quot;&gt;程&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:28pt;&quot;&gt;信&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:28pt;&quot;&gt;息&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QTextBrowser" name="ProcessText">
+               <property name="styleSheet">
+                <string notr="true">border-radius: 20px;
+font: 12pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="ClearProcessText">
+               <property name="minimumSize">
+                <size>
+                 <width>70</width>
+                 <height>420</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+               </property>
+               <property name="text">
+                <string>清空</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_7">
+          <attribute name="title">
+           <string>外广-自动化（强停一次）</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_33">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_18">
+             <item>
+              <widget class="QLineEdit" name="AutoPathText">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">border-radius: 20px;
+font: 14pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="AutoStart">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+               </property>
+               <property name="text">
+                <string>启动</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="AutoClearPathText">
+               <property name="minimumSize">
+                <size>
+                 <width>120</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+               </property>
+               <property name="text">
+                <string>清空文本</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QTabWidget" name="tabWidget_5">
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <widget class="QWidget" name="tab_13">
+              <attribute name="title">
+               <string>详情输出页</string>
+              </attribute>
+              <layout class="QVBoxLayout" name="verticalLayout_34">
+               <item>
+                <widget class="QLabel" name="label_32">
+                 <property name="styleSheet">
+                  <string notr="true">font: 28pt &quot;幼圆&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>自动化信息详情：</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_33">
+                 <property name="styleSheet">
+                  <string notr="true">font: 14pt &quot;幼圆&quot;;
+color: rgb(255, 85, 0);</string>
+                 </property>
+                 <property name="text">
+                  <string>前提：已配置外广，保活已成功启动，外广延时已通过，包体为B包状态</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTextBrowser" name="AutoInfo">
+                 <property name="styleSheet">
+                  <string notr="true">border-radius: 20px;
+font: 10pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="tab_14">
+              <attribute name="title">
+               <string>弹窗截图页</string>
+              </attribute>
+              <layout class="QHBoxLayout" name="horizontalLayout_20">
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_35" stretch="8,1,1">
+                 <item>
+                  <widget class="QLabel" name="AutoLockImg">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;幼圆&quot;;
+border-color: rgb(170, 255, 127);
+border-width: 1px;
+border-style: solid;
+border-radius:10px;</string>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;锁屏新闻&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;图&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;片&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;预&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;览&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;区&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextBrowser" name="AutoLockPath">
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;
+font: 10pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="AutoLockLook">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+                   </property>
+                   <property name="text">
+                    <string>查看原图</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_40" stretch="8,1,1">
+                 <item>
+                  <widget class="QLabel" name="AutoUnlockImg">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;幼圆&quot;;
+border-color: rgb(170, 255, 127);
+border-width: 1px;
+border-style: solid;
+border-radius:10px;</string>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;解锁后弹窗&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;图&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;片&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;预&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;览&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;区&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextBrowser" name="AutoUnlockPath">
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;
+font: 10pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="AutoUnlockLook">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+                   </property>
+                   <property name="text">
+                    <string>查看原图</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_36" stretch="8,1,1">
+                 <item>
+                  <widget class="QLabel" name="AutoChargeImg">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;幼圆&quot;;
+border-color: rgb(170, 255, 127);
+border-width: 1px;
+border-style: solid;
+border-radius:10px;</string>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;插拔电弹窗&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;图&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;片&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;预&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;览&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;区&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextBrowser" name="AutoChargePath">
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;
+font: 10pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="AutoChargeLook">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+                   </property>
+                   <property name="text">
+                    <string>查看原图</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_39" stretch="8,1,1">
+                 <item>
+                  <widget class="QLabel" name="AutoWifiImg">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;幼圆&quot;;
+border-color: rgb(170, 255, 127);
+border-width: 1px;
+border-style: solid;
+border-radius:10px;</string>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;WiFi弹窗&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;图&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;片&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;预&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;览&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;区&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextBrowser" name="AutoWifiPath">
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;
+font: 10pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="AutoWifiLook">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+                   </property>
+                   <property name="text">
+                    <string>查看原图</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_38" stretch="8,1,1">
+                 <item>
+                  <widget class="QLabel" name="AutoTimerImg">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;幼圆&quot;;
+border-color: rgb(170, 255, 127);
+border-width: 1px;
+border-style: solid;
+border-radius:10px;</string>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;定时弹窗&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;图&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;片&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;预&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;览&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;区&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextBrowser" name="AutoTimerPath">
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;
+font: 10pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="AutoTimerLook">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+                   </property>
+                   <property name="text">
+                    <string>查看原图</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_37" stretch="8,1,1">
+                 <item>
+                  <widget class="QLabel" name="AutoHomeImg">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;幼圆&quot;;
+border-color: rgb(170, 255, 127);
+border-width: 1px;
+border-style: solid;
+border-radius:10px;</string>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;home键弹窗&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;图&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;片&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;预&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;览&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;区&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextBrowser" name="AutoHomePath">
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;
+font: 10pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="AutoHomeLook">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+                   </property>
+                   <property name="text">
+                    <string>查看原图</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="tab_15">
+              <attribute name="title">
+               <string>广告截图页</string>
+              </attribute>
+              <layout class="QHBoxLayout" name="horizontalLayout_21">
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_41" stretch="8,0,1,1">
+                 <item>
+                  <widget class="QLabel" name="AutoAdUnlockImg">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;幼圆&quot;;
+border-color: rgb(170, 255, 127);
+border-width: 1px;
+border-style: solid;
+border-radius:10px;</string>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;图&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;片&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;预&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;览&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;区&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_40">
+                   <property name="styleSheet">
+                    <string notr="true">font: 10pt &quot;幼圆&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>解锁后弹窗广告展示</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextBrowser" name="AutoAdUnlockPath">
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;
+font: 10pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="AutoAdUnlockLook">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+                   </property>
+                   <property name="text">
+                    <string>查看原图</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_42" stretch="8,0,1,1">
+                 <item>
+                  <widget class="QLabel" name="AutoAdChargeImg">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;幼圆&quot;;
+border-color: rgb(170, 255, 127);
+border-width: 1px;
+border-style: solid;
+border-radius:10px;</string>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;图&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;片&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;预&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;览&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;区&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_43">
+                   <property name="styleSheet">
+                    <string notr="true">font: 10pt &quot;幼圆&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>插拔电弹窗广告展示</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextBrowser" name="AutoAdChargePath">
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;
+font: 10pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="AutoAdChargeLook">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+                   </property>
+                   <property name="text">
+                    <string>查看原图</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_43" stretch="8,0,1,1">
+                 <item>
+                  <widget class="QLabel" name="AutoAdHomeImg">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;幼圆&quot;;
+border-color: rgb(170, 255, 127);
+border-width: 1px;
+border-style: solid;
+border-radius:10px;</string>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;图&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;片&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;预&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;览&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;区&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_45">
+                   <property name="styleSheet">
+                    <string notr="true">font: 10pt &quot;幼圆&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>home键弹窗广告展示</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextBrowser" name="AutoAdHomePath">
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;
+font: 10pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="AutoAdHomeLook">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+                   </property>
+                   <property name="text">
+                    <string>查看原图</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_44" stretch="8,0,1,1">
+                 <item>
+                  <widget class="QLabel" name="AutoAdWifiImg">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;幼圆&quot;;
+border-color: rgb(170, 255, 127);
+border-width: 1px;
+border-style: solid;
+border-radius:10px;</string>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;图&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;片&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;预&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;览&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;区&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_47">
+                   <property name="styleSheet">
+                    <string notr="true">font: 10pt &quot;幼圆&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>wifi切换弹窗广告展示</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextBrowser" name="AutoAdWifiPath">
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;
+font: 10pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="AutoAdWifiLook">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+                   </property>
+                   <property name="text">
+                    <string>查看原图</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_45" stretch="8,0,1,1">
+                 <item>
+                  <widget class="QLabel" name="AutoAdTimerImg">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;幼圆&quot;;
+border-color: rgb(170, 255, 127);
+border-width: 1px;
+border-style: solid;
+border-radius:10px;</string>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;图&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;片&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;预&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;览&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;区&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_49">
+                   <property name="styleSheet">
+                    <string notr="true">font: 10pt &quot;幼圆&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>定时弹窗广告展示</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextBrowser" name="AutoAdTimerPath">
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;
+font: 10pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="AutoAdTimerLook">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+                   </property>
+                   <property name="text">
+                    <string>查看原图</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_8">
+          <attribute name="title">
+           <string>外广-自动化（强停置灰）</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_58">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_19">
+             <item>
+              <widget class="QLineEdit" name="AshingPathText">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">border-radius: 20px;
+font: 14pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="AshingStart">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+               </property>
+               <property name="text">
+                <string>启动</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="AshingClearPathText">
+               <property name="minimumSize">
+                <size>
+                 <width>120</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+               </property>
+               <property name="text">
+                <string>清空文本</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QTabWidget" name="tabWidget_6">
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <widget class="QWidget" name="tab_16">
+              <attribute name="title">
+               <string>详情输出页</string>
+              </attribute>
+              <layout class="QVBoxLayout" name="verticalLayout_46">
+               <item>
+                <widget class="QLabel" name="label_50">
+                 <property name="styleSheet">
+                  <string notr="true">font: 28pt &quot;幼圆&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>自动化信息详情：</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_51">
+                 <property name="styleSheet">
+                  <string notr="true">font: 14pt &quot;幼圆&quot;;
+color: rgb(255, 85, 0);</string>
+                 </property>
+                 <property name="text">
+                  <string>前提：已配置外广，保活已成功启动，外广延时已通过，包体为B包状态</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTextBrowser" name="AshingInfo">
+                 <property name="styleSheet">
+                  <string notr="true">border-radius: 20px;
+font: 10pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="tab_17">
+              <attribute name="title">
+               <string>弹窗截图页</string>
+              </attribute>
+              <layout class="QHBoxLayout" name="horizontalLayout_22">
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_47" stretch="8,1,1">
+                 <item>
+                  <widget class="QLabel" name="AshingLockImg">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;幼圆&quot;;
+border-color: rgb(170, 255, 127);
+border-width: 1px;
+border-style: solid;
+border-radius:10px;</string>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;锁屏新闻&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;图&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;片&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;预&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;览&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;区&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextBrowser" name="AshingLockPath">
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;
+font: 10pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="AshingLockLook">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+                   </property>
+                   <property name="text">
+                    <string>查看原图</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_48" stretch="8,1,1">
+                 <item>
+                  <widget class="QLabel" name="AshingUnlockImg">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;幼圆&quot;;
+border-color: rgb(170, 255, 127);
+border-width: 1px;
+border-style: solid;
+border-radius:10px;</string>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;解锁后弹窗&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;图&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;片&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;预&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;览&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;区&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextBrowser" name="AshingUnlockPath">
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;
+font: 10pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="AshingUnlockLook">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+                   </property>
+                   <property name="text">
+                    <string>查看原图</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_49" stretch="8,1,1">
+                 <item>
+                  <widget class="QLabel" name="AshingChargeImg">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;幼圆&quot;;
+border-color: rgb(170, 255, 127);
+border-width: 1px;
+border-style: solid;
+border-radius:10px;</string>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;插拔电弹窗&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;图&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;片&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;预&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;览&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;区&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextBrowser" name="AshingChargePath">
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;
+font: 10pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="AshingChargeLook">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+                   </property>
+                   <property name="text">
+                    <string>查看原图</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_50" stretch="8,1,1">
+                 <item>
+                  <widget class="QLabel" name="AshingWifiImg">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;幼圆&quot;;
+border-color: rgb(170, 255, 127);
+border-width: 1px;
+border-style: solid;
+border-radius:10px;</string>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;wifi弹窗&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;图&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;片&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;预&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;览&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;区&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextBrowser" name="AshingWifiPath">
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;
+font: 10pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="AshingWifiLook">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+                   </property>
+                   <property name="text">
+                    <string>查看原图</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_51" stretch="8,1,1">
+                 <item>
+                  <widget class="QLabel" name="AshingTimerImg">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;幼圆&quot;;
+border-color: rgb(170, 255, 127);
+border-width: 1px;
+border-style: solid;
+border-radius:10px;</string>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;定时弹窗&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;图&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;片&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;预&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;览&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;区&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextBrowser" name="AshingTimerPath">
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;
+font: 10pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="AshingTimerLook">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+                   </property>
+                   <property name="text">
+                    <string>查看原图</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_52" stretch="8,1,1">
+                 <item>
+                  <widget class="QLabel" name="AshingHomeImg">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;幼圆&quot;;
+border-color: rgb(170, 255, 127);
+border-width: 1px;
+border-style: solid;
+border-radius:10px;</string>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;home键弹窗&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;图&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;片&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;预&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;览&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;区&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextBrowser" name="AshingHomePath">
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;
+font: 10pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="AshingHomeLook">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+                   </property>
+                   <property name="text">
+                    <string>查看原图</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="tab_18">
+              <attribute name="title">
+               <string>广告截图页</string>
+              </attribute>
+              <layout class="QHBoxLayout" name="horizontalLayout_23">
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_53" stretch="8,0,1,1">
+                 <item>
+                  <widget class="QLabel" name="AshingAdUnlockImg">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;幼圆&quot;;
+border-color: rgb(170, 255, 127);
+border-width: 1px;
+border-style: solid;
+border-radius:10px;</string>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;图&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;片&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;预&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;览&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;区&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_59">
+                   <property name="styleSheet">
+                    <string notr="true">font: 10pt &quot;幼圆&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>解锁后弹窗广告展示</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextBrowser" name="AshingAdUnlockPath">
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;
+font: 10pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="AshingAdUnlockLook">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+                   </property>
+                   <property name="text">
+                    <string>查看原图</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_54" stretch="8,0,1,1">
+                 <item>
+                  <widget class="QLabel" name="AshingAdChargeImg">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;幼圆&quot;;
+border-color: rgb(170, 255, 127);
+border-width: 1px;
+border-style: solid;
+border-radius:10px;</string>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;图&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;片&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;预&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;览&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;区&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_61">
+                   <property name="styleSheet">
+                    <string notr="true">font: 10pt &quot;幼圆&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>插拔电弹窗广告展示</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextBrowser" name="AshingAdChargePath">
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;
+font: 10pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="AshingAdChargeLook">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+                   </property>
+                   <property name="text">
+                    <string>查看原图</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_55" stretch="8,0,1,1">
+                 <item>
+                  <widget class="QLabel" name="AshingAdHomeImg">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;幼圆&quot;;
+border-color: rgb(170, 255, 127);
+border-width: 1px;
+border-style: solid;
+border-radius:10px;</string>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;图&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;片&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;预&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;览&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;区&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_63">
+                   <property name="styleSheet">
+                    <string notr="true">font: 10pt &quot;幼圆&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>home键弹窗广告展示</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextBrowser" name="AshingAdHomePath">
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;
+font: 10pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="AshingAdHomeLook">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+                   </property>
+                   <property name="text">
+                    <string>查看原图</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_56" stretch="8,0,1,1">
+                 <item>
+                  <widget class="QLabel" name="AshingAdWifiImg">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;幼圆&quot;;
+border-color: rgb(170, 255, 127);
+border-width: 1px;
+border-style: solid;
+border-radius:10px;</string>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;图&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;片&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;预&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;览&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;区&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_65">
+                   <property name="styleSheet">
+                    <string notr="true">font: 10pt &quot;幼圆&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>wifi切换弹窗广告展示</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextBrowser" name="AshingAdWifiPath">
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;
+font: 10pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="AshingAdWifiLook">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+                   </property>
+                   <property name="text">
+                    <string>查看原图</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_57" stretch="8,0,1,1">
+                 <item>
+                  <widget class="QLabel" name="AshingAdTimerImg">
+                   <property name="styleSheet">
+                    <string notr="true">font: 14pt &quot;幼圆&quot;;
+border-color: rgb(170, 255, 127);
+border-width: 1px;
+border-style: solid;
+border-radius:10px;</string>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;图&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;片&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;预&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;览&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;区&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_67">
+                   <property name="styleSheet">
+                    <string notr="true">font: 10pt &quot;幼圆&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>定时弹窗广告展示</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextBrowser" name="AshingAdTimerPath">
+                   <property name="styleSheet">
+                    <string notr="true">border-radius: 20px;
+font: 10pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="AshingAdTimerLook">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+                   </property>
+                   <property name="text">
+                    <string>查看原图</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_6">
+      <attribute name="title">
+       <string>       创建目录       </string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_59">
+       <item>
+        <widget class="QTextEdit" name="CreateDirText">
+         <property name="styleSheet">
+          <string notr="true">border-radius: 20px;
+font: 12pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="CreateDir">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>100</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton
+{border-radius:10px;
+font: 28pt &quot;幼圆&quot;;}</string>
+         </property>
+         <property name="text">
+          <string>创建目录</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="CreateClear">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>100</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton
+{border-radius:10px;
+font: 28pt &quot;幼圆&quot;;}</string>
+         </property>
+         <property name="text">
+          <string>清空文本</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="ico.qrc"/>
+ </resources>
+ <connections/>
+</ui>

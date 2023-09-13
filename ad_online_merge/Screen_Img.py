@@ -5,10 +5,10 @@ import datetime
 
 
 
-def scr(dirname_text):
+def scr(dirname_text, device_id):
     try:
         # 加入try 避免出现连接失败时产生的闪退问题
-        d = u2.connect()
+        d = u2.connect(device_id)
     except RuntimeError as run:
         msg_box = QMessageBox(QMessageBox.Critical, '错误', f'报错信息：{run}，手机连接失败，请重新连接手机')
         msg_box.exec_()

@@ -1,15 +1,15 @@
 import os
 import uiautomator2 as u2
-from Package_Acitivity import get_package_name, get_activity_name,get_apk_app_name
+from PackageAcitivity import GetPackageName, GetActivityName, GetApkName
 from time import sleep
 import datetime
 
 
 class Out_Ad():
     def __init__(self, path):
-        self.package = get_package_name(path)
-        self.activity = get_activity_name(path)
-        self.appname = get_apk_app_name(path)
+        self.package = GetPackageName(path)
+        self.activity = GetActivityName(path)
+        self.appname = GetApkName(path)
         # print(self.package)
         self.filetime = datetime.datetime.now().strftime('%Y{y}%m{m}%d{d} %H{h}%M{f}%S{s}').format(y='年', m='月', d='日', h='时', f='分', s='秒')
 
@@ -40,7 +40,6 @@ class Out_Ad():
         # 判断结果
         if not isExists:
             # 如果不存在则创建目录
-            # 创建目录操作函数
             os.makedirs(path)
             return path
         else:

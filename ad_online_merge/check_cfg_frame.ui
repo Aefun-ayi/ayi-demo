@@ -42,7 +42,7 @@
       <string notr="true"/>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>3</number>
      </property>
      <widget class="QWidget" name="online">
       <attribute name="title">
@@ -937,7 +937,41 @@ border-radius: 20px;
       <attribute name="title">
        <string>截图-五图</string>
       </attribute>
-      <layout class="QVBoxLayout" name="verticalLayout_37" stretch="1,8">
+      <layout class="QVBoxLayout" name="verticalLayout_37" stretch="2,2,16">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_22" stretch="8,2">
+         <item>
+          <widget class="QComboBox" name="img_device">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 18pt &quot;幼圆&quot;;
+color: rgb(0, 255, 127);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="img_device_refresh">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 20pt &quot;幼圆&quot;;</string>
+           </property>
+           <property name="text">
+            <string>刷新</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,9,1">
          <item>
@@ -1259,7 +1293,34 @@ QPushButton:pressed{background-color:rgb(176,176,176);};</string>
       <attribute name="title">
        <string>外广-自动化（强停一次）</string>
       </attribute>
-      <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,9">
+      <layout class="QVBoxLayout" name="verticalLayout_3" stretch="2,2,16">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_20" stretch="8,2">
+         <item>
+          <widget class="QComboBox" name="auto_device">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>50</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="device_refresh">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>刷新</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,0,0">
          <item>
@@ -1343,7 +1404,7 @@ QPushButton:pressed{background-color:rgb(167, 167, 167);};
               <string notr="true">color: rgb(0, 255, 127);</string>
              </property>
              <property name="text">
-              <string>前提：已配置外广，保活已启动，外广延时已通过</string>
+              <string>前提：已配置外广，保活已启动，外广延时已通过，包体为B包状态</string>
              </property>
             </widget>
            </item>
@@ -1364,7 +1425,7 @@ color: rgb(170, 255, 127);</string>
           </attribute>
           <layout class="QHBoxLayout" name="horizontalLayout_2">
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_12" stretch="9,1">
+            <layout class="QVBoxLayout" name="verticalLayout_12" stretch="9,1,0">
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_5">
                <item>
@@ -1377,7 +1438,7 @@ border-radius:10px;
 font: 20pt &quot;微软雅黑&quot;;</string>
                  </property>
                  <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;锁屏新闻&lt;/p&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -1393,12 +1454,26 @@ font: 20pt &quot;微软雅黑&quot;;</string>
 font: 10pt &quot;微软雅黑&quot;;
 color: rgb(170, 255, 127);</string>
                </property>
+               <property name="html">
+                <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'微软雅黑'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="look_lock">
+               <property name="text">
+                <string>查看原图</string>
+               </property>
               </widget>
              </item>
             </layout>
            </item>
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_39" stretch="9,1">
+            <layout class="QVBoxLayout" name="verticalLayout_39" stretch="9,1,0">
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_38">
                <item>
@@ -1411,7 +1486,7 @@ border-radius:10px;
 font: 20pt &quot;微软雅黑&quot;;</string>
                  </property>
                  <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;解锁后弹窗&lt;/p&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -1429,10 +1504,17 @@ color: rgb(170, 255, 127);</string>
                </property>
               </widget>
              </item>
+             <item>
+              <widget class="QPushButton" name="look_unlock">
+               <property name="text">
+                <string>查看原图</string>
+               </property>
+              </widget>
+             </item>
             </layout>
            </item>
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_52" stretch="9,1">
+            <layout class="QVBoxLayout" name="verticalLayout_52" stretch="9,1,0">
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_53">
                <item>
@@ -1445,7 +1527,7 @@ border-radius:10px;
 font: 20pt &quot;微软雅黑&quot;;</string>
                  </property>
                  <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;插拔电弹窗&lt;/p&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -1463,10 +1545,17 @@ color: rgb(170, 255, 127);</string>
                </property>
               </widget>
              </item>
+             <item>
+              <widget class="QPushButton" name="look_charge">
+               <property name="text">
+                <string>查看原图</string>
+               </property>
+              </widget>
+             </item>
             </layout>
            </item>
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_54" stretch="9,1">
+            <layout class="QVBoxLayout" name="verticalLayout_54" stretch="9,1,0">
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_55">
                <item>
@@ -1479,7 +1568,7 @@ border-radius:10px;
 font: 20pt &quot;微软雅黑&quot;;</string>
                  </property>
                  <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;wifi弹窗&lt;/p&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -1497,10 +1586,17 @@ color: rgb(170, 255, 127);</string>
                </property>
               </widget>
              </item>
+             <item>
+              <widget class="QPushButton" name="look_wifi">
+               <property name="text">
+                <string>查看原图</string>
+               </property>
+              </widget>
+             </item>
             </layout>
            </item>
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_40" stretch="9,1">
+            <layout class="QVBoxLayout" name="verticalLayout_40" stretch="9,1,0">
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_41">
                <item>
@@ -1513,7 +1609,7 @@ border-radius:10px;
 font: 20pt &quot;微软雅黑&quot;;</string>
                  </property>
                  <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;定时弹窗&lt;/p&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -1531,10 +1627,17 @@ color: rgb(170, 255, 127);</string>
                </property>
               </widget>
              </item>
+             <item>
+              <widget class="QPushButton" name="look_timing">
+               <property name="text">
+                <string>查看原图</string>
+               </property>
+              </widget>
+             </item>
             </layout>
            </item>
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_42" stretch="9,1">
+            <layout class="QVBoxLayout" name="verticalLayout_42" stretch="9,1,0">
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_43">
                <item>
@@ -1547,7 +1650,7 @@ border-radius:10px;
 font: 20pt &quot;微软雅黑&quot;;</string>
                  </property>
                  <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;home键弹窗&lt;/p&gt;&lt;p&gt;图&lt;/p&gt;&lt;p&gt;片&lt;/p&gt;&lt;p&gt;预&lt;/p&gt;&lt;p&gt;览&lt;/p&gt;&lt;p&gt;区&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -1565,6 +1668,13 @@ color: rgb(170, 255, 127);</string>
                </property>
               </widget>
              </item>
+             <item>
+              <widget class="QPushButton" name="look_home">
+               <property name="text">
+                <string>查看原图</string>
+               </property>
+              </widget>
+             </item>
             </layout>
            </item>
           </layout>
@@ -1575,7 +1685,7 @@ color: rgb(170, 255, 127);</string>
           </attribute>
           <layout class="QHBoxLayout" name="horizontalLayout_6">
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_46" stretch="8,0,1">
+            <layout class="QVBoxLayout" name="verticalLayout_46" stretch="8,0,1,0">
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_47">
                <item>
@@ -1616,10 +1726,17 @@ color: rgb(170, 255, 127);</string>
                </property>
               </widget>
              </item>
+             <item>
+              <widget class="QPushButton" name="look_unlock_ad">
+               <property name="text">
+                <string>查看原图</string>
+               </property>
+              </widget>
+             </item>
             </layout>
            </item>
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_45" stretch="8,0,1">
+            <layout class="QVBoxLayout" name="verticalLayout_45" stretch="8,0,1,0">
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_44">
                <item>
@@ -1660,10 +1777,17 @@ color: rgb(170, 255, 127);</string>
                </property>
               </widget>
              </item>
+             <item>
+              <widget class="QPushButton" name="look_charge_ad">
+               <property name="text">
+                <string>查看原图</string>
+               </property>
+              </widget>
+             </item>
             </layout>
            </item>
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_56" stretch="8,0,1">
+            <layout class="QVBoxLayout" name="verticalLayout_56" stretch="8,0,1,0">
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_57">
                <item>
@@ -1704,10 +1828,17 @@ color: rgb(170, 255, 127);</string>
                </property>
               </widget>
              </item>
+             <item>
+              <widget class="QPushButton" name="look_home_ad">
+               <property name="text">
+                <string>查看原图</string>
+               </property>
+              </widget>
+             </item>
             </layout>
            </item>
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_48" stretch="8,0,1">
+            <layout class="QVBoxLayout" name="verticalLayout_48" stretch="8,0,1,0">
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_49">
                <item>
@@ -1748,10 +1879,17 @@ color: rgb(170, 255, 127);</string>
                </property>
               </widget>
              </item>
+             <item>
+              <widget class="QPushButton" name="look_wifi_ad">
+               <property name="text">
+                <string>查看原图</string>
+               </property>
+              </widget>
+             </item>
             </layout>
            </item>
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_50" stretch="8,0,1">
+            <layout class="QVBoxLayout" name="verticalLayout_50" stretch="8,0,1,0">
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_51">
                <item>
@@ -1792,6 +1930,13 @@ color: rgb(170, 255, 127);</string>
                </property>
               </widget>
              </item>
+             <item>
+              <widget class="QPushButton" name="look_timming_ad">
+               <property name="text">
+                <string>查看原图</string>
+               </property>
+              </widget>
+             </item>
             </layout>
            </item>
           </layout>
@@ -1804,7 +1949,34 @@ color: rgb(170, 255, 127);</string>
       <attribute name="title">
        <string>外广-自动化（强停置灰）</string>
       </attribute>
-      <layout class="QVBoxLayout" name="verticalLayout_81">
+      <layout class="QVBoxLayout" name="verticalLayout_81" stretch="2,2,16">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_21" stretch="8,2">
+         <item>
+          <widget class="QComboBox" name="ash_device">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>50</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="ash_decice_refresh">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>刷新</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_7">
          <item>
@@ -1909,7 +2081,7 @@ color: rgb(170, 255, 127);</string>
           </attribute>
           <layout class="QHBoxLayout" name="horizontalLayout_8">
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_59" stretch="9,1">
+            <layout class="QVBoxLayout" name="verticalLayout_59" stretch="9,1,0">
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_60">
                <item>
@@ -1940,10 +2112,17 @@ color: rgb(170, 255, 127);</string>
                </property>
               </widget>
              </item>
+             <item>
+              <widget class="QPushButton" name="look_ash_lock">
+               <property name="text">
+                <string>查看原图</string>
+               </property>
+              </widget>
+             </item>
             </layout>
            </item>
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_61" stretch="9,1">
+            <layout class="QVBoxLayout" name="verticalLayout_61" stretch="9,1,0">
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_62">
                <item>
@@ -1974,10 +2153,17 @@ color: rgb(170, 255, 127);</string>
                </property>
               </widget>
              </item>
+             <item>
+              <widget class="QPushButton" name="look_ash_unlock">
+               <property name="text">
+                <string>查看原图</string>
+               </property>
+              </widget>
+             </item>
             </layout>
            </item>
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_63" stretch="9,1">
+            <layout class="QVBoxLayout" name="verticalLayout_63" stretch="9,1,0">
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_64">
                <item>
@@ -2008,10 +2194,17 @@ color: rgb(170, 255, 127);</string>
                </property>
               </widget>
              </item>
+             <item>
+              <widget class="QPushButton" name="look_ash_charge">
+               <property name="text">
+                <string>查看原图</string>
+               </property>
+              </widget>
+             </item>
             </layout>
            </item>
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_65" stretch="9,1">
+            <layout class="QVBoxLayout" name="verticalLayout_65" stretch="9,1,0">
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_66">
                <item>
@@ -2042,10 +2235,17 @@ color: rgb(170, 255, 127);</string>
                </property>
               </widget>
              </item>
+             <item>
+              <widget class="QPushButton" name="look_ash_wifi">
+               <property name="text">
+                <string>查看原图</string>
+               </property>
+              </widget>
+             </item>
             </layout>
            </item>
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_67" stretch="9,1">
+            <layout class="QVBoxLayout" name="verticalLayout_67" stretch="9,1,0">
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_68">
                <item>
@@ -2076,10 +2276,17 @@ color: rgb(170, 255, 127);</string>
                </property>
               </widget>
              </item>
+             <item>
+              <widget class="QPushButton" name="look_ash_timing">
+               <property name="text">
+                <string>查看原图</string>
+               </property>
+              </widget>
+             </item>
             </layout>
            </item>
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_69" stretch="9,1">
+            <layout class="QVBoxLayout" name="verticalLayout_69" stretch="9,1,0">
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_70">
                <item>
@@ -2110,6 +2317,13 @@ color: rgb(170, 255, 127);</string>
                </property>
               </widget>
              </item>
+             <item>
+              <widget class="QPushButton" name="look_ash_home">
+               <property name="text">
+                <string>查看原图</string>
+               </property>
+              </widget>
+             </item>
             </layout>
            </item>
           </layout>
@@ -2120,7 +2334,7 @@ color: rgb(170, 255, 127);</string>
           </attribute>
           <layout class="QHBoxLayout" name="horizontalLayout_19">
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_71" stretch="8,0,1">
+            <layout class="QVBoxLayout" name="verticalLayout_71" stretch="8,0,1,0">
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_72">
                <item>
@@ -2161,10 +2375,17 @@ color: rgb(170, 255, 127);</string>
                </property>
               </widget>
              </item>
+             <item>
+              <widget class="QPushButton" name="look_ash_unlock_ad">
+               <property name="text">
+                <string>查看原图</string>
+               </property>
+              </widget>
+             </item>
             </layout>
            </item>
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_73" stretch="8,0,1">
+            <layout class="QVBoxLayout" name="verticalLayout_73" stretch="8,0,1,0">
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_74">
                <item>
@@ -2205,10 +2426,17 @@ color: rgb(170, 255, 127);</string>
                </property>
               </widget>
              </item>
+             <item>
+              <widget class="QPushButton" name="look_ash_charge_ad">
+               <property name="text">
+                <string>查看原图</string>
+               </property>
+              </widget>
+             </item>
             </layout>
            </item>
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_75" stretch="8,0,1">
+            <layout class="QVBoxLayout" name="verticalLayout_75" stretch="8,0,1,0">
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_76">
                <item>
@@ -2249,10 +2477,17 @@ color: rgb(170, 255, 127);</string>
                </property>
               </widget>
              </item>
+             <item>
+              <widget class="QPushButton" name="look_ash_home_ad">
+               <property name="text">
+                <string>查看原图</string>
+               </property>
+              </widget>
+             </item>
             </layout>
            </item>
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_77" stretch="8,0,1">
+            <layout class="QVBoxLayout" name="verticalLayout_77" stretch="8,0,1,0">
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_78">
                <item>
@@ -2293,10 +2528,17 @@ color: rgb(170, 255, 127);</string>
                </property>
               </widget>
              </item>
+             <item>
+              <widget class="QPushButton" name="look_ash_wifi_ad">
+               <property name="text">
+                <string>查看原图</string>
+               </property>
+              </widget>
+             </item>
             </layout>
            </item>
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_79" stretch="8,0,1">
+            <layout class="QVBoxLayout" name="verticalLayout_79" stretch="8,0,1,0">
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_80">
                <item>
@@ -2334,6 +2576,13 @@ font: 20pt &quot;微软雅黑&quot;;</string>
                 <string notr="true">border-radius: 20px;
 font: 10pt &quot;微软雅黑&quot;;
 color: rgb(170, 255, 127);</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="look_ash_timming_ad">
+               <property name="text">
+                <string>查看原图</string>
                </property>
               </widget>
              </item>

@@ -1,50 +1,53 @@
-import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QLCDNumber
-from PyQt5.QtCore import QTimer, QTime
+from PyQt5.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QLCDNumber, QWidget
+from PyQt5.QtCore import QTimer, QTime, Qt
 
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-
         self.setWindowTitle("倒计时")
-        self.setGeometry(100, 100, 200, 100)
+        self.resize(300, 100)
 
-        self.lcd = QLCDNumber(self)
-        self.lcd.setGeometry(50, 30, 100, 30)
+        layout = QVBoxLayout()
 
-        self.timer = QTimer(self)
-        self.timer.timeout.connect(self.update_timer)
+        self.lcd_number = QLCDNumber()
+        self.lcd_number.setDigitCount(8)  # 设置显示的位数为8位
 
-        self.end_time = QTime(18, 30)  # 设置截止时间为12点
-        self.lcd.setDigitCount(5)  # 设置显示位数
+        layout.addWidget(self.lcd_number)
 
-    def start_timer(self):
+        widget = QWidget()
+        widget.setLayout(layout)
+        self.setCentralWidget(widget)
+
+        self.timer = QTimer()
+        self.timer.setInterval(1000)  # 每秒更新一次
+        self.timer.timeout.connect(self.update_time)
+
+        self.start_countdown()
+
+    def start_countdown(self):
+        self.timer.start()
+        self.update_time()
+
+    def update_time(self):
+
         current_time = QTime.currentTime()
-        remaining_time = current_time.secsTo(self.end_time)
+        target_time = QTime(18, 30)  # 设置截止时间
+        remaining_time = current_time.secsTo(target_time)
 
-        if remaining_time < 0:  # 如果当前时间已经超过截止时间，则将截止时间设置为次日的12点
-            next_day = current_time.addDays(1)
-            self.end_time = QTime(12, 0)
-            remaining_time = current_time.secsTo(next_day)
+        hours = remaining_time // 3600
+        minutes = (remaining_time % 3600) // 60
+        seconds = remaining_time % 60
 
-        self.lcd.display(remaining_time)  # 显示截止时间剩余的秒数
-        self.timer.start(1000)  # 每隔1秒触发一次timeout事件
+        # 格式化成时分秒的字符串
+        time_str = "{:02d}:{:02d}:{:02d}".format(hours, minutes, seconds)
 
-    def update_timer(self):
-        current_time = QTime.currentTime()
-        remaining_time = current_time.secsTo(self.end_time)
-
-        if remaining_time < 0:
-            self.timer.stop()  # 倒计时结束，停止计时器
-            self.lcd.display(0)  # 设置显示为0
-        else:
-            self.lcd.display(remaining_time)
-
+        self.lcd_number.display(time_str)
 
 if __name__ == "__main__":
+    import sys
     app = QApplication(sys.argv)
     window = MainWindow()
+    window.start_countdown()
     window.show()
-    window.start_timer()
-    sys.exit(app.exec_())
+    sys.exit(app.exec())
