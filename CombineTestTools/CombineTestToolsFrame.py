@@ -1557,7 +1557,7 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "测试工具箱-Ae"))
+        Form.setWindowTitle(_translate("Form", "测试工具箱-Ae v1.1"))
         self.label.setText(_translate("Form", "拖入出包文件夹生成路径（注意路径不可带中文）："))
         self.SelectOnline.setText(_translate("Form", "查询"))
         self.ClearOnlineText.setText(_translate("Form", "清空"))

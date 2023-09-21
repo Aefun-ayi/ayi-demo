@@ -1,6 +1,7 @@
 import base64
-import requests
 from PyQt5.QtWidgets import QMessageBox
+from MySQLConnect import MysqlConnection
+import requests
 
 class AdContrastCfg():
     def __init__(self, appid, pid, chan, pro):
@@ -11,11 +12,17 @@ class AdContrastCfg():
 
     def ad_contrast_select(self):
         sids = ['all', '1066A_A', '1066B_B', '1066C_C']  # 把目前在用的4个分组放在列表
-        res = requests.get('http://192.168.7.43:8008/ad')
-        if self.pro not in res.json():
-            pro_msg_box = QMessageBox(QMessageBox.Critical, '错误', '输入的key有误')
+        # res = requests.get('http://192.168.7.43:8008/ad')
+        # if self.pro not in res.json():
+        #     pro_msg_box = QMessageBox(QMessageBox.Critical, '错误', '输入的key有误')
+        #     pro_msg_box.exec_()
+        # all_ad_name = res.json()[f'{self.pro}']
+        db = MysqlConnection()
+        AdName = db.select(f'select ad_name from adinfotable where package_info = "{self.pro}";')
+        if len(AdName) == 0:
+            pro_msg_box = QMessageBox(QMessageBox.Critical, '错误', '此需求的广告位信息为空')
             pro_msg_box.exec_()
-        all_ad_name = res.json()[f'{self.pro}']
+        all_ad_name = list(AdName[0][0].split(","))
         for i in sids:  # 对列表进行循环，列表内每一个分组的值进行输出
             txt = '{"buy_id":"default",' \
                   '"imei":"658992ce-34ad-45f6-965c-ecec952a4294",' \

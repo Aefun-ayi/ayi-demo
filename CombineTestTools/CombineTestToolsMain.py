@@ -399,7 +399,7 @@ class MainWindow(QWidget, CombineTestToolsFrame.Ui_Form):
         # 启动时自动刷新一次设备信息填充至DevicesList
         self.DeviceRefresh()
         # 启动时检查版本号 不符合则拉起接口下载新版
-        self.CurrentVersion = '1.0'  # 当前版本号
+        self.CurrentVersion = '1.1'  # 当前版本号
         self.session = requests.Session()
         self.CheckVersion()
 
@@ -411,7 +411,7 @@ class MainWindow(QWidget, CombineTestToolsFrame.Ui_Form):
             self.chile_Win = DownloadWindow.MainWindow()
             self.chile_Win.show()
             desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")  # 定义桌面路径 获取任意使用的当前电脑的桌面路径
-            exe = fr'{desktop_path}\测试工具箱V1.1.exe'  # 文件存放地址
+            exe = fr'{desktop_path}\测试工具箱V1.2.exe'  # 文件存放地址
             QMessageBox.warning(self, "提示", f"更新完成，存放路径{exe}，已放置桌面，请关闭旧版本，启动新版本开始使用")
             delay = 2000  # 延时2秒关闭窗口
             timer = QTimer()
