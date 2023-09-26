@@ -30,7 +30,7 @@ class MainWindow(QDialog):
         self.start_download()
 
     def start_download(self):
-        url = 'http://192.168.7.111/测试工具V1.2.exe'
+        url = 'http://192.168.7.111/测试工具箱V1.3.exe'
         self.downloader_thread = DownloaderThread(url)
         self.downloader_thread.progress.connect(self.update_progress)
         self.downloader_thread.finished.connect(self.download_finished)

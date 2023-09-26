@@ -48,7 +48,7 @@ class OnlineCfg():
         v3_head = {'token': f'{self.login()}',
                    'appidList': f'{self.appid}',
                    'chaList': '',
-                   'prjid': f'',
+                   'prjid': f'{self.pid}',
                    'status': '',
                    'start': '1',
                    'limit': '100',
@@ -62,7 +62,8 @@ class OnlineCfg():
             for d_res in V3_collect:
                 if 'cha' in dict(d_res).keys() and self.cha in dict(d_res)['cha']:
                     return d_res
-        # return v3_res.json()['data']
+        else:
+            return v3_res.json()['data']
 
     def audit(self):
         audit_url = f'{self.ip}{self.audit_cfg}'
@@ -82,14 +83,23 @@ class OnlineCfg():
         custom_head = {'start': '0',
                        'limit': '100',
                        'appid': f'{self.appid}',
-                       'cha': '',
-                       'prjid': f'{self.pid}',
+                       'cha': f'',
+                       'prjid': f'',
                        'status': '',
                        'params': '',
                        'token': f'{self.login()}',
                        'indexCode': 'Q3VzdG9tUGFyYW1Db25maWdfRm9Nb3Zl'}
         custom_res = requests.post(custom_url, custom_head)
-        return custom_res.json()['data']
+        custom_collect = custom_res.json()['data']
+        if custom_collect != []:
+            for d_res in custom_collect:
+                if 'prjid' in dict(d_res).keys() and self.pid in dict(d_res)['prjid'] and self.pid != '':
+                    return d_res
+            for d_res in custom_collect:
+                if 'cha' in dict(d_res).keys() and self.cha in dict(d_res)['cha']:
+                    return d_res
+        else:
+            return custom_collect
 
     def first(self):
         first_url = f'{self.ip}{self.first_cfg}'

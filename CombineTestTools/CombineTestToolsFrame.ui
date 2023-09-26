@@ -45,7 +45,7 @@ QTabBar::tab{width:200px;}</string>
          </property>
          <widget class="QWidget" name="tab_3">
           <attribute name="title">
-           <string>    查询在线配置    </string>
+           <string>    查询在线配置--批量    </string>
           </attribute>
           <layout class="QVBoxLayout" name="verticalLayout_7" stretch="1,9">
            <item>
@@ -857,6 +857,126 @@ color: rgb(170, 255, 127);</string>
                 </widget>
                </item>
               </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_19">
+          <attribute name="title">
+           <string>查询在线配置--单独</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_61" stretch="1,8">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_24" stretch="1,3,1,3,4,4">
+             <item>
+              <widget class="QLabel" name="label_26">
+               <property name="styleSheet">
+                <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+               </property>
+               <property name="text">
+                <string>项目id：</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="OneselfPid">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">border-radius: 20px;
+font: 14pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_25">
+               <property name="styleSheet">
+                <string notr="true">font: 14pt &quot;幼圆&quot;;</string>
+               </property>
+               <property name="text">
+                <string>渠道：</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="Oneselfchan">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">border-radius: 20px;
+font: 14pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="OneselfSelect">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+               </property>
+               <property name="text">
+                <string>查询</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="OneselfClear">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+               </property>
+               <property name="text">
+                <string>清空</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_60" stretch="1,8">
+             <item>
+              <widget class="QLabel" name="label_27">
+               <property name="styleSheet">
+                <string notr="true">font: 28pt &quot;幼圆&quot;;</string>
+               </property>
+               <property name="text">
+                <string>在线配置参数详情：</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QTextBrowser" name="OneselfOnlineCfg">
+               <property name="styleSheet">
+                <string notr="true">border-radius: 20px;
+font: 14pt &quot;微软雅黑&quot;;
+color: rgb(170, 255, 127);</string>
+               </property>
+              </widget>
              </item>
             </layout>
            </item>

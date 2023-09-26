@@ -2,7 +2,7 @@ import openpyxl
 import json
 
 # 打开 Excel 文件
-wb = openpyxl.load_workbook(r"C:\Users\Administrator\Desktop\新建 XLSX 工作表.xlsx")
+wb = openpyxl.load_workbook(r"C:\Users\Administrator\Desktop\工作簿2.xlsx")
 
 # 获取工作表中的数据
 sheet = wb.active
@@ -15,11 +15,13 @@ data = []
 for row in rows:
     # 获取每一行数据
     values = [cell.value for cell in row]
-
+    # a = values[0].split(",")
     # 将每一行数据转换为字典对象
+    # list(res[0][0].split(","))
+    # print(a)
     data.append({
-        "packinfo": values[0],
-        "adinfo": values[1]
+        "model": values[0],
+        "phonename": values[1]
         # "gender": values[2]
     })
 

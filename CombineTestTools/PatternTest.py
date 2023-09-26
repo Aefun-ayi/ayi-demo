@@ -98,6 +98,7 @@ class Pattern_API():
                 passlist.append("合规化关闭")
             else:
                 loselist.append("合规化打开")
+
         if 'list' not in self.API.v3fk():
             loselist.append(f"v3风控配置为空：{self.API.v3fk()['list']}，默认打开")
         else:

@@ -53,6 +53,7 @@ from WorkerAshingLookWifiAd import WorkerAshingLookWifiAd
 from WorkerAshingLookTimer import WorkerAshingLookTimer
 from WorkerAshingLookTimerAd import WorkerAshingLookTimerAd
 from WorkerCreateDirfile import WorkerCreateDirfile
+from WorkerOnlineConfigOneself import WorkerOnlineConfigOneselfMain
 import DownloadWindow
 
 
@@ -207,6 +208,13 @@ class MainWindow(QWidget, CombineTestToolsFrame.Ui_Form):
         self.AdContrastThread.Lack.connect(self.AdContrastLack)
         self.VerifyAd.clicked.connect(self.AdNameContrast)
         self.ClearVerifyAdText.clicked.connect(self.AdNameClear)
+
+        # 查询在线配置--单独的点击连接
+        self.OneSelfOnlineCfgQueue = Queue()
+        self.OneSelfOnlineCfgThread = WorkerOnlineConfigOneselfMain(self.OneSelfOnlineCfgQueue)
+        self.OneSelfOnlineCfgThread.OnlineCfgLog.connect(self.OneSelfOnlineConfigLogUpdate)
+        self.OneselfSelect.clicked.connect(self.OneSelfOnlineConfigSelect)
+        self.OneselfClear.clicked.connect(self.OneSelfOnlineConfigClear)
 
         # 选择设备的刷新按钮点击连接
         self.DevicesRefresh.clicked.connect(self.DeviceRefresh)
@@ -399,7 +407,7 @@ class MainWindow(QWidget, CombineTestToolsFrame.Ui_Form):
         # 启动时自动刷新一次设备信息填充至DevicesList
         self.DeviceRefresh()
         # 启动时检查版本号 不符合则拉起接口下载新版
-        self.CurrentVersion = '1.1'  # 当前版本号
+        self.CurrentVersion = '1.2'  # 当前版本号
         self.session = requests.Session()
         self.CheckVersion()
 
@@ -411,7 +419,7 @@ class MainWindow(QWidget, CombineTestToolsFrame.Ui_Form):
             self.chile_Win = DownloadWindow.MainWindow()
             self.chile_Win.show()
             desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")  # 定义桌面路径 获取任意使用的当前电脑的桌面路径
-            exe = fr'{desktop_path}\测试工具箱V1.2.exe'  # 文件存放地址
+            exe = fr'{desktop_path}\测试工具箱V1.3.exe'  # 文件存放地址
             QMessageBox.warning(self, "提示", f"更新完成，存放路径{exe}，已放置桌面，请关闭旧版本，启动新版本开始使用")
             delay = 2000  # 延时2秒关闭窗口
             timer = QTimer()
@@ -559,6 +567,22 @@ class MainWindow(QWidget, CombineTestToolsFrame.Ui_Form):
         self.MatchText.clear()
         self.LackText.clear()
         self.TmrText.clear()
+
+    def OneSelfOnlineConfigLogUpdate(self, text):
+        self.OneselfOnlineCfg.append(text)
+        self.OneselfOnlineCfg.document().setDefaultTextOption(self.option)
+
+    def OneSelfOnlineConfigSelect(self):
+        pid = self.OneselfPid.text()
+        chan = self.Oneselfchan.text()
+        appinfo = f'{pid}&{chan}'
+        self.OneSelfOnlineCfgQueue.put(appinfo)
+        self.OneSelfOnlineCfgThread.start()
+
+
+    def OneSelfOnlineConfigClear(self):
+        self.OneselfOnlineCfg.clear()
+
 
     def DeviceRefresh(self):
         self.DevicesList.clear()
