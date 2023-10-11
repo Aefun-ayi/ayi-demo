@@ -1,8 +1,6 @@
+import requests
 from PyQt5.QtCore import QThread, pyqtSignal, QMutex
-from AdGroup import AdGroupCfg
-from AdNames import AdNameCfg
-from AdSources import AdSourcesCfg
-from RemovePunctuation import Remove
+
 
 class WorkerAdSelect(QThread):
     AllGroup = pyqtSignal(str)
@@ -18,90 +16,94 @@ class WorkerAdSelect(QThread):
     PlaqueSources = pyqtSignal(str)
     VideoSources = pyqtSignal(str)
 
-
     def __init__(self, queue):
         # 通过调用父类构造函数并设置初始计数值来初始化工作线程
         super().__init__()
         self.queue = queue
 
-
     def run(self):
         appInfo = self.queue.get()
         pid = appInfo.split("&")[0]
         chan = appInfo.split("&")[1]
-        appid = pid[:5]
-        group_info = AdGroupCfg(appid, pid, chan).ad_sid_select()
-        all_info = Remove(group_info[0])
-        a_info = Remove(group_info[1])
-        b_info = Remove(group_info[2])
-        c_info = Remove(group_info[3])
-        if len(all_info) < 1:
+        try:
+            name_url = 'http://192.168.7.188:8101/ad_names'
+            name_data = {'pid': pid,
+                         'chan': chan
+                         }
+            name_res = requests.post(url=name_url, data=name_data)
+            name_info = name_res.json()
+            if len(name_info['msg_name']) == 0:
+                pass
+            else:
+                for i in name_info['msg_name']:
+                    self.MsgName.emit(i)
+            if len(name_info['splash_name']) == 0:
+                pass
+            else:
+                for i in name_info['splash_name']:
+                    self.SplashName.emit(i)
+            if len(name_info['plaque_name']) == 0:
+                pass
+            else:
+                for i in name_info['plaque_name']:
+                    self.PlaqueName.emit(i)
+            if len(name_info['video_name']) == 0:
+                pass
+            else:
+                for i in name_info['video_name']:
+                    self.VideoName.emit(i)
+            group_url = 'http://192.168.7.188:8101/ad_group'
+            group_data = {'pid': pid,
+                          'chan': chan
+                          }
+            group_res = requests.post(url=group_url, data=group_data)
+            group_info = group_res.json()
+            if len(group_info['all']) == 0:
+                pass
+            else:
+                for i in group_info['all']:
+                    self.AllGroup.emit(i)
+            if len(group_info['a']) == 0:
+                pass
+            else:
+                for i in group_info['a']:
+                    self.AGroup.emit(i)
+            if len(group_info['b']) == 0:
+                pass
+            else:
+                for i in group_info['b']:
+                    self.BGroup.emit(i)
+            if len(group_info['c']) == 0:
+                pass
+            else:
+                for i in group_info['c']:
+                    self.CGroup.emit(i)
+            sources_url = 'http://192.168.7.188:8101/ad_sources'
+            sources_data = {'pid': pid,
+                            'chan': chan
+                            }
+            sources_res = requests.post(url=sources_url, data=sources_data)
+            sources_info = sources_res.json()
+            if len(sources_info['msg_sources']) == 0:
+                pass
+            else:
+                for i in sources_info['msg_sources']:
+                    self.MsgSources.emit(i)
+            if len(sources_info['splash_sources']) == 0:
+                pass
+            else:
+                for i in sources_info['splash_sources']:
+                    self.SplashSources.emit(i)
+            if len(sources_info['plaque_sources']) == 0:
+                pass
+            else:
+                for i in sources_info['plaque_sources']:
+                    self.PlaqueSources.emit(i)
+            if len(sources_info['video_sources']) == 0:
+                pass
+            else:
+                for i in sources_info['video_sources']:
+                    self.VideoSources.emit(i)
+        except Exception as e:
+            print(e)
             pass
-        else:
-            self.AllGroup.emit(all_info)
-            # self.AllGroupText.document().setDefaultTextOption(self.option)
-        if len(a_info) < 1:
-            pass
-        else:
-            self.AGroup.emit(a_info)
-            # self.AGroupText.document().setDefaultTextOption(self.option)
-        if len(b_info) < 1:
-            pass
-        else:
-            self.BGroup.emit(b_info)
-            # self.BGroupText.document().setDefaultTextOption(self.option)
-        if len(c_info) < 1:
-            pass
-        else:
-            self.CGroup.emit(c_info)
-            # self.CGroupText.document().setDefaultTextOption(self.option)
-        adname = AdNameCfg(appid, pid, chan).ad_name_select()
-        splash_name = Remove(adname[0])
-        msg_name = Remove(adname[1])
-        plaque_name = Remove(adname[2])
-        video_name = Remove(adname[3])
-        if len(adname[0]) < 1:
-            pass
-        else:
-            self.SplashName.emit(splash_name)
-            # self.SplashCfgText.document().setDefaultTextOption(self.option)
-        if len(adname[1]) < 1:
-            pass
-        else:
-            self.MsgName.emit(msg_name)
-            # self.MsgCfgText.document().setDefaultTextOption(self.option)
-        if len(adname[2]) < 1:
-            pass
-        else:
-            self.PlaqueName.emit(plaque_name)
-            # self.PlaqueCfgText.document().setDefaultTextOption(self.option)
-        if len(adname[3]) < 1:
-            pass
-        else:
-            self.VideoName.emit(video_name)
-            # self.VideoCfgText.document().setDefaultTextOption(self.option)
-        adsid = AdSourcesCfg(appid, pid, chan).ad_sids_select()
-        splash_sid = Remove(adsid[0])
-        msg_sid = Remove(adsid[1])
-        plaque_sid = Remove(adsid[2])
-        video_sid = Remove(adsid[3])
-        if len(adsid[0]) < 1:
-            pass
-        else:
-            self.SplashSources.emit(splash_sid)
-            # self.SplashSourceText.document().setDefaultTextOption(self.option)
-        if len(adsid[1]) < 1:
-            pass
-        else:
-            self.MsgSources.emit(msg_sid)
-            # self.MsgSourceText.document().setDefaultTextOption(self.option)
-        if len(adsid[2]) < 1:
-            pass
-        else:
-            self.PlaqueSources.emit(plaque_sid)
-            # self.PlaqueSourceText.document().setDefaultTextOption(self.option)
-        if len(adsid[3]) < 1:
-            pass
-        else:
-            self.VideoSources.emit(video_sid)
-            # self.VideoSourceText.document().setDefaultTextOption(self.option)

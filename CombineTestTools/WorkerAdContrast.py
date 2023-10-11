@@ -1,6 +1,5 @@
+import requests
 from PyQt5.QtCore import QThread, pyqtSignal, QMutex
-from AdContrast import AdContrastCfg
-from RemovePunctuation import Remove
 
 class WorkerAdContrast(QThread):
     Match = pyqtSignal(str)
@@ -17,17 +16,30 @@ class WorkerAdContrast(QThread):
         pid = appInfo.split("&")[0]
         chan = appInfo.split("&")[1]
         pro = appInfo.split("&")[2]
-        appid = pid[:5]
-        adthan = AdContrastCfg(appid, pid, chan, pro).ad_contrast_select()
-        match = Remove(adthan[0])
-        short = Remove(adthan[1])
-        tmr = Remove(adthan[2])
-        self.Match.emit(f"-----匹配的广告位-----\n{match}")
-        if len(adthan[1]) < 1:
-            self.Lack.emit('无缺少的广告位')
-        else:
-            self.Lack.emit(f"-----含有缺少的广告位-----\n{short}")
-        if len(adthan[2]) < 1:
-            self.Tmr.emit('无冗余的广告位')
-        else:
-            self.Tmr.emit(f"-----含有冗余的广告位-----\n{tmr}")
+        try:
+            url = 'http://192.168.7.188:8101/ad_contrast'
+            data = {'pid': pid,
+                    'chan': chan,
+                    'pro': pro
+                    }
+            res = requests.post(url=url, data=data)
+            info = res.json()
+            print(info)
+            if len(info['match_ad_name']) == 0:
+                self.Match.emit('无匹配的广告位')
+            else:
+                for i in info['match_ad_name']:
+                    self.Match.emit(i)
+            if len(info['short_ad_name']) == 0:
+                self.Lack.emit('无缺少的广告位')
+            else:
+                for i in info['short_ad_name']:
+                    self.Lack.emit(i)
+            if len(info['tmr_ad_name']) == 0:
+                self.Tmr.emit('无冗余的广告位')
+            else:
+                for i in info['tmr_ad_name']:
+                    self.Tmr.emit(i)
+        except Exception as e:
+            print(e)
+            pass

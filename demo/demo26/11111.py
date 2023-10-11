@@ -1,7 +1,10 @@
+import requests
 
+url = 'http://192.168.80.128:8100/ad_names'
 
-a = (1,2,3,4)
+data = {'pid': '38726001',
+        'chan': 'csj'}
 
-for i in range(len(a)):
+res = requests.post(url, data)
 
-    print(i)
+print(res.json())

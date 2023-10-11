@@ -1,6 +1,5 @@
 import UrlConfig
 import requests
-import urllib.parse
 
 
 class OnlineCfg():
@@ -33,7 +32,7 @@ class OnlineCfg():
                  'start': '0',
                  'limit': '100',
                  'appid': f'{self.appid}',
-                 'cha': f'{self.cha}',
+                 'cha': '',
                  'prjid': '',
                  'buy_id': '',
                  'buy_act': '',
@@ -41,6 +40,16 @@ class OnlineCfg():
                  'indexCode': 'VjJMb2NrQ29uZmlnX0ZvTW92ZQ%3D%3D'}
 
         response1 = requests.post(v2url, head2)
+        v2_collect = response1.json()['data']
+        if v2_collect != []:
+            for d_res in v2_collect:
+                if 'prjid' in dict(d_res).keys() and self.pid in dict(d_res)['prjid'] and self.pid != '':
+                    return d_res
+            for d_res in v2_collect:
+                if 'cha' in dict(d_res).keys() and self.cha in dict(d_res)['cha']:
+                    return d_res
+        else:
+            return v2_collect.json()['data']
         return response1.json()['data']
 
     def v3fk(self):
@@ -91,6 +100,7 @@ class OnlineCfg():
                        'indexCode': 'Q3VzdG9tUGFyYW1Db25maWdfRm9Nb3Zl'}
         custom_res = requests.post(custom_url, custom_head)
         custom_collect = custom_res.json()['data']
+        # print(custom_collect)
         if custom_collect != []:
             for d_res in custom_collect:
                 if 'prjid' in dict(d_res).keys() and self.pid in dict(d_res)['prjid'] and self.pid != '':

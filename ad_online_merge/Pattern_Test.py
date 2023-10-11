@@ -132,9 +132,9 @@ class Pattern_API():
         return loselist,passlist
 
 
-#
+
 # if __name__ == '__main__':
-#     a = Pattern_API()
+#     a = Pattern_API(r"E:\csgj\createApk_1.4.4\createApk\outFloder\39925003_android.rctsab.eeictsccl_1.0.1_csj_20230927.apk")
 #     a.testms()
 #     print(a.testms()[0])
 #     print(a.testms()[1])

@@ -86,6 +86,8 @@ class MainWindow(QWidget, CombineTestToolsFrame.Ui_Form):
         self.ClearAdText.setIcon(clearIcon)
         self.ClearVerifyAdText.setIcon(clearIcon)
         self.ClearVerifyAdText.setIconSize(QtCore.QSize(35, 35))
+        self.OneselfSelect.setIcon(selectIcon)
+        self.OneselfClear.setIcon(clearIcon)
 
         # 创建目录页面icon设置
         self.CreateDir.setIcon(createicon)
@@ -404,27 +406,32 @@ class MainWindow(QWidget, CombineTestToolsFrame.Ui_Form):
         self.CreateDirThread.ProductDirectory.connect(self.CreateDirProductDirTips)
         self.CreateDirThread.ParentDirectory.connect(self.CreateDirParentDirTips)
         self.CreateClear.clicked.connect(self.CreateClearDirText)
-        # 启动时自动刷新一次设备信息填充至DevicesList
-        self.DeviceRefresh()
         # 启动时检查版本号 不符合则拉起接口下载新版
-        self.CurrentVersion = '1.2'  # 当前版本号
+        self.CurrentVersion = '1.3'  # 当前版本号
         self.session = requests.Session()
         self.CheckVersion()
+        # 启动时自动刷新一次设备信息填充至DevicesList
+        self.DeviceRefresh()
+
 
     def CheckVersion(self):
-        version_api = self.session.get('http://192.168.7.43:8008/version')
-        remote_version = version_api.text
-        if self.CurrentVersion != remote_version:
-            QMessageBox.warning(self, "提示", f"发现新版本{remote_version}，开始更新")
-            self.chile_Win = DownloadWindow.MainWindow()
-            self.chile_Win.show()
-            desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")  # 定义桌面路径 获取任意使用的当前电脑的桌面路径
-            exe = fr'{desktop_path}\测试工具箱V1.3.exe'  # 文件存放地址
-            QMessageBox.warning(self, "提示", f"更新完成，存放路径{exe}，已放置桌面，请关闭旧版本，启动新版本开始使用")
-            delay = 2000  # 延时2秒关闭窗口
-            timer = QTimer()
-            timer.start(delay)  # 启动定时器
-            app.exec_()
+        try:
+            version_api = self.session.get('http://192.168.7.188:8101/version')
+            remote_version = version_api.json()
+            if self.CurrentVersion != remote_version['version']:
+                QMessageBox.warning(self, "提示", f"发现新版本{remote_version}，开始更新")
+                self.chile_Win = DownloadWindow.MainWindow()
+                self.chile_Win.show()
+                desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")  # 定义桌面路径 获取任意使用的当前电脑的桌面路径
+                exe = fr'{desktop_path}\测试工具箱V1.4.exe'  # 文件存放地址
+                QMessageBox.warning(self, "提示", f"更新完成，存放路径{exe}，已放置桌面，请关闭旧版本，启动新版本开始使用")
+                delay = 2000  # 延时2秒关闭窗口
+                timer = QTimer()
+                timer.start(delay)  # 启动定时器
+                app.exec_()
+        except:
+            pass
+
 
 
     def OnlineSelectClick(self):
@@ -466,51 +473,51 @@ class MainWindow(QWidget, CombineTestToolsFrame.Ui_Form):
             tips.exec_()
 
     def SelectAd_All_Group(self, text):
-        self.AllGroupText.setText(text)
+        self.AllGroupText.append(text)
         self.AllGroupText.document().setDefaultTextOption(self.option)
 
     def SelectAd_A_Group(self, text):
-        self.AGroupText.setText(text)
+        self.AGroupText.append(text)
         self.BGroupText.document().setDefaultTextOption(self.option)
 
     def SelectAd_B_Group(self, text):
-        self.BGroupText.setText(text)
+        self.BGroupText.append(text)
         self.BGroupText.document().setDefaultTextOption(self.option)
 
     def SelectAd_C_Group(self, text):
-        self.CGroupText.setText(text)
+        self.CGroupText.append(text)
         self.CGroupText.document().setDefaultTextOption(self.option)
 
     def SelectAdSplashName(self, text):
-        self.SplashCfgText.setText(text)
+        self.SplashCfgText.append(text)
         self.SplashCfgText.document().setDefaultTextOption(self.option)
 
     def SelectAdMsgName(self, text):
-        self.MsgCfgText.setText(text)
+        self.MsgCfgText.append(text)
         self.MsgCfgText.document().setDefaultTextOption(self.option)
 
     def SelectAdVideoName(self, text):
-        self.VideoCfgText.setText(text)
+        self.VideoCfgText.append(text)
         self.VideoCfgText.document().setDefaultTextOption(self.option)
 
     def SelectAdPlaqueName(self, text):
-        self.PlaqueCfgText.setText(text)
+        self.PlaqueCfgText.append(text)
         self.PlaqueCfgText.document().setDefaultTextOption(self.option)
 
     def SelectAdSplashSources(self, text):
-        self.SplashSourceText.setText(text)
+        self.SplashSourceText.append(text)
         self.SplashSourceText.document().setDefaultTextOption(self.option)
 
     def SelectAdMsgSources(self, text):
-        self.MsgSourceText.setText(text)
+        self.MsgSourceText.append(text)
         self.MsgSourceText.document().setDefaultTextOption(self.option)
 
     def SelectAdVideoSources(self, text):
-        self.VideoSourceText.setText(text)
+        self.VideoSourceText.append(text)
         self.VideoSourceText.document().setDefaultTextOption(self.option)
 
     def SelectAdPlaqueSources(self, text):
-        self.PlaqueSourceText.setText(text)
+        self.PlaqueSourceText.append(text)
         self.PlaqueSourceText.document().setDefaultTextOption(self.option)
 
     def AdClearClick(self):
@@ -552,15 +559,15 @@ class MainWindow(QWidget, CombineTestToolsFrame.Ui_Form):
             tips.exec_()
 
     def AdContrastMatch(self, text):
-        self.MatchText.setText(text)
+        self.MatchText.append(text)
         self.MatchText.document().setDefaultTextOption(self.option)
 
     def AdContrastTmr(self, text):
-        self.TmrText.setText(text)
+        self.TmrText.append(text)
         self.TmrText.document().setDefaultTextOption(self.option)
 
     def AdContrastLack(self, text):
-        self.LackText.setText(text)
+        self.LackText.append(text)
         self.LackText.document().setDefaultTextOption(self.option)
 
     def AdNameClear(self):
@@ -570,7 +577,6 @@ class MainWindow(QWidget, CombineTestToolsFrame.Ui_Form):
 
     def OneSelfOnlineConfigLogUpdate(self, text):
         self.OneselfOnlineCfg.append(text)
-        self.OneselfOnlineCfg.document().setDefaultTextOption(self.option)
 
     def OneSelfOnlineConfigSelect(self):
         pid = self.OneselfPid.text()
@@ -585,9 +591,13 @@ class MainWindow(QWidget, CombineTestToolsFrame.Ui_Form):
 
 
     def DeviceRefresh(self):
-        self.DevicesList.clear()
-        for i in get_connected_device_models():
-            self.DevicesList.addItem(f'{i}')
+        try:
+            self.DevicesList.clear()
+            for i in get_connected_device_models():
+                self.DevicesList.addItem(f'{i}')
+        except Exception as e:
+            msg_box = QMessageBox(QMessageBox.Critical, '错误', e)
+            msg_box.exec_()
 
     def devices_info(self):
         devices_id = self.DevicesList.currentText()

@@ -1,6 +1,7 @@
 import os
 import subprocess
-from MySQLConnect import MysqlConnection
+import requests
+
 
 def check_adb_devices():
     adb_list = []
@@ -17,7 +18,6 @@ def check_adb_devices():
 def get_connected_device_models():
     # 获取设备model
     models = []
-    db = MysqlConnection()
     for device in check_adb_devices():
         result = subprocess.run(['adb', '-s', device, 'shell', 'getprop', 'ro.product.brand'], stdout=subprocess.PIPE,
                                 stderr=subprocess.PIPE)
@@ -25,18 +25,19 @@ def get_connected_device_models():
                                  stderr=subprocess.PIPE)
         model = result.stdout.decode('utf-8').strip()
         model1 = result1.stdout.decode('utf-8').strip()
-        phone_name = db.select(f'select phone_name from Device_Info where phone_mobile = "{model1}"')
-        if len(phone_name) == 0:
+        url = 'http://192.168.7.188:8101/model_name'
+        data = {'model': model1}
+        res = requests.post(url, data)
+        if res.json()['phone_name'] == '无model信息':
             models.append(f"{model} {model1}/{device}")
         else:
-            models.append(f"{model} {phone_name[0][0]}/{device}")
-    db.exit()
+            models.append(f"{model} {res.json()['phone_name']}/{device}")
     return models
 
 
 #
-# if __name__ == '__main__':
-#     check_adb_devices()
-#     get_connected_device_models()
-#     print(get_connected_device_models())
+if __name__ == '__main__':
+    # check_adb_devices()
+    get_connected_device_models()
+    print(get_connected_device_models())
     # print(check_adb_devices())
