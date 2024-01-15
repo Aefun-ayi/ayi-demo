@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QProgressBar, QLabel, QApplication, QDialog
 from WorkerProgressChangeValues import DownloaderThread
 from PyQt5 import QtCore
-
+import ApiConfig
 
 class MainWindow(QDialog):
     def __init__(self):
@@ -30,7 +30,7 @@ class MainWindow(QDialog):
         self.start_download()
 
     def start_download(self):
-        url = 'http://192.168.9.7/测试工具箱V1.4.exe'
+        url = f'{ApiConfig.windows()}/测试工具箱V1.4.exe'
         self.downloader_thread = DownloaderThread(url)
         self.downloader_thread.progress.connect(self.update_progress)
         self.downloader_thread.finished.connect(self.download_finished)

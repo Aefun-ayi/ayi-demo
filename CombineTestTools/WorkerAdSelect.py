@@ -1,6 +1,6 @@
 import requests
 from PyQt5.QtCore import QThread, pyqtSignal, QMutex
-
+import ApiConfig
 
 class WorkerAdSelect(QThread):
     AllGroup = pyqtSignal(str)
@@ -26,7 +26,7 @@ class WorkerAdSelect(QThread):
         pid = appInfo.split("&")[0]
         chan = appInfo.split("&")[1]
         try:
-            name_url = 'http://192.168.9.188:8101/ad_names'
+            name_url = f'{ApiConfig.centos()}/ad_names'
             name_data = {'pid': pid,
                          'chan': chan
                          }
@@ -52,7 +52,7 @@ class WorkerAdSelect(QThread):
             else:
                 for i in name_info['video_name']:
                     self.VideoName.emit(i)
-            group_url = 'http://192.168.9.188:8101/ad_group'
+            group_url = f'{ApiConfig.centos()}/ad_group'
             group_data = {'pid': pid,
                           'chan': chan
                           }
@@ -78,7 +78,7 @@ class WorkerAdSelect(QThread):
             else:
                 for i in group_info['c']:
                     self.CGroup.emit(i)
-            sources_url = 'http://192.168.9.188:8101/ad_sources'
+            sources_url = f'{ApiConfig.centos()}/ad_sources'
             sources_data = {'pid': pid,
                             'chan': chan
                             }

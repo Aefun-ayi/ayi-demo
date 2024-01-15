@@ -1,7 +1,7 @@
 import os
 import subprocess
 import requests
-
+import ApiConfig
 
 def check_adb_devices():
     adb_list = []
@@ -37,7 +37,7 @@ def get_connected_device_models():
         model = result.stdout.decode('utf-8').strip()
         model1 = result1.stdout.decode('utf-8').strip()
         # version = android_version.stdout.decode('utf-8').strip()
-        url = 'http://192.168.9.188:8101/model_name'
+        url = f'{ApiConfig.centos()}/model_name'
         data = {'model': model1}
         res = requests.post(url, data)
         if res.json()['phone_name'] == '无model信息':

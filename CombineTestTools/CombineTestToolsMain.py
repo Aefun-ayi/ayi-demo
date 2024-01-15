@@ -54,6 +54,7 @@ from WorkerAshingLookTimer import WorkerAshingLookTimer
 from WorkerAshingLookTimerAd import WorkerAshingLookTimerAd
 from WorkerCreateDirfile import WorkerCreateDirfile
 from WorkerOnlineConfigOneself import WorkerOnlineConfigOneselfMain
+import ApiConfig
 import DownloadWindow
 
 
@@ -416,8 +417,9 @@ class MainWindow(QWidget, CombineTestToolsFrame.Ui_Form):
 
     def CheckVersion(self):
         try:
-            version_api = self.session.get('http://192.168.9.188:8101/version')
+            version_api = self.session.get(f'{ApiConfig.centos()}/version')
             remote_version = version_api.json()
+            print(remote_version)
             if self.CurrentVersion != remote_version['version']:
                 QMessageBox.warning(self, "提示", f"发现新版本{remote_version}，开始更新")
                 self.chile_Win = DownloadWindow.MainWindow()
