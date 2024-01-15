@@ -31,6 +31,11 @@ def GetActivityName(apk_path):
     return activity_name
 
 def GetApkName(apk_path):
+    """
+    获取apk的名称
+    :param apk_path: apk文件路径
+    :return: 名称
+    """
     command = ["aapt", "dump", "badging", apk_path]
     output = subprocess.check_output(command).decode("utf-8")
     start = output.find("application-label:") + 19

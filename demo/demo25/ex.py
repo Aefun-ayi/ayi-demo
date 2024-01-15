@@ -2,7 +2,7 @@ import openpyxl
 import json
 def aaa():
     # 打开 Excel 文件
-    wb = openpyxl.load_workbook(r"C:\Users\Administrator\Desktop\adinfotable.xlsx")
+    wb = openpyxl.load_workbook(r"C:\Users\Administrator\Desktop\device_info.xlsx")
 
     # 获取工作表中的数据
     sheet = wb.active
@@ -30,5 +30,5 @@ def aaa():
     # print(json_data)
     return data
 
-a = aaa()
-print(a)
+# a = aaa()
+# print(a)
