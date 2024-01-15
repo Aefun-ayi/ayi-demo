@@ -17,7 +17,7 @@ class WorkerAdContrast(QThread):
         chan = appInfo.split("&")[1]
         pro = appInfo.split("&")[2]
         try:
-            url = 'http://192.168.7.188:8101/ad_contrast'
+            url = 'http://192.168.9.188:8101/ad_contrast'
             data = {'pid': pid,
                     'chan': chan,
                     'pro': pro

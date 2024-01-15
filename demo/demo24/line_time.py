@@ -5,7 +5,7 @@ from PyQt5.QtCore import QTimer, QTime, Qt
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("倒计时")
+        self.setWindowTitle("下班倒计时")
         self.resize(300, 100)
 
         layout = QVBoxLayout()

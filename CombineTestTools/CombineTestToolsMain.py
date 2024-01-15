@@ -416,7 +416,7 @@ class MainWindow(QWidget, CombineTestToolsFrame.Ui_Form):
 
     def CheckVersion(self):
         try:
-            version_api = self.session.get('http://192.168.7.188:8101/version')
+            version_api = self.session.get('http://192.168.9.188:8101/version')
             remote_version = version_api.json()
             if self.CurrentVersion != remote_version['version']:
                 QMessageBox.warning(self, "提示", f"发现新版本{remote_version}，开始更新")
@@ -596,7 +596,9 @@ class MainWindow(QWidget, CombineTestToolsFrame.Ui_Form):
             for i in get_connected_device_models():
                 self.DevicesList.addItem(f'{i}')
         except Exception as e:
-            msg_box = QMessageBox(QMessageBox.Critical, '错误', e)
+            # print(e)
+            # pass
+            msg_box = QMessageBox(QMessageBox.Critical, '错误', str(e))
             msg_box.exec_()
 
     def devices_info(self):
