@@ -17,7 +17,7 @@ class WorkerOnlineConfigOneselfMain(QThread):
         cha = appInfo.split("&")[1]
         pid = appInfo.split("&")[0]
         try:
-            url = 'http://192.168.7.188:8101/online_config_oneself'
+            url = 'http://192.168.9.188:8101/online_config_oneself'
             data = {'pid': pid,
                     'chan': cha}
             res = requests.post(url, data)
