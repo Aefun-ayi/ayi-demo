@@ -77,7 +77,6 @@ class MainWindow(QWidget, CombineTestToolsFrame.Ui_Form):
         screenicon = qta.icon('mdi.cellphone-screenshot', color='green')
         selectIcon = qta.icon('ei.search', color='green')  #查询按钮icon
         clearIcon = qta.icon('fa5s.quidditch', color='green')  # 清理按钮icon
-
         # 查询页面icon设置
         self.SelectOnline.setIcon(selectIcon)
         self.SelectAd.setIcon(selectIcon)

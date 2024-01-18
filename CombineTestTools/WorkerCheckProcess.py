@@ -35,9 +35,9 @@ class WorkerCheckProcessMain(QThread):
             model1 = result1.stdout.decode('utf-8').strip()
             rtime = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')  # 时间戳
             if package_name in progress:
-                self.ProcessInfo.emit(rtime + f'   设备信息：{model} {model1} 安卓版本:【{version}】/{devices_info}\n' + progress)
+                self.ProcessInfo.emit(rtime + f'   设备信息：{model} {model1} 安卓版本 :【{version}】\n' + progress)
             else:
-                self.ProcessInfo.emit(rtime + f'   设备信息：{model} {model1} 安卓版本:【{version}】/{devices_info}\n无进程信息\n')
+                self.ProcessInfo.emit(rtime + f'   设备信息：{model} {model1} 安卓版本 :【{version}】\n无进程信息\n')
         else:
             progress = os.popen(f'adb -s {devices_info} shell ps|findstr {path}').read()
             android_version = subprocess.run(['adb', '-s', devices_info, 'shell', 'getprop', 'ro.build.version.release'],
@@ -54,6 +54,6 @@ class WorkerCheckProcessMain(QThread):
             model1 = result1.stdout.decode('utf-8').strip()
             rtime = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')  # 时间戳
             if path in progress:
-                self.ProcessInfo.emit(rtime + f'   设备信息：{model} {model1} 安卓版本:【{version}】/{devices_info}\n' + progress)
+                self.ProcessInfo.emit(rtime + f'   设备信息：{model} {model1} 安卓版本:【{version}】\n' + progress)
             else:
-                self.ProcessInfo.emit(rtime + f'   设备信息：{model} {model1} 安卓版本:【{version}】/{devices_info}\n无进程信息\n')
+                self.ProcessInfo.emit(rtime + f'   设备信息：{model} {model1} 安卓版本:【{version}】\n无进程信息\n')
