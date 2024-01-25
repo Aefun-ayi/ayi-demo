@@ -599,6 +599,7 @@ class MainWindow(QWidget, CombineTestToolsFrame.Ui_Form):
         except Exception as e:
             # print(e)
             # pass
+            print(e)
             msg_box = QMessageBox(QMessageBox.Critical, '错误', str(e))
             msg_box.exec_()
 

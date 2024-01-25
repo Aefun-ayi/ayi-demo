@@ -1,9 +1,9 @@
 
 def centos():
-    api = 'http://192.168.9.188:8101'
+    api = 'http://192.168.7.188:8101'
     return api
 
 
 def windows():
-    api = 'http://192.168.9.7'
+    api = 'http://192.168.7.15'
     return api
