@@ -19,7 +19,7 @@ def upload_jks_file(file_path, upload_url, key_name, key_password):
 
 # 调用上传函数
 file_path = "D:\laying-file\discussed15484.jks"    # 文件路径
-upload_url = 'http://192.168.7.188:8111/upload'
+upload_url = 'http://192.168.9.188:8111/upload'
 keyname = 'discussed15484'  # 别名
 keypassword = 'discussed46548'  # 密码
 upload_jks_file(file_path, upload_url, key_name=keyname, key_password=keypassword)
