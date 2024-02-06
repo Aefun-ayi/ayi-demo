@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1004</width>
+    <width>936</width>
     <height>711</height>
    </rect>
   </property>
@@ -990,7 +990,7 @@ color: rgb(170, 255, 127);</string>
       <attribute name="title">
        <string>       设备       </string>
       </attribute>
-      <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,9">
+      <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,0">
        <property name="spacing">
         <number>5</number>
        </property>
@@ -1007,7 +1007,7 @@ color: rgb(170, 255, 127);</string>
         <number>5</number>
        </property>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout" stretch="8,2">
+        <layout class="QHBoxLayout" name="horizontalLayout" stretch="8,2,0">
          <item>
           <widget class="QComboBox" name="DevicesList">
            <property name="minimumSize">
@@ -1038,6 +1038,24 @@ font: 14pt &quot;幼圆&quot;;}</string>
            </property>
            <property name="text">
             <string>刷新</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="GBA">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton
+{border-radius:10px;
+font: 14pt &quot;幼圆&quot;;}</string>
+           </property>
+           <property name="text">
+            <string>金手指</string>
            </property>
           </widget>
          </item>

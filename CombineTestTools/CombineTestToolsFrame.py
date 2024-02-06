@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(1004, 711)
+        Form.resize(936, 711)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/WindowTitle/WindowIco.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Form.setWindowIcon(icon)
@@ -553,6 +553,13 @@ class Ui_Form(object):
 "font: 14pt \"幼圆\";}")
         self.DevicesRefresh.setObjectName("DevicesRefresh")
         self.horizontalLayout.addWidget(self.DevicesRefresh)
+        self.GBA = QtWidgets.QPushButton(self.tab_2)
+        self.GBA.setMinimumSize(QtCore.QSize(0, 40))
+        self.GBA.setStyleSheet("QPushButton\n"
+"{border-radius:10px;\n"
+"font: 14pt \"幼圆\";}")
+        self.GBA.setObjectName("GBA")
+        self.horizontalLayout.addWidget(self.GBA)
         self.horizontalLayout.setStretch(0, 8)
         self.horizontalLayout.setStretch(1, 2)
         self.verticalLayout_3.addLayout(self.horizontalLayout)
@@ -1584,7 +1591,6 @@ class Ui_Form(object):
         self.tabWidget_3.addTab(self.tab_8, "")
         self.verticalLayout_3.addWidget(self.tabWidget_3)
         self.verticalLayout_3.setStretch(0, 1)
-        self.verticalLayout_3.setStretch(1, 9)
         self.tabWidget.addTab(self.tab_2, "")
         self.tab_6 = QtWidgets.QWidget()
         self.tab_6.setObjectName("tab_6")
@@ -1672,6 +1678,7 @@ class Ui_Form(object):
         self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_19), _translate("Form", "查询在线配置--单独"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("Form", "       查询       "))
         self.DevicesRefresh.setText(_translate("Form", "刷新"))
+        self.GBA.setText(_translate("Form", "金手指"))
         self.label_24.setText(_translate("Form", "创建五图文件夹"))
         self.ImgMkdirName.setText(_translate("Form", "创建目录"))
         self.ImgOne.setText(_translate("Form", "<html><head/><body><p><span style=\" font-size:22pt;\">图</span></p><p><span style=\" font-size:22pt;\">片</span></p><p><span style=\" font-size:22pt;\">预</span></p><p><span style=\" font-size:22pt;\">览</span></p><p><span style=\" font-size:22pt;\">区</span></p></body></html>"))

@@ -22,6 +22,7 @@ from WorkerUninstallApp import WorkerUninstallAppMain
 from WorkerClearApp import WorkerClearAppMain
 from WorkerDebugApp import WorkerDebugAppMain
 from WorkerUnDebugApp import WorkerUnDebugAppMain
+from WorkerGBA import WorkerGBAMain
 from WorkerAdSelect import WorkerAdSelect
 from WorkerOnlineInfo import WorkerOnline
 from WorkerAdContrast import WorkerAdContrast
@@ -77,6 +78,7 @@ class MainWindow(QWidget, CombineTestToolsFrame.Ui_Form):
         screenicon = qta.icon('mdi.cellphone-screenshot', color='green')
         selectIcon = qta.icon('ei.search', color='green')  #查询按钮icon
         clearIcon = qta.icon('fa5s.quidditch', color='green')  # 清理按钮icon
+        GBAIcon = qta.icon('ri.fingerprint-fill', color='green')  # 金手指按钮
 
         # 查询页面icon设置
         self.SelectOnline.setIcon(selectIcon)
@@ -130,6 +132,8 @@ class MainWindow(QWidget, CombineTestToolsFrame.Ui_Form):
         self.UndebugApp.setIcon(undebugicon)
         self.UndebugApp.setIconSize(QtCore.QSize(30, 30))
         self.ClearProcessText.setIcon(clearIcon)
+        self.GBA.setIcon(GBAIcon)
+        self.GBA.setIconSize(QtCore.QSize(30, 30))
 
         # 外广自动化强停一次页面icon设置
         self.AutoStart.setIcon(starticon)
@@ -296,6 +300,10 @@ class MainWindow(QWidget, CombineTestToolsFrame.Ui_Form):
         self.UnDebugAppThread = WorkerUnDebugAppMain(self.UnDebugAppQueue)
         self.UndebugApp.clicked.connect(self.UndebugAppMain)
         self.UnDebugAppThread.DebugInfo.connect(self.UnDebugInfoMsgBox)
+        self.GBAQueue = Queue()
+        self.GBAThread = WorkerGBAMain(self.GBAQueue)
+        self.GBA.clicked.connect(self.GBAMsgBox)
+
 
         # 外广自动化-强停一次页面的线程连接
         self.AutoQueue = Queue()
@@ -808,6 +816,13 @@ class MainWindow(QWidget, CombineTestToolsFrame.Ui_Form):
 
     def UnDebugInfoMsgBox(self, text):
         msg_box = QMessageBox(QMessageBox.Information, 'debug开关', f'{text}')
+        msg_box.exec_()
+
+    def GBAMsgBox(self):
+        devices_info = self.devices_info()
+        self.GBAQueue.put(devices_info)
+        self.GBAThread.start()
+        msg_box = QMessageBox(QMessageBox.Information, '金手指开关', '金手指开关已打开，启动应用开始验证')
         msg_box.exec_()
 
     def AutoDriver(self):
