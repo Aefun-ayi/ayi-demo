@@ -5,5 +5,5 @@ def centos():
 
 
 def windows():
-    api = 'http://192.168.9.15'
+    api = 'http://192.168.7.15'
     return api
