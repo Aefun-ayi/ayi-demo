@@ -5,7 +5,6 @@ import os
 
 
 class WorkerGBAMain(QThread):
-    DevicesInfo = pyqtSignal(str)
 
     def __init__(self, queue):
         # 通过调用父类构造函数并设置初始计数值来初始化工作线程
